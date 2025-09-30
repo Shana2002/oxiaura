@@ -38,7 +38,7 @@ export default function Navbar() {
         {/* Nav links */}
         <ul className="hidden md:flex gap-6 list-none">
           <li><Link href="/" className="text-gray-800 font-medium hover:text-green-600">Home</Link></li>
-          <li><Link href="/about" className="text-gray-800 font-medium hover:text-green-600">About</Link></li>
+          <li><Link href="/about-us" className="text-gray-800 font-medium hover:text-green-600">About</Link></li>
           <li><Link href="/products" className="text-gray-800 font-medium hover:text-green-600">Products</Link></li>
           <li><Link href="/plans" className="text-gray-800 font-medium hover:text-green-600">Investment Plans</Link></li>
           <li><Link href="/blog" className="text-gray-800 font-medium hover:text-green-600">Blog</Link></li>
