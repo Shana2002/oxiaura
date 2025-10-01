@@ -12,56 +12,7 @@ import {
 import Navbar from "@/components/common/Navbar";
 import MissionBox from "@/components/ui/MissionBox";
 import Footer from "@/components/common/Footer";
-
-// Custom component for the Expert Card
-const ExpertCard = ({ name, title, bio, imageUrl }) => (
-  <div className="bg-white rounded-xl shadow-lg p-6 h-[70vh] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-green-100">
-    {/* Profile Image Placeholder */}
-    <div className="w-28 h-28 rounded-full bg-green-200 mb-4 overflow-hidden border-4 border-white shadow-md">
-      {/* Using a placeholder for the expert image */}
-      <img
-        src={imageUrl}
-        alt={name}
-        className="w-full h-full object-cover"
-        onError={(e) => {
-          e.target.onerror = null;
-          e.target.src =
-            "https://placehold.co/112x112/A5D6A7/004D40?text=Expert";
-        }}
-      />
-    </div>
-
-    <h3 className="text-xl font-bold text-green-800">{name}</h3>
-    <p className="text-sm font-semibold text-green-600 mb-3">{title}</p>
-
-    <p className="text-gray-600 text-sm mb-4 line-clamp-4">{bio}</p>
-
-    {/* Social Links */}
-    <div className="flex space-x-3 text-green-700">
-      <a
-        href="#"
-        aria-label={`Follow ${name} on Facebook`}
-        className="hover:text-green-500 transition"
-      >
-        <Facebook size={18} />
-      </a>
-      <a
-        href="#"
-        aria-label={`Follow ${name} on Twitter`}
-        className="hover:text-green-500 transition"
-      >
-        <Twitter size={18} />
-      </a>
-      <a
-        href="#"
-        aria-label={`Follow ${name} on LinkedIn`}
-        className="hover:text-green-500 transition"
-      >
-        <Linkedin size={18} />
-      </a>
-    </div>
-  </div>
-);
+import ExpertCard from "@/components/ui/ExpertCard";
 
 // Custom component for the Service/Product Card
 const ServiceCard = ({ title, description, icon: Icon }) => (
@@ -76,22 +27,22 @@ const ServiceCard = ({ title, description, icon: Icon }) => (
 
 const teamMembers = [
   {
-    name: "John Doe",
-    title: "Chief Investment Officer",
-    bio: "John leads our strategic planning and ensures all investments meet strict ecological and return standards.",
-    imageUrl: "https://placehold.co/112x112/A5D6A7/004D40?text=JD",
+    name: "Mr. Jagath Premal",
+    title: "Director",
+    bio: "Mr. Jagath Premal has over 30 years of experience in top management roles in Sri Lanka's plantation and insurance sectors and Director of Principal officer Fairwell Insurance Brokers, earning national and international awards.",
+    imageUrl: "https://oxiaura.com/wp-content/uploads/2025/01/222.jpg",
   },
   {
-    name: "Jane Smith",
-    title: "Head of Sustainability",
-    bio: "Jane is responsible for vetting all partner projects to guarantee genuine environmental impact and compliance.",
-    imageUrl: "https://placehold.co/112x112/B9F6CA/004D40?text=JS",
+    name: "Dr. Susantha Kosgolla",
+    title: "Director",
+    bio: "International Nelson mandela pease award 2019 winner . lanka abhimani Honorary title . PHD honor National American business university . Member of Lions club international. Sectary of Young Men Buddhist Association (YMBA – Kurunegala ) . Chairmen of Oxiflame Cosmetics (Pvt) Ltd. Chairmen of OlixCeylon (Pvt) Ltd. Member of Million Dollar Round Table .",
+    imageUrl: "https://oxiaura.com/wp-content/uploads/2025/01/9.jpg",
   },
   {
-    name: "Alex Lee",
+    name: "Sharman Kulathilaka",
     title: "Lead R&D Scientist",
-    bio: "Alex manages our research into innovative eco-friendly technologies that drive our future investment opportunities.",
-    imageUrl: "https://placehold.co/112x112/81C784/004D40?text=AL",
+    bio: "35 years in Insurance industry experience.  Retired ad GM(Sales) People Insurance PLC.  Dip in MKTG(SLIM) . MBA(UK) , MSLIM ,MCIM",
+    imageUrl: "https://oxiaura.com/wp-content/uploads/2025/09/Untitled-1.png",
   },
 ];
 
@@ -118,14 +69,14 @@ const services = [
 
 export default function App() {
   return (
-    <div className="bg-gradient-to-r from-[#CDFFB7] to-white">
+    <div className="bg-gradient-to-r from-[#CDFFB7] to-white text-black">
       <Navbar />
       {/* Mission Section */}
       <div className="h-screen flex flex-col w-[100vw] items-center justify-center">
         <h2 className="text-3xl md:text-6xl font-bold text-green-900">
           Nature-Powered Investments
         </h2>
-        <h3 className="text-3xl md:text-6xl font-bold mb-10">
+        <h3 className="text-3xl md:text-6xl font-bold mb-10 text-black">
           guaranteed return
         </h3>
         <div className="w-[70vw] h-[60vh]">
@@ -197,17 +148,17 @@ export default function App() {
       {/* Our Experts Section */}
       <section className="py-20 bg-white h-screen">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-3xl font-bold text-green-900 mb-12">
+          <h2 className="text-center text-6xl font-bold text-green-900 mb-12">
             Our Experts
           </h2>
-          <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto h-full ">
+          <div className="grid md:grid-cols-3 gap-10 mx-auto h-full ">
             {teamMembers.map((member, index) => (
               <ExpertCard key={index} {...member} />
             ))}
           </div>
         </div>
       </section>
-
+              
       <Footer />
     </div>
   );
