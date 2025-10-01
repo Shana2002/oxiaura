@@ -72,7 +72,7 @@ export default function Navbar() {
       {/* Right: Search + Profile */}
       <div className="flex items-center gap-4">
         {/* Search */}
-        <div className="relative hidden sm:block">
+        <div className="relative hidden sm:block text-black">
           <input
             type="search"
             placeholder="Search"

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaEnvelope } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -14,13 +15,13 @@ const Footer = () => {
           </p>
           <div className="mt-4 space-y-2 text-sm">
             <p className="flex items-center gap-2">
-              <FaPhone /> +94 78 123 4567 / +94 11 234 5678
+              <FaPhone /> +94 76 455 3564 / +94 38 225 4330
             </p>
             <p className="flex items-center gap-2">
-              <IoLogoWhatsapp /> +94 78 123 4567
+              <IoLogoWhatsapp /> +94 76 455 3564
             </p>
             <p className="flex items-center gap-2">
-              <FaEnvelope /> info@example.com
+              <FaEnvelope /> info@oxiaura.com
             </p>
           </div>
           <div className="mt-4 flex gap-4">
@@ -35,37 +36,34 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-2">Welcome</h3>
             <ul className="space-y-1 text-sm">
-              <li>Home</li>
-              <li>About</li>
-              <li>Products</li>
-              <li>Contact us</li>
+              <li><Link href={"/"}>Home</Link></li>
+              <li><Link href={"/about"}>About</Link></li>
+              <li><Link href={"/products"}>Products</Link></li>
+              <li><Link href={"/contact"}>Contact us</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-2">Products</h3>
             <ul className="space-y-1 text-sm">
-              <li>Product 01</li>
-              <li>Product 02</li>
-              <li>Product 03</li>
-              <li>Product 04</li>
+              <li><Link href={"/"}>Agarwood</Link></li>
+              <li><Link href={"/"}>TJC Mango</Link></li>
+              <li><Link href={"/"}>Vanila</Link></li>
+              <li><Link href={"/"}>Sandalwood</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-2">Partnerships</h3>
             <ul className="space-y-1 text-sm">
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <li><Link href={"/"}>Olix</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-2">Groups</h3>
             <ul className="space-y-1 text-sm">
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <li><Link href={"/"}>Excel Lanka Travels</Link></li>
+              <li><Link href={"/"}>Oxiaura Cosmetics</Link></li>
+              <li><Link href={"/"}>JK Holdings</Link></li>
+              <li><Link href={"/"}>JK Logistics</Link></li>
             </ul>
           </div>
         </div>

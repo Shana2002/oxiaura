@@ -25,7 +25,7 @@ export default function AboutUs2() {
       <div className="absolute top-0 w-full h-full bg-black/40"></div>
       
       {/* Top Gradient */}
-      <div className="absolute w-full h-100 -top-12 bg-gradient-to-b from-transparent via-[rgba(12,57,60,0.82)] to-transparent]"></div>
+      <div className="absolute w-full h-100 -top-24 bg-gradient-to-b from-transparent via-[rgba(12,57,60,0.82)] to-transparent]"></div>
       
       {/* Mid Gradient */}
       <div className="absolute w-full h-100 top-1/2 -translate-y-1/2 bg-gradient-to-t from-transparent via-[rgba(12,57,60,0.82)] to-transparent"></div>
