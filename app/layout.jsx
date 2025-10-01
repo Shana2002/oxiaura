@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { FaWhatsapp } from "react-icons/fa6";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,9 +13,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
+      
         className={`${inter.variable} antialiased`}
       >
+         {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/your-number "
+        className="fixed bottom-6 right-6 bg-green-600 p-4 rounded-full text-white shadow-lg hover:bg-green-700 z-1000"
+      >
+        <FaWhatsapp className="text-2xl" />
+      </a>
         {children}
+        
       </body>
     </html>
   );

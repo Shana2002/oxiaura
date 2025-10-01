@@ -1,29 +1,26 @@
-"use client"; // Only if using App Router and you want client-side interactivity
+"use client"
 
-import { useState,useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import logo from "@/assets/images/logo1.png"
-import { FaSearch } from 'react-icons/fa';
-import { CgProfile } from "react-icons/cg";
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { Search, User, Menu, X } from "lucide-react"
+import logo from '@/assets/images/logo1.png'
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) { // adjust scroll threshold
-        setScrolled(true);
+      if (window.scrollY > 50) {
+        setScrolled(true)
       } else {
-        setScrolled(false);
+        setScrolled(false)
       }
-    };
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <header
@@ -33,50 +30,77 @@ export default function Navbar() {
     >
       {/* Left: Logo */}
       <nav className="flex items-center gap-6">
-        <Image src={logo} alt="Logo"/>
+        <Link href="/" className="flex items-center">
+          <img src={logo} alt="OXIAURA Logo" className="h-10 w-auto" />
+        </Link>
 
         {/* Nav links */}
         <ul className="hidden md:flex gap-6 list-none">
-          <li><Link href="/" className="text-gray-800 font-medium hover:text-green-600">Home</Link></li>
-          <li><Link href="/about-us" className="text-gray-800 font-medium hover:text-green-600">About</Link></li>
-          <li><Link href="/products" className="text-gray-800 font-medium hover:text-green-600">Products</Link></li>
-          <li><Link href="/plans" className="text-gray-800 font-medium hover:text-green-600">Investment Plans</Link></li>
-          <li><Link href="/blog" className="text-gray-800 font-medium hover:text-green-600">Blog</Link></li>
-          <li><Link href="/contact" className="text-gray-800 font-medium hover:text-green-600">Contact</Link></li>
+          <li>
+            <Link href="/" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/about-us" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
+              About us
+            </Link>
+          </li>
+          <li>
+            <Link href="/products" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
+              Products
+            </Link>
+          </li>
+          <li>
+            <Link href="/plans" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
+              Investment plans
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
 
       {/* Right: Search + Profile */}
       <div className="flex items-center gap-4">
         {/* Search */}
-        <div className="relative">
+        <div className="relative hidden sm:block">
           <input
             type="search"
             placeholder="Search"
-            className="border border-green-600 rounded-full px-4 py-1 text-sm focus:outline-none"
+            className="border border-green-600 rounded-full px-4 py-1.5 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-green-600"
           />
           <button
             type="submit"
-            className="absolute right-0 top-0 w-7 h-7 flex items-center justify-center rounded-full bg-green-600 text-white"
+            className="absolute right-0 top-0 w-8 h-full flex items-center justify-center rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors p-"
           >
-            <FaSearch size={20} />
+            <Search size={25} />
           </button>
         </div>
 
         {/* Profile button */}
         <Link
           href="/profile"
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-green-600 text-white"
+          className="w-10 h-10 flex items-center justify-center rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors"
         >
-          <CgProfile  size={20} />
+          <User size={20} />
         </Link>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-gray-800 text-xl"
+          className="md:hidden text-gray-800 hover:text-green-600 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
-          <i className="fa-solid fa-bars"></i>
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -84,15 +108,63 @@ export default function Navbar() {
       {isOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
           <ul className="flex flex-col items-center gap-4 py-4">
-            <li><Link href="/" className="text-gray-800 hover:text-green-600">Home</Link></li>
-            <li><Link href="/about" className="text-gray-800 hover:text-green-600">About</Link></li>
-            <li><Link href="/products" className="text-gray-800 hover:text-green-600">Products</Link></li>
-            <li><Link href="/plans" className="text-gray-800 hover:text-green-600">Investment Plans</Link></li>
-            <li><Link href="/blog" className="text-gray-800 hover:text-green-600">Blog</Link></li>
-            <li><Link href="/contact" className="text-gray-800 hover:text-green-600">Contact</Link></li>
+            <li>
+              <Link
+                href="/"
+                className="text-gray-800 hover:text-green-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about-us"
+                className="text-gray-800 hover:text-green-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                About us
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/products"
+                className="text-gray-800 hover:text-green-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Products
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/plans"
+                className="text-gray-800 hover:text-green-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Investment plans
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog"
+                className="text-gray-800 hover:text-green-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="text-gray-800 hover:text-green-600 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
       )}
     </header>
-  );
+  )
 }

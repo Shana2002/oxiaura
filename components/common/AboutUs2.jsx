@@ -6,21 +6,34 @@ import Testimonial from "../ui/Testimonial";
 
 export default function AboutUs2() {
   return (
-    <section className="relative h-[300vh] bg-[#0D893F] bg-[url('/images/aboutus2_bg.png')] bg-no-repeat bg-cover bg-center">
-      {/* Dark overlay and gradients */}
-      <div class="absolute top-0 w-screen h-[300vh] bg-black/40"></div>
-      <div class="absolute w-screen h-[20vh] -top-[10vh] bg-gradient-to-b from-[rgba(37,75,73,0)] via-[rgba(12,57,60,0.81)] to-[rgba(12,57,60,1)]"></div>
-      <div class="absolute w-screen h-[30vh] top-[10vh] bg-gradient-to-t from-[rgba(37,75,73,0)] via-[rgba(12,57,60,0.82)] to-[rgba(12,57,60,1)]"></div>
+    // Replaced fixed height with min-h-screen for content and added vertical padding
+    <section className="relative min-h-screen bg-[#0D893F] bg-[url('/images/aboutus2_bg.png')] bg-no-repeat bg-cover bg-center text-white pt-12">
+      
+      {/* Dark overlay and gradients - h-full ensures they cover all content height */}
+      <div className="absolute top-0 w-full h-full bg-black/40"></div>
+      
+      {/* Top Gradient */}
+      <div className="absolute w-full h-100 -top-12 bg-gradient-to-b from-transparent via-[rgba(12,57,60,0.82)] to-transparent]"></div>
+      
+      {/* Mid Gradient */}
+      <div className="absolute w-full h-100 top-1/2 -translate-y-1/2 bg-gradient-to-t from-transparent via-[rgba(12,57,60,0.82)] to-transparent"></div>
 
-      {/* Content container */}
+      {/* Content container - All sections are relative to this Z-index */}
       <div className="relative z-30">
-        {/* Green Roots Section */}
-        <div className="flex flex-col md:flex-row items-center justify-center h-screen px-[5vw] gap-8">
-          {/* Text */}
-          <div className="md:w-1/3 flex flex-col gap-4">
-            <h3 className="text-3xl font-semibold">Green Roots</h3>
-            <h1 className="text-6xl font-bold">Strong Futures</h1>
-            <p className="text-gray-200">
+        
+        {/* Green Roots Section - Uses flex-col on mobile, flex-row on md/desktop */}
+        <div className="flex flex-col md:flex-row items-center justify-center min-h-screen py-16 px-6 lg:px-16 gap-10 md:gap-12 lg:gap-16">
+          
+          {/* Text Container: Full width on mobile, 1/3 on tablet/desktop */}
+          <div className="w-full md:w-1/3 flex flex-col gap-2 order-2 md:order-1">
+            <h3 className="text-xl sm:text-5xl font-semibold text-white">
+              Green Roots
+            </h3>
+            <h1 className="text-4xl sm:text-3xl lg:text-7xl font-bold leading-tight">
+              Strong Futures
+            </h1>
+            
+            <p className="text-gray-200 text-base md:text-lg max-w-xl mt-7">
               Oxiaura Plantation Pvt. Ltd. is more than just a plantation
               company—we are a forward-thinking enterprise that blends
               innovation with sustainable, eco-friendly practices at every stage
@@ -28,38 +41,40 @@ export default function AboutUs2() {
               renewable energy, and responsible resource management, we ensure
               that our products not only meet but exceed the highest standards
               of quality and environmental stewardship.
-              <br />
+
+              <br className="mb-4" />
               Our commitment goes beyond production; it is about creating a
               positive impact on communities, ecosystems, and future
               generations. From cultivating with care to adopting green
               technologies, we strive to preserve biodiversity, reduce our
               carbon footprint, and foster a culture of responsibility across
               the industry.
-              <br />
+
+              <br className="mb-4" />
               At Oxiaura, we believe sustainability is not an option—it’s the
               foundation of long-term success. With every product we deliver, we
               aim to inspire trust, promote well-being, and shape a greener,
               more resilient future for the world.
+
             </p>
           </div>
 
-          {/* Image */}
-          <div className="md:w-2/3 relative">
+          {/* Image Container: Full width on mobile, 2/3 on tablet/desktop */}
+          <div className="w-full md:w-2/3 relative order-1 md:order-2">
             <Image
               src={Plant}
               alt="plant_img"
-              width={800}
-              height={600}
-              className="rounded-lg"
+              // Fluid sizing for optimized loading
+              sizes="(max-width: 500px) 75vw, 66vw" 
+              className="w-full h-auto rounded-lg "
             />
           </div>
         </div>
 
-        {/* Products Section */}
+        {/* Products Section and Testimonials (Assumed to be responsive components) */}
         <ProductSection />
-
-        {/* Client Comments Section */}
         <Testimonial />
+        
       </div>
     </section>
   );
