@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: inherit;
 }
+    .clipped-img {
+      width: 1045px;
+      height: 4000px;
+      object-fit: cover;
+      clip-path: url(#customMask);
+    }

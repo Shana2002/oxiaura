@@ -5,7 +5,7 @@ export default function GetInTouch() {
   return (
     <section className="bg-white py-20 px-5 md:px-20 flex flex-col md:flex-row gap-10">
       {/* Left Image + Partnerships */}
-      <div className="md:w-1/2 flex flex-col gap-6">
+      <div className="md:w-2/4 flex flex-col gap-6">
         <div className="bg-green-700 w-full h-[50vh] relative rounded-lg overflow-hidden">
           <Image
             src={Plant}
@@ -16,17 +16,19 @@ export default function GetInTouch() {
         </div>
 
         <div className="flex items-center bg-gray-100 rounded-lg p-4">
-          <input
-            type="text"
-            placeholder="For partnerships and investments"
+          <p
+            
+            
             className="flex-1 bg-transparent outline-none px-2 py-2 text-gray-700"
-          />
+          >For partnerships and investments</p>
+          <p className="font-semibold">email@oxiaura.com</p>
           <span className="ml-4 w-10 h-10 flex items-center justify-center bg-black text-white rounded-full cursor-pointer">
             &rarr;
           </span>
+          
         </div>
 
-        <p className="font-semibold">email@oxiaura.com</p>
+        
       </div>
 
       {/* Right Form */}

@@ -1,55 +1,100 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
-import HeroImage from '@/assets/images/hero_image.png'
-import HeroImage2 from '@/assets/images/hero_image2.png'
+import { FaArrowRight, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import HeroImage2 from "@/assets/images/hero_image2.png";
+import HeroImage from "@/assets/images/hero_image.png";
 
 export default function Hero() {
   return (
-    <section className="h-screen flex items-center justify-between px-[5vw] bg-gradient-to-r from-[#CDFFB7] to-white">
-      {/* Left: Text Content */}
-      <div className="flex flex-col max-w-[30vw] gap-4">
-        <h2 className="text-[7vh] font-medium text-green-700 leading-none">
-          Connecting
-        </h2>
-        <h1 className="text-[15vh] font-bold text-green-700 leading-tight">
-          Nature
-        </h1>
-        <h3 className="text-[4.3vh] font-semibold leading-none">
-          with <span className="text-green-700">Oxiaura Plantation</span>
-        </h3>
-        <p className="mt-6 mb-8 text-lg text-gray-700">
-          From eco-conscious sourcing to worldwide delivery, Oxiaura is your
-          bridge between nature and innovation.
-        </p>
+    <section className="relative min-h-screen bg-gradient-to-b from-green-50 to-white overflow-hidden px-[5vw] py-5">
+      
+      {/* Grid Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8">
 
-        <Link
-          href="#"
-          className="relative flex items-center justify-between bg-neutral-900 hover:bg-green-700 text-white rounded-full px-4 py-3 w-[15vw] transition duration-300"
-        >
-          <h4 className="px-2">Discover Sustainability</h4>
-          <span className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black">
-            <FaArrowRight  className="fa-solid fa-arrow-right"/>
-          </span>
-        </Link>
-      </div>
+        {/* Left: Text Content */}
+        <div className="col-span-1 lg:col-span-5 flex flex-col gap-4 text-center lg:text-left z-10">
+          <h2 className="text-3xl md:text-6xl font-medium text-green-700">Connecting</h2>
+          <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold text-green-700 leading-none">Nature</h1>
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-none">
+            with <span className="text-green-900">Oxiaura Plantation</span>
+          </h3>
+          <p className="mt-6 mb-8 text-base md:text-lg text-gray-700 max-w-xl mx-auto lg:mx-0">
+            From eco-conscious sourcing to worldwide delivery, Oxiaura is your
+            bridge between nature and innovation.
+          </p>
 
-      {/* Right: Images */}
-      <div className="relative w-[60vw] h-screen">
-        <Image
-          src={HeroImage}
-          alt="Plantation"
-          width={1045}
-          height={700}
-          className="absolute right-0 top-10 rounded-lg"
-        />
-        <Image
-          src={HeroImage2}
-          alt="Plantation"
-          width={500}
-          height={400}
-          className="absolute right-0 top-[66vh] rounded-lg"
-        />
+          {/* CTA Button */}
+          <Link
+            href="#"
+            className="relative flex items-center justify-between bg-black hover:bg-green-700 text-white rounded-full px-5 py-3 w-fit mx-auto lg:mx-0 transition duration-300"
+          >
+            <span className="pr-3">Discover Sustainability</span>
+            <span className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black">
+              <FaArrowRight />
+            </span>
+          </Link>
+
+          {/* Social Icons */}
+          <div className="flex justify-center lg:justify-start gap-4 mt-6">
+            <a href="#" className="bg-green-700 text-white p-3 rounded-full hover:bg-green-800">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="bg-green-700 text-white p-3 rounded-full hover:bg-green-800">
+              <FaInstagram />
+            </a>
+            <a href="#" className="bg-green-700 text-white p-3 rounded-full hover:bg-green-800">
+              <FaLinkedinIn />
+            </a>
+          </div>
+        </div>
+
+        {/* Right: Images */}
+        <div className="col-span-1 lg:col-span-7 relative w-full h-[400px] md:h-[600px] lg:h-[100vh] flex justify-center lg:justify-end">
+
+          {/* Mobile: rounded rectangle */}
+          <div className="lg:hidden w-full h-full rounded-[30px] overflow-hidden">
+            <Image
+              src={HeroImage2}
+              alt="Hero Plantation"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* Desktop: SVG mask */}
+          <div className="hidden lg:block relative w-full h-full">
+            <div className="image1 scale-[1.9] w-full h-full overflow-hidden ml-[170px] mt-[-100px]">
+            <Image
+              src={HeroImage}
+              alt="Hero Plantation"
+              fill
+              className="object-cover"
+              style={{
+                WebkitMaskImage: 'url("/hero-mask.svg")',
+      WebkitMaskRepeat: 'no-repeat',
+      WebkitMaskSize: '100% 100%',   // ✅ always fills
+      WebkitMaskPosition: 'center',
+      maskImage: 'url("/hero-mask.svg")',
+      maskRepeat: 'no-repeat',
+      maskSize: '100% 100%',        // ✅ no small mask
+      maskPosition: 'left',
+              }}
+            />
+            </div>
+
+            {/* Secondary overlapping image */}
+            <div className="absolute bottom-15 right-[-45] w-[64%] h-auto">
+              <Image
+                src={HeroImage2}
+                alt="Hands Planting"
+                width={2000}
+                height={1100}
+                className="rounded-[30px] object-cover"
+              />
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );
