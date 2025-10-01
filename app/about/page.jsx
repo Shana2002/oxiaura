@@ -1,14 +1,6 @@
 "use client";
 
 import React from "react";
-import {
-  Twitter,
-  Linkedin,
-  Facebook,
-  Leaf,
-  TrendingUp,
-  Cpu,
-} from "lucide-react";
 import Navbar from "@/components/common/Navbar";
 import MissionBox from "@/components/ui/MissionBox";
 import Footer from "@/components/common/Footer";
@@ -49,22 +41,22 @@ const teamMembers = [
 
 const services = [
   {
-    title: "Sustainable Agriculture",
+    title: "Premium Plantation Products",
     description:
-      "Investments in vertical farming, organic production, and water conservation technologies.",
-    icon: Leaf,
+      "From Agarwood to Vanilla and Snake Chilli, we cultivate quality.",
+    image:"/images/what_we_1.png"
   },
   {
-    title: "Renewable Energy",
+    title: "Responsible Investment Opportunities",
     description:
-      "Funding solar, wind, and geothermal projects with high growth potential and low carbon footprint.",
-    icon: TrendingUp,
+      "Grow with us through sustainable agriculture ventures and property investments.",
+    image:"/images/what_we_2.png"
   },
   {
-    title: "AI & Eco-Tech",
+    title: "Strong Distribution, Local Care",
     description:
-      "Developing intelligent systems for environmental monitoring and resource management.",
-    icon: Cpu,
+      "We deliver superior products to international markets with transparency and eco-conscious practices.",
+    image:"/images/what_we_3.png"
   },
 ];
 
@@ -167,7 +159,7 @@ export default function App() {
                 key={index}
                 title={service.title}
                 description={service.description}
-                image="/images/plant1.png"
+                image={service.image}
                 className="w-full"
               />
             ))}

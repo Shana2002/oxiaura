@@ -61,7 +61,7 @@ const Testimonial = () => {
         >
           {testimonials.map((testimonial, index) => (
             <motion.div
-              key={testimonial.id}
+              key={index}
               className="flex-shrink-0 w-full flex flex-col items-center justify-center p-6 relative"
               initial="hidden"
               whileInView="visible"

@@ -11,7 +11,7 @@ const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { product } = useParams(); // get dynamic route param
   const productData = products.find(
-    (item) => item.title.toLowerCase().replace(/\s+/g, "-") === product.toLowerCase()
+    (item) => item.slug.toLowerCase().replace(/\s+/g, "-") === product.toLowerCase()
   );
 
   if (!productData) {
@@ -117,8 +117,13 @@ const App = () => {
       <Navbar/>
       <main className="mx-auto py-8 px-[5vw]">
         {/* Career Hero Banner */}
-        <div className={`h-[50vh] mt-[15vh] relative rounded-lg mb-10 overflow-hidden flex items-center justify-center bg-[url(${productData.image})] bg-contain bg-center`}>
-          <div className="bg-black absolute top-0 left-0 w-full h-full opacity-65 rounded-lg"></div>
+        <div className={`h-[50vh] mt-[15vh] rounded-4xl relative mb-10 overflow-hidden flex items-center justify-center`}
+        style={{
+                    backgroundImage: `url(${productData.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}>
+          <div className="bg-black absolute top-0 left-0 w-full h-full opacity-65 rounded-4xl"></div>
           <div className="relative z-10 p-8 text-white text-center">
             <h1 className="text-5xl font-bold mb-1">
               {productData.title}

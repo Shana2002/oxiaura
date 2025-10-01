@@ -29,7 +29,7 @@ export const products = [
     desc: "Vanilla, derived from the pods of the Vanilla planifolia orchid, is one of the world’s most popular and expensive spices. Its distinctive sweet and creamy aroma has made it an essential ingredient in desserts, beverages, and perfumes. The cultivation of vanilla is labor-intensive, requiring careful hand-pollination and months of curing to develop its unique flavor profile. In addition to its culinary uses, vanilla has calming properties and is often used in aromatherapy. Regions like Madagascar, Tahiti, and Sri Lanka are known for high-quality vanilla production. Its natural richness makes it a symbol of elegance and indulgence, valued by chefs and industries worldwide.",
     subtitle: "Sweet elegance of nature",
     image: "/images/vanila_flower.png",
-    slug: "vanila",
+    slug: "vanilla",
     paragraphs: [
       {
         title: "Best Growing Conditions",
@@ -53,7 +53,7 @@ export const products = [
     title: "TJC Mango",
     desc: "Mango, often called the 'King of Fruits,' is loved for its rich flavor, juiciness, and vibrant color. The TJC mango variety is known for its exceptional sweetness and aroma, making it a favorite among fruit lovers. Beyond taste, mangoes are packed with vitamins A, C, and antioxidants that promote health and immunity. They are versatile in culinary uses, from juices and smoothies to salads, chutneys, and desserts. Cultivated in tropical regions, mangoes hold cultural significance in many countries, symbolizing prosperity and love. TJC mango, with its smooth texture and rich taste, showcases the best qualities of this royal fruit.",
     subtitle: "The king of fruits",
-    image: "/images/tjc_mango.png",
+    image: "/images/TJC_mango.webp",
     slug: "tjc-mango",
     paragraphs: [
       {
@@ -78,7 +78,7 @@ export const products = [
     title: "Sandalwood",
     desc: "Sandalwood is a highly prized aromatic wood, renowned for its long-lasting fragrance and medicinal properties. The heartwood of the sandalwood tree contains essential oils that are widely used in perfumes, incense, cosmetics, and traditional medicine. Its calming aroma is often associated with spiritual practices, meditation, and cultural rituals, making it sacred in many Asian traditions. Sandalwood oil is also valued in skincare for its anti-inflammatory and soothing properties. Due to its high demand and slow growth, sandalwood is considered one of the most expensive woods globally, often referred to as 'liquid gold.' Sustainable farming practices are crucial for preserving this natural treasure.",
     subtitle: "Sacred essence of nature",
-    image: "/images/sandalwood.png",
+    image: "/images/sandalwood.jpg",
     slug: "sandalwood",
     paragraphs: [
       {
@@ -103,7 +103,7 @@ export const products = [
     title: "Passion Fruit",
     desc: "Passion fruit is a tropical fruit celebrated for its tangy flavor, vibrant aroma, and nutritional richness. With a tough outer rind and a seedy, juicy interior, it is often used in juices, desserts, cocktails, and sauces. Packed with vitamins A, C, and fiber, passion fruit supports digestion, immunity, and skin health. Its exotic flavor makes it a popular choice in both fresh consumption and processed products. The fruit is also associated with relaxation and stress relief due to its natural compounds. Easy to cultivate in tropical climates, passion fruit symbolizes exotic indulgence and vitality in modern diets.",
     subtitle: "Exotic taste of vitality",
-    image: "/images/passion_fruit.png",
+    image: "/images/passion_fruit.jpg",
     slug: "passion-fruit",
     paragraphs: [
       {
@@ -153,7 +153,7 @@ export const products = [
     title: "Scotch Bonnet",
     desc: "Scotch Bonnet is a fiery chili pepper widely used in Caribbean cuisine for its intense heat and fruity flavor. Named after its resemblance to a Scottish tam o' shanter hat, this pepper is an essential ingredient in jerk seasonings, sauces, and marinades. Despite its spiciness, Scotch Bonnet has a sweet undertone that enhances the depth of dishes. It is also rich in vitamins A and C, offering health benefits such as boosting immunity and metabolism. Due to its bold flavor, it is a symbol of Caribbean culinary heritage, adding both spice and character to regional dishes.",
     subtitle: "Caribbean fiery flavor",
-    image: "/images/scotch_bonnet.png",
+    image: "/images/scotchbonnet.webp",
     slug: "scotch-bonnet",
     paragraphs: [
       {
@@ -236,5 +236,57 @@ export const testimonials = [
     comment:
       "Oxaiura Plantation’s strategic approach to crop selection, production, and global distribution is exemplary. Their commitment to ethical practices and investor relations reflects a forward-thinking and trustworthy enterprise, making them a prime choice for long-term agricultural investments.",
     image: "/images/testimonials/kamal.png",
+  },
+];
+
+
+export const plantationBlogs = [
+  {
+    title: "Sustainable Practices at Oxaiura Plantation",
+    slug:"sustainable-practices-at-oxaiura-plantation",
+    image: "/images/blog_header.png",
+    description: `Oxaiura Plantation is committed to sustainable agriculture, emphasizing eco-friendly practices and responsible resource management. From soil conservation to water management, the plantation employs advanced techniques to minimize environmental impact while ensuring high-quality yields. Sustainable farming at Oxaiura is not just a practice but a philosophy that permeates every step, from seed selection to harvest. 
+
+The plantation implements crop rotation, organic fertilizers, and integrated pest management to maintain soil fertility and biodiversity. These practices help prevent soil degradation, improve crop resilience, and reduce dependency on chemical inputs. By adopting renewable energy sources and efficient irrigation systems, Oxaiura reduces water and energy consumption, further aligning with global sustainability standards. 
+
+Beyond environmental stewardship, the plantation emphasizes social responsibility. Workers are provided with fair wages, safe working conditions, and continuous training to enhance skills and knowledge in modern agricultural practices. The integration of sustainability into business strategy ensures that Oxaiura Plantation not only produces premium crops but also contributes positively to the ecosystem and local communities.
+
+Investors and stakeholders recognize that these sustainable practices enhance long-term value, ensuring consistent quality and market competitiveness. By focusing on both environmental and social dimensions, Oxaiura Plantation exemplifies how agriculture can thrive in harmony with nature, promoting a resilient and responsible business model that benefits everyone involved.`
+  },
+  {
+    title: "Global Market Impact of Oxaiura Crops",
+    image: "/images/Chille.png",
+    slug:"global-market-impact-of-oxaiura-crops",
+    description: `Oxaiura Plantation’s crops have consistently demonstrated exceptional performance in the global market, reflecting the quality and care invested in cultivation. By focusing on premium crops like Agarwood, TJC Mango, and Vanilla, the plantation has positioned itself as a trusted supplier to international buyers who value quality, authenticity, and sustainability.
+
+The global demand for luxury and high-quality agricultural products is increasing, and Oxaiura Plantation leverages its reputation to secure lucrative contracts worldwide. The plantation employs rigorous quality control measures to meet international standards, ensuring that every batch of crops satisfies stringent regulatory requirements. From proper post-harvest handling to controlled storage and logistics, Oxaiura guarantees that products arrive fresh, intact, and ready for high-value markets.
+
+Furthermore, Oxaiura participates in international trade fairs, expos, and certifications to strengthen its brand recognition. By maintaining traceability and transparency, the plantation assures buyers of ethical sourcing and sustainable cultivation, which is increasingly valued in global markets. This proactive engagement enhances investor confidence and reinforces Oxaiura’s position as a market leader in premium agricultural commodities.
+
+In addition, Oxaiura monitors global trends in agricultural products, adjusting cultivation practices and crop selections to meet emerging demands. The plantation’s focus on quality, innovation, and market responsiveness ensures a competitive edge, driving growth, profitability, and long-term sustainability. Stakeholders benefit from both the financial returns and the prestige associated with high-demand, ethically produced crops.`
+  },
+  {
+    title: "Technological Innovation in Modern Plantations",
+    image: "/images/Chille.png",
+    slug:"technological-innovation-in-modern-plantations",
+    description: `Oxaiura Plantation integrates cutting-edge technology to enhance crop productivity, quality, and sustainability. From precision agriculture tools to automated irrigation systems, technology enables the plantation to monitor conditions in real-time, optimize resource use, and minimize losses. 
+
+Advanced soil sensors measure moisture, nutrient levels, and pH, allowing for precise adjustments in fertilization and irrigation. Drone monitoring provides aerial imaging to detect pest infestations, crop health variations, and growth patterns. By leveraging these technologies, Oxaiura ensures that every plant receives optimal care, improving both yield and quality while reducing waste and environmental impact.
+
+In addition, the plantation uses data analytics to forecast production trends, plan harvest schedules, and align supply with market demands. Integrated farm management software tracks every stage of cultivation, providing actionable insights that enhance decision-making and operational efficiency. These technological advancements make Oxaiura a leader in modern plantation practices, combining traditional knowledge with innovative solutions.
+
+Employees are trained to operate and maintain these technologies effectively, fostering a culture of continuous improvement and adaptation. Investors and partners benefit from predictable, high-quality output, risk mitigation, and improved operational transparency. The adoption of technology reinforces Oxaiura Plantation’s commitment to excellence, sustainability, and global competitiveness in the agricultural sector.`
+  },
+  {
+    title: "Cultural and Economic Significance of Plantation Crops",
+    image: "/images/Chille.png",
+    slug:"cultural-and-economic-significance-of-plantation-crops",
+    description: `The crops cultivated at Oxaiura Plantation carry profound cultural and economic importance. Agarwood, Vanilla, TJC Mango, and other premium crops are not only valuable commodities but also embody centuries-old traditions, culinary heritage, and regional identity. 
+
+Agarwood, for example, is revered in many Asian cultures for its aromatic properties, spiritual significance, and use in perfumes and incense. Vanilla is celebrated globally for its rich flavor and culinary versatility. TJC Mango is prized for its taste, nutritional value, and symbolic status as the 'king of fruits.' By cultivating such crops, Oxaiura Plantation preserves heritage while catering to modern markets.
+
+Economically, these crops generate significant revenue streams for local communities and investors. The plantation creates employment opportunities, supports ancillary industries like processing, packaging, and logistics, and contributes to regional economic growth. Its commitment to sustainable practices ensures that these economic benefits do not come at the expense of environmental or social well-being.
+
+By blending cultural preservation with economic development, Oxaiura Plantation demonstrates how agriculture can be both profitable and socially responsible. Investors gain from high-value products with global demand, while communities benefit from sustainable employment and skill development. The plantation exemplifies a balanced approach where tradition, economy, and sustainability coexist harmoniously.`
   },
 ];
