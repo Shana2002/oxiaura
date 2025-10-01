@@ -3,18 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion"; // ✅ import motion
 import Comma from "@/assets/images/comma.png";
-
-const testimonials = [
-  {
-    id: 1,
-    name: "Alice",
-    text: "A truly remarkable experience! The plantation was breathtaking, and the guided tour offered deep insights into the history and process behind every crop. Highly recommend for nature lovers and curious minds alike!",
-  },
-  { id: 2, name: "Bob", text: "This is testimonial 2." },
-  { id: 3, name: "Charlie", text: "This is testimonial 3." },
-  { id: 4, name: "Diana", text: "This is testimonial 4." },
-  { id: 5, name: "Ethan", text: "This is testimonial 5." },
-];
+import { testimonials } from "@/assets/data.js";
 
 const Testimonial = () => {
   const [current, setCurrent] = useState(0);
@@ -83,12 +72,24 @@ const Testimonial = () => {
                 className="w-full h-full rounded-3xl bg-[rgba(255,255,255,0.4)]
                            shadow-[0_4px_30px_rgba(0,0,0,0.1)]
                            backdrop-blur-[6.4px]
-                           flex items-center justify-center flex-col"
+                           flex items-center justify-center flex-col gap-5"
               >
-                <p className="text-center text-white">{testimonial.text}</p>
-                <h3 className="font-bold text-lg text-white mt-4">
-                  {testimonial.name}
-                </h3>
+                <p className="text-center text-2xl px-10 text-white">
+                  {testimonial.comment}
+                </p>
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="size-25 rounded-full"
+                />
+                <div>
+                  <h3 className="font-bold text-xl text-white mt-4">
+                    {testimonial.name}
+                  </h3>
+                  <h3 className="font-bold text-white">
+                    {testimonial.position}
+                  </h3>
+                </div>
               </div>
               <Image
                 alt="customer-image"

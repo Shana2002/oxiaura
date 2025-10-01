@@ -3,38 +3,35 @@ import React, { useState } from 'react';
 import { Search, ShoppingCart, User, MessageSquare, Menu, X, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
+import {products} from "@/assets/data.js";
+import { useParams } from 'next/navigation';
 
 // Main App component
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const Hero = () => (
-    <div
-      className="relative h-[400px] sm:h-[550px] bg-cover bg-center flex items-center justify-center rounded-b-xl overflow-hidden shadow-2xl"
-      style={{
-        backgroundImage: 'url("https://placehold.co/1200x600/650000/ffffff?text=Product+Image+-+Scotch+Bonnet")',
-      }}
-    >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-      
-      {/* Content */}
-      <div className="relative text-center text-white p-6">
-        <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight">
-          Scotch bonnet
-        </h1>
-        <p className="text-xl sm:text-2xl mt-2 font-light">
-          Bold Heat, Naturally Grown
-        </p>
-      </div>
-    </div>
+  const { product } = useParams(); // get dynamic route param
+  const productData = products.find(
+    (item) => item.title.toLowerCase().replace(/\s+/g, "-") === product.toLowerCase()
   );
 
+  if (!productData) {
+    return (
+      <div className="min-h-screen flex flex-col bg-white">
+        <Navbar />
+        <main className="flex flex-col items-center justify-center flex-grow">
+          <h1 className="text-5xl font-bold text-red-600">Product not available</h1>
+          <p className="text-gray-600 mt-2">The product you are looking for doesn’t exist.</p>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
   const MetricBar = () => (
-    <div className="relative max-w-7xl mx-auto mt-[-30px] sm:mt-[-40px] ">
-      <div className="bg-white p-6 shadow-xl rounded-lg text-center border-t-4 border-[#006633]">
+    <div className="relative px-[5vw] my-5 mx-auto mt-[-30px] sm:mt-[-40px] ">
+      <div className="rounded-lg text-center ">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-[#006633]">
-          100K
+          {productData.watching}K
         </h2>
         <p className="text-lg text-gray-500 mt-1 mb-3">watching</p>
         <div className="mx-auto w-1/3 border-b-2 border-[#66cc33]"></div>
@@ -48,7 +45,7 @@ const App = () => {
   );
 
   const FeatureBlock = ({ title, content }) => (
-    <div className="bg-white p-6 sm:p-8 rounded-lg border-l-4 border-[#006633] shadow-md hover:shadow-lg transition duration-300 h-full">
+    <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 h-full w-5/12">
       <h3 className="text-2xl font-semibold text-[#006633] mb-3">{title}</h3>
       <p className="text-gray-600 leading-relaxed">
         {content}
@@ -118,16 +115,16 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       <Navbar/>
-      <main className="mx-auto py-8 max-w-7xl">
+      <main className="mx-auto py-8 px-[5vw]">
         {/* Career Hero Banner */}
-        <div className=" h-[50vh] mt-[15vh] relative rounded-lg mb-10 overflow-hidden flex items-end bg-[url('/images/scotchbonnet.png')] bg-center">
+        <div className={`h-[50vh] mt-[15vh] relative rounded-lg mb-10 overflow-hidden flex items-center justify-center bg-[url(${productData.image})] bg-contain bg-center`}>
           <div className="bg-black absolute top-0 left-0 w-full h-full opacity-65 rounded-lg"></div>
-          <div className="relative z-10 p-8 text-white">
+          <div className="relative z-10 p-8 text-white text-center">
             <h1 className="text-5xl font-bold mb-1">
-              sdsad
+              {productData.title}
             </h1>
             <p className="text-2xl font-light">
-              dsadsad
+              {productData.subtitle}
             </p>
           </div>
         </div>
@@ -138,24 +135,12 @@ const App = () => {
         <MetricBar />
 
         {/* Product Features Section */}
-        <section className="max-w-7xl mx-auto py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            <FeatureBlock
-              title="Fiery Flavor, Pure Quality"
-              content="Our Scotch bonnet chilies are meticulously selected to deliver an unparalleled kick of heat. Grown in rich, natural soil, they undergo rigorous quality checks, ensuring you receive a premium product that is both potent and pure. Perfect for authentic Caribbean and global cuisine, adding a signature fire to every dish."
-            />
-            <FeatureBlock
-              title="Sustainably Cultivated"
-              content="We prioritize ecological balance. By employing sustainable farming techniques, we not only protect the environment but also enhance the natural integrity and flavor profile of the chilies. This commitment to earth-friendly practices guarantees that every harvest is guilt-free and naturally exceptional."
-            />
-          </div>
-
-          {/* Farm to Market Callout */}
-          <div className="max-w-4xl mx-auto text-center py-8">
-            <h3 className="text-3xl font-bold text-gray-800 mb-4">From Farm to Global Market</h3>
-            <p className="text-lg text-gray-600">
-              Meticulous care is applied at every stage, from seed planting to final packaging. Our globally certified supply chain ensures that our chilies maintain peak freshness, flavor, and nutritional value, reaching your location quickly and efficiently while maintaining complete traceability.
-            </p>
+        <section className="mx-auto my-[10vh]">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 mx-[5vw]"> */}
+          <div className="flex items-center justify-center flex-wrap gap-8 mb-16 mx-[5vw]">
+            {productData.paragraphs.map((p,i)=>(
+              <FeatureBlock key={i} title={p.title} content={p.paragraph} />
+            ))}
           </div>
         </section>
 

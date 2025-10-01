@@ -27,7 +27,7 @@ const ProductHorizontalCard = ({ title, subtitle, desc,image,  link,side }) => {
           {desc}
         </p>
         <Link
-          href={`/products/${title}`}
+          href={link}
           className="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-green-800 transition duration-300"
         >
           Go to Product

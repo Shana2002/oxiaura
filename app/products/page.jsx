@@ -5,7 +5,8 @@ import Navbar from "@/components/common/Navbar";
 import ProductHorizontalCard from "@/components/ui/ProductHorizontalCard";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {products} from "@/assets/data.js";
+import { products } from "@/assets/data.js";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -140,13 +141,14 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="container mx-auto px-4 py-16"
       >
-        {products.slice(0,4).map((item, index) => (
+        {products.slice(0, 4).map((item, index) => (
           <ProductHorizontalCard
             key={index}
             title={item.title}
             desc={item.desc}
             subtitle={item.subtitle}
             image={item.image}
+            link={`/products/${item.slug}`}
             side={index} // alternate layout
           />
         ))}
@@ -160,26 +162,27 @@ export default function Home() {
         className="container mx-auto px-4 py-12"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {products.slice(4,7).map((product, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: i * 0.2 }}
-              className="relative rounded-lg overflow-hidden shadow-lg h-[70vh]"
-            >
-              <Image
-                src={product.image}
-                alt={product.title}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
-              <div className="absolute bottom-4 left-4 text-white px-2">
-                <h3 className="text-xl font-semibold">{product.title}</h3>
-                <p className="text-sm line-clamp-2 ">{product.desc}</p>
-              </div>
-            </motion.div>
+          {products.slice(4, 7).map((product, i) => (
+            <Link key={i} href={`/products/${product.slug}`}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                className="relative rounded-lg overflow-hidden shadow-lg h-[70vh]"
+              >
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                <div className="absolute bottom-4 left-4 text-white px-2">
+                  <h3 className="text-xl font-semibold">{product.title}</h3>
+                  <p className="text-sm line-clamp-2 ">{product.desc}</p>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </motion.section>
