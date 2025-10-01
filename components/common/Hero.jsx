@@ -5,6 +5,7 @@ import { FaArrowRight, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icon
 import { motion } from "framer-motion";
 import HeroImage2 from "@/assets/images/hero_image2.png";
 import HeroImage from "@/assets/images/hero_image.png";
+import HeroRightScroller from "../ui/HeroRightScroller";
 
 export default function Hero() {
   // Motion variants
@@ -80,25 +81,11 @@ export default function Hero() {
             />
           </div>
 
-          <div className="hidden lg:block relative w-full h-full">
-            <div className="image1 scale-[1.9] w-full h-full overflow-hidden ml-[170px] mt-[-100px]">
-              <Image
-                src={HeroImage}
-                alt="Hero Plantation"
-                fill
-                className="object-cover"
-                style={{
-                  WebkitMaskImage: 'url("/hero-mask.svg")',
-                  WebkitMaskRepeat: 'no-repeat',
-                  WebkitMaskSize: '100% 100%',
-                  WebkitMaskPosition: 'center',
-                  maskImage: 'url("/hero-mask.svg")',
-                  maskRepeat: 'no-repeat',
-                  maskSize: '100% 100%',
-                  maskPosition: 'left',
-                }}
-              />
-            </div>
+          <div className="hidden lg:block relative w-full h-full ">
+            
+              <HeroRightScroller />
+            
+            
 
             <div className="absolute bottom-15 xl:bottom-5 right-[-45] w-[64%] h-auto">
               <Image
