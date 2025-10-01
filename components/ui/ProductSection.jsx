@@ -1,42 +1,64 @@
+"use client"
 import Link from "next/link";
-import React from "react";
+import { motion } from "framer-motion";
 
 const ProductSection = () => {
+  // Container variant for staggering children
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2, // each child appears 0.2s after previous
+      },
+    },
+  };
+
+  // Item variant
+  const item = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+  };
+
   return (
-    // Outer container has flexible padding and minimum height
-    <div className="flex flex-col justify-center items-center px-6 md:px-12 lg:px-16 py-16 md:py-24 min-h-screen">
-      
-      {/* Grid Container:
-          - lg:h-[80vh] restores the necessary fixed height for the complex desktop grid layout.
-          - Mobile (default): grid-cols-1 stacks items.
-          - Tablet (sm): grid-cols-2 for a simple 2-column layout.
-          - Desktop (lg): Transitions to the complex 11-column, 3-row grid.
-      */}
+    <motion.div
+      className="flex flex-col justify-center items-center px-6 md:px-12 lg:px-16 py-16 md:py-24 min-h-screen"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.3 }} // triggers when 30% visible
+    >
+      {/* Grid */}
       <div className="grid w-full h-auto lg:h-[80vh] gap-4 md:gap-6 lg:gap-[17px] 
                       grid-cols-1 sm:grid-cols-2 
                       lg:grid-cols-[repeat(11,1fr)] lg:grid-rows-[repeat(3,1fr)]">
         
-        {/* Item 1: Agarwood (Main Large Block) */}
-        <div className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                        lg:col-span-4 lg:row-span-3 
-                        bg-[url('/images/agarwood.png')] bg-no-repeat bg-cover bg-center">
-        </div>
-        
-        {/* Item 2: Vanilla (Top Middle Block) */}
-        <div className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                        lg:col-span-3 lg:row-span-2 lg:col-start-5 lg:row-start-1
-                        bg-[url('/images/vanila.png')] bg-no-repeat bg-cover bg-center"></div>
-                        
-        {/* Item 3: Watermelon (Bottom Middle Block) */}
-        <div className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                        lg:col-span-3 lg:col-start-5 lg:row-start-3 
-                        bg-[url('/images/watermelon.png')] bg-no-repeat bg-cover bg-center"></div>
-                        
-        {/* Item 4: Scotch Bonnet (Right Large Block) */}
-        <div className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                        lg:col-span-4 lg:row-span-3 lg:col-start-8 lg:row-start-1
-                        bg-[url('/images/scotchbonnet.png')] bg-no-repeat bg-cover bg-center"></div>
-                        
+        <motion.div
+          className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
+                     lg:col-span-4 lg:row-span-3 
+                     bg-[url('/images/agarwood.png')] bg-no-repeat bg-cover bg-center"
+          variants={item}
+        />
+
+        <motion.div
+          className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
+                     lg:col-span-3 lg:row-span-2 lg:col-start-5 lg:row-start-1
+                     bg-[url('/images/vanila.png')] bg-no-repeat bg-cover bg-center"
+          variants={item}
+        />
+
+        <motion.div
+          className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
+                     lg:col-span-3 lg:col-start-5 lg:row-start-3 
+                     bg-[url('/images/watermelon.png')] bg-no-repeat bg-cover bg-center"
+          variants={item}
+        />
+
+        <motion.div
+          className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
+                     lg:col-span-4 lg:row-span-3 lg:col-start-8 lg:row-start-1
+                     bg-[url('/images/scotchbonnet.png')] bg-no-repeat bg-cover bg-center"
+          variants={item}
+        />
       </div>
 
       {/* View More Link */}
@@ -46,7 +68,7 @@ const ProductSection = () => {
       >
         View More
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

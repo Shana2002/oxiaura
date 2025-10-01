@@ -1,11 +1,30 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Plant from "@/assets/images/plant_img.png";
 
 export default function GetInTouch() {
+  // Motion variants
+  const leftVariant = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } },
+  };
+
+  const rightVariant = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } },
+  };
+
   return (
     <section className="bg-white py-20 px-5 md:px-20 flex flex-col md:flex-row gap-10">
       {/* Left Image + Partnerships */}
-      <div className="md:w-2/4 flex flex-col gap-6">
+      <motion.div
+        className="md:w-2/4 flex flex-col gap-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        variants={leftVariant}
+      >
         <div className="bg-green-700 w-full h-[50vh] relative rounded-lg overflow-hidden">
           <Image
             src={Plant}
@@ -16,23 +35,24 @@ export default function GetInTouch() {
         </div>
 
         <div className="flex items-center bg-gray-100 rounded-lg p-4">
-          <p
-            
-            
-            className="flex-1 bg-transparent outline-none px-2 py-2 text-gray-700"
-          >For partnerships and investments</p>
+          <p className="flex-1 bg-transparent outline-none px-2 py-2 text-gray-700">
+            For partnerships and investments
+          </p>
           <p className="font-semibold">email@oxiaura.com</p>
           <span className="ml-4 w-10 h-10 flex items-center justify-center bg-black text-white rounded-full cursor-pointer">
             &rarr;
           </span>
-          
         </div>
-
-        
-      </div>
+      </motion.div>
 
       {/* Right Form */}
-      <div className="md:w-1/2">
+      <motion.div
+        className="md:w-1/2"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        variants={rightVariant}
+      >
         <h1 className="text-3xl font-bold text-green-700 mb-6">Getting touch</h1>
         <form className="flex flex-col gap-4">
           <div className="flex flex-col md:flex-row gap-4">
@@ -80,7 +100,7 @@ export default function GetInTouch() {
             Send your message
           </button>
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,18 +1,35 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { motion } from "framer-motion";
 import HeroImage2 from "@/assets/images/hero_image2.png";
 import HeroImage from "@/assets/images/hero_image.png";
 
 export default function Hero() {
+  // Motion variants
+  const leftVariant = {
+    hidden: { x: -100, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 1, ease: "easeOut" } },
+  };
+
+  const rightVariant = {
+    hidden: { x: 100, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 1, ease: "easeOut" } },
+  };
+
   return (
     <section className="relative min-h-screen bg-gradient-to-b from-green-50 to-white overflow-hidden px-[5vw] py-16 lg:py-5 text-black">
       
-      {/* Grid Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8">
 
         {/* Left: Text Content */}
-        <div className="col-span-1 lg:col-span-5 flex flex-col gap-4 text-center lg:text-left z-10">
+        <motion.div
+          className="col-span-1 lg:col-span-5 flex flex-col gap-4 text-center lg:text-left z-10"
+          variants={leftVariant}
+          initial="hidden"
+          animate="visible"
+        >
           <h2 className="text-3xl md:text-6xl font-medium text-green-700">Connecting</h2>
           <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold text-green-700 leading-none">Nature</h1>
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-none">
@@ -23,7 +40,6 @@ export default function Hero() {
             bridge between nature and innovation.
           </p>
 
-          {/* CTA Button */}
           <Link
             href="#"
             className="relative flex items-center justify-between bg-black hover:bg-green-700 text-white rounded-full px-5 py-3 w-fit mx-auto lg:mx-0 transition duration-300"
@@ -34,7 +50,6 @@ export default function Hero() {
             </span>
           </Link>
 
-          {/* Social Icons */}
           <div className="flex justify-center lg:justify-start gap-4 mt-6">
             <a href="#" className="bg-green-700 text-white p-3 rounded-full hover:bg-green-800">
               <FaFacebookF />
@@ -46,12 +61,16 @@ export default function Hero() {
               <FaLinkedinIn />
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right: Images */}
-        <div className="col-span-1 lg:col-span-7 relative w-full h-[400px] md:h-[600px] lg:h-[100vh] flex justify-center lg:justify-end">
+        <motion.div
+          className="col-span-1 lg:col-span-7 relative w-full h-[400px] md:h-[600px] lg:h-[100vh] flex justify-center lg:justify-end"
+          variants={rightVariant}
+          initial="hidden"
+          animate="visible"
+        >
 
-          {/* Mobile: rounded rectangle */}
           <div className="lg:hidden w-full h-full rounded-2xl overflow-hidden">
             <Image
               src={HeroImage2}
@@ -61,28 +80,26 @@ export default function Hero() {
             />
           </div>
 
-          {/* Desktop: SVG mask */}
           <div className="hidden lg:block relative w-full h-full">
             <div className="image1 scale-[1.9] w-full h-full overflow-hidden ml-[170px] mt-[-100px]">
-            <Image
-              src={HeroImage}
-              alt="Hero Plantation"
-              fill
-              className="object-cover"
-              style={{
-                WebkitMaskImage: 'url("/hero-mask.svg")',
-      WebkitMaskRepeat: 'no-repeat',
-      WebkitMaskSize: '100% 100%',   // ✅ always fills
-      WebkitMaskPosition: 'center',
-      maskImage: 'url("/hero-mask.svg")',
-      maskRepeat: 'no-repeat',
-      maskSize: '100% 100%',        // ✅ no small mask
-      maskPosition: 'left',
-              }}
-            />
+              <Image
+                src={HeroImage}
+                alt="Hero Plantation"
+                fill
+                className="object-cover"
+                style={{
+                  WebkitMaskImage: 'url("/hero-mask.svg")',
+                  WebkitMaskRepeat: 'no-repeat',
+                  WebkitMaskSize: '100% 100%',
+                  WebkitMaskPosition: 'center',
+                  maskImage: 'url("/hero-mask.svg")',
+                  maskRepeat: 'no-repeat',
+                  maskSize: '100% 100%',
+                  maskPosition: 'left',
+                }}
+              />
             </div>
 
-            {/* Secondary overlapping image */}
             <div className="absolute bottom-15 xl:bottom-5 right-[-45] w-[64%] h-auto">
               <Image
                 src={HeroImage2}
@@ -94,7 +111,7 @@ export default function Hero() {
             </div>
           </div>
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );
