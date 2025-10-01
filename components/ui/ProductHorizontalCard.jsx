@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const ProductHorizontalCard = ({ title, subtitle, desc,image,  link,side }) => {
 
-    const col = side ? "flex-row-reverse" : "flex-row";
-    const textSide = side ? "text-right":"text-left";
+    const col = side % 2 !== 0 ? "flex-row-reverse" : "flex-row"
+    const textSide = side % 2 !== 0 ? "text-right" : "text-left";
     return (
     <div className= {`flex ${col} items-center justify-center md:justify-between mb-16 gap-6`}>
       <div className="md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0 mx-auto">
@@ -23,11 +23,11 @@ const ProductHorizontalCard = ({ title, subtitle, desc,image,  link,side }) => {
         <p className="text-gray-500 text-2xl font-semibold mb-2">
           {subtitle}
         </p>
-        <p className="text-gray-600 mb-6 leading-relaxed">
+        <p className="text-gray-600 mb-6 leading-relaxed line-clamp-3">
           {desc}
         </p>
         <Link
-          href="#"
+          href={`/products/${title}`}
           className="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-green-800 transition duration-300"
         >
           Go to Product
