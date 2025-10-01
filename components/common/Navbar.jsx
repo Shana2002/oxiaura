@@ -31,38 +31,38 @@ export default function Navbar() {
       {/* Left: Logo */}
       <nav className="flex items-center gap-6">
         <Link href="/" className="flex items-center">
-          <img src={logo} alt="OXIAURA Logo" className="h-10 w-auto" />
+          <img src={"/images/logo1.png"} alt="OXIAURA Logo" className="h-10 w-auto" />
         </Link>
 
         {/* Nav links */}
-        <ul className="hidden md:flex gap-6 list-none">
+        <ul className="hidden lg:flex gap-6 list-none">
           <li>
-            <Link href="/" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
+            <Link href="/" className="text-gray-800  font-semibold hover:text-green-600 transition-colors">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about-us" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
-              About us
+            <Link href="/about" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
+              About
             </Link>
           </li>
           <li>
-            <Link href="/products" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
+            <Link href="/products" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
               Products
             </Link>
           </li>
           <li>
-            <Link href="/plans" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
+            <Link href="/plans" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
               Investment plans
             </Link>
           </li>
           <li>
-            <Link href="/blog" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
+            <Link href="/blogs" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
               Blog
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-gray-800 font-medium hover:text-green-600 transition-colors">
+            <Link href="/contact" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
               Contact
             </Link>
           </li>
@@ -96,7 +96,7 @@ export default function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-gray-800 hover:text-green-600 transition-colors"
+          className="lg:hidden text-gray-800 hover:text-green-600 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -106,7 +106,7 @@ export default function Navbar() {
 
       {/* Mobile nav menu */}
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-white shadow-md lg:hidden">
           <ul className="flex flex-col items-center gap-4 py-4">
             <li>
               <Link

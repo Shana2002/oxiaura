@@ -69,7 +69,7 @@ const services = [
 
 export default function App() {
   return (
-    <div className="bg-gradient-to-r from-[#f5fff1] to-white">
+    <div className="bg-gradient-to-r from-[#f5fff1] to-white text-black">
       <Navbar />
       {/* Mission Section */}
 <div className="h-screen flex flex-col w-full items-center justify-center px-4 md:px-0">

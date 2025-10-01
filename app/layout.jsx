@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
       
-        className={`${inter.variable} antialiased`}
+        className={`${inter.variable} antialiased text-black`}
       >
          {/* WhatsApp Floating Button */}
       <a

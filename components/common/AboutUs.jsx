@@ -5,7 +5,7 @@ import LogoLarge from '@/assets/images/logo_large.png'
 
 export default function AboutUs() {
   return (
-    <section className="relative bg-gradient-to-r from-[#CDFFB7] to-white min-h-screen overflow-hidden py-8 md:py-2">
+    <section className="relative bg-gradient-to-r from-[#CDFFB7] to-white min-h-screen overflow-hidden py-8 md:py-2 text-black">
       
       {/* Bottom Background Image - Adjusted for better mobile visibility */}
       <Image

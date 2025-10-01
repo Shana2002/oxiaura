@@ -65,7 +65,7 @@ const Testimonial = () => {
                   </p>
                   <h3 className="font-bold text-lg text-white">{testimonial.name}</h3>
                 </div>
-                <Image src={Comma} className="absolute top-0 left-0 text-9xl text-white w-1/12" />
+                <Image alt="customer-image" src={Comma} className="absolute top-0 left-0 text-9xl text-white w-1/12" />
               </div>
             ))}
           </div>

@@ -6,7 +6,7 @@ import HeroImage from "@/assets/images/hero_image.png";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-green-50 to-white overflow-hidden px-[5vw] py-5">
+    <section className="relative min-h-screen bg-gradient-to-b from-green-50 to-white overflow-hidden px-[5vw] py-16 lg:py-5 text-black">
       
       {/* Grid Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8">
@@ -52,12 +52,12 @@ export default function Hero() {
         <div className="col-span-1 lg:col-span-7 relative w-full h-[400px] md:h-[600px] lg:h-[100vh] flex justify-center lg:justify-end">
 
           {/* Mobile: rounded rectangle */}
-          <div className="lg:hidden w-full h-full rounded-[30px] overflow-hidden">
+          <div className="lg:hidden w-full h-full rounded-2xl overflow-hidden">
             <Image
               src={HeroImage2}
               alt="Hero Plantation"
               fill
-              className="object-cover"
+              className="object-center rounded-2xl"
             />
           </div>
 
@@ -83,7 +83,7 @@ export default function Hero() {
             </div>
 
             {/* Secondary overlapping image */}
-            <div className="absolute bottom-15 right-[-45] w-[64%] h-auto">
+            <div className="absolute bottom-15 xl:bottom-5 right-[-45] w-[64%] h-auto">
               <Image
                 src={HeroImage2}
                 alt="Hands Planting"
