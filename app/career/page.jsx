@@ -1,4 +1,6 @@
 "use client"
+import Footer from '@/components/common/Footer';
+import Navbar from '@/components/common/Navbar';
 import React from 'react';
 
 // Reusable Job Card Component
@@ -63,55 +65,16 @@ const CareerPage = () => {
   return (
     <div className="min-h-screen bg-white font-['Inter',_sans-serif]">
       {/* 1. Navigation Bar */}
-      <nav className="sticky top-0 z-10 w-full bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <svg viewBox="0 0 24 24" className="h-6 w-6 text-emerald-600" fill="currentColor">
-              <path d="M12 2L2 22h20L12 2zm0 13l4-8H8l4 8z" />
-            </svg>
-            <span className="text-xl font-extrabold text-gray-800">EXIAURA</span>
-          </div>
-
-          {/* Nav Links (Hidden on small screens for simplicity) */}
-          <div className="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
-            {['Home', 'About us', 'Products', 'Investment plans', 'Blog', 'Contact'].map((item) => (
-              <a key={item} href="#" className="hover:text-emerald-600 transition-colors">
-                {item}
-              </a>
-            ))}
-          </div>
-
-          {/* Search and Profile */}
-          <div className="flex items-center space-x-4">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search"
-                className="w-32 border border-gray-300 rounded-full px-4 py-1 text-sm focus:ring-emerald-500 focus:border-emerald-500 transition-all hidden sm:block"
-              />
-              <svg className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-            <svg className="h-7 w-7 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* 2. Hero Section */}
-      <header className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+      <section className='w-full h-screen flex items-center justify-center flex-col'>
+        <div className="relative px-[5vw] w-[90vw] rounded-4xl h-[40vh] overflow-hidden">
         {/* Background Image */}
         <img
-          src="https://placehold.co/1200x500/10b981/ffffff?text=Diverse+Team"
+          src="/images/career_image_1.png"
           alt="Diverse team of professionals smiling"
           className="absolute inset-0 w-full h-full object-cover"
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = 'https://placehold.co/1200x500/10b981/ffffff?text=Team+Image';
-          }}
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gray-900/60" />
@@ -125,19 +88,16 @@ const CareerPage = () => {
             Cultivating Success
           </p>
         </div>
-      </header>
-
-      {/* 3. Quote Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-lg italic text-gray-700 font-medium">
+      </div>
+      <div className="mx-auto px-4 text-center mt-44">
+          <p className="text-2xl italic text-gray-700 font-medium">
             "Be part of a company that blends innovation, sustainability, and opportunity."
           </p>
         </div>
       </section>
 
       {/* 4. Available Opportunities Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="mx-auto px-4 sm:px-6 lg:px-8 w-[90vw] py-12 mb-20">
         {/* Heading and Count */}
         <div className="flex justify-between items-end mb-8 border-b border-gray-200 pb-4">
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900">
@@ -160,6 +120,7 @@ const CareerPage = () => {
           ))}
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
