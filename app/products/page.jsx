@@ -1,3 +1,5 @@
+
+import Navbar from '@/components/common/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -5,26 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <header className="relative bg-gradient-to-r from-green-700 to-green-900 text-white py-4 px-6 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <div className="h-8 w-8 bg-white rounded-full flex items-center justify-center">
-            {/* Placeholder for logo */}
-            <span className="text-green-700 font-bold">L</span>
-          </div>
-          <span className="text-xl font-semibold">OXIAURA</span>
-        </div>
-        <nav className="hidden md:flex space-x-6">
-          <Link href="#" className="hover:text-green-200">Home</Link>
-          <Link href="#" className="hover:text-green-200">About</Link>
-          <Link href="#" className="hover:text-green-200">Products</Link>
-          <Link href="#" className="hover:text-green-200">Contact</Link>
-        </nav>
-        <button className="md:hidden p-2 rounded-md hover:bg-green-800">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </header>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative text-center py-16 md:py-24 bg-cover bg-center" style={{ backgroundImage: "url('/placeholder-leaves.png')" }}>
@@ -55,7 +38,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="relative rounded-lg overflow-hidden shadow-lg h-64">
             <Image
-              src="/placeholder-chilli.png"
+              src="/images/scotchbonnet.png"
               alt="Chilli"
               layout="fill"
               objectFit="cover"
@@ -70,7 +53,7 @@ export default function Home() {
 
           <div className="relative rounded-lg overflow-hidden shadow-lg h-64">
             <Image
-              src="/placeholder-agarwood.png"
+              src="/images/agarwood.png"
               alt="Agarwood"
               layout="fill"
               objectFit="cover"
@@ -85,7 +68,7 @@ export default function Home() {
 
           <div className="relative rounded-lg overflow-hidden shadow-lg h-64">
             <Image
-              src="/placeholder-greenbean.png"
+              src="/images/vanila.png"
               alt="Green Bean"
               layout="fill"
               objectFit="cover"
