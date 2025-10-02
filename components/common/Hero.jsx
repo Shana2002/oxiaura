@@ -4,9 +4,7 @@ import Link from "next/link";
 import { FaArrowRight, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-
-// Leaf image
-import Leaf from "@/public/images/leaf.png";
+import Leaf from "@/assets/images/leaf.png";
 
 export default function Hero() {
   const leftVariant = {

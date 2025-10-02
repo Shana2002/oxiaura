@@ -13,17 +13,17 @@ export default function Home() {
 
       {/* Hero Section */}
       <motion.section
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         className="overflow-hidden h-[70vh] flex items-center justify-center flex-col"
       >
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="relative w-[90vw] h-[50vh] rounded-4xl flex items-center"
           style={{
             backgroundImage: `url(${plantationBlogs[0].image})`,
@@ -55,10 +55,10 @@ export default function Home() {
 
       {/* Story Section with fade-up animation */}
       <motion.div
-        initial={{ opacity: 0, y: 80 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <StorySecion
           title="Top rated stories"

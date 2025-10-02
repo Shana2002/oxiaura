@@ -34,31 +34,43 @@ const ProductSection = () => {
         
         <motion.div
           className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                     lg:col-span-4 lg:row-span-3 
+                     lg:col-span-4 lg:row-span-3  relative
                      bg-[url('/images/agarwood.png')] bg-no-repeat bg-cover bg-center"
           variants={item}
-        />
+        >
+          <div className="absolute w-full h-full bg-gradient-to-t from-black/72 to-black/0 top-0 left-0 "></div>
+          <p className="absolute bottom-0 px-10 py-12">Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.</p>
+        </motion.div>
 
         <motion.div
           className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                     lg:col-span-3 lg:row-span-2 lg:col-start-5 lg:row-start-1
+                     lg:col-span-3 lg:row-span-2 lg:col-start-5 lg:row-start-1 relative
                      bg-[url('/images/vanila.png')] bg-no-repeat bg-cover bg-center"
           variants={item}
-        />
+        >
+          <div className="absolute w-full h-full bg-gradient-to-t from-black/72 to-black/0 top-0 left-0 "></div>
+          <p className="absolute bottom-0 px-10 py-12">Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.</p>
+        </motion.div>
 
         <motion.div
           className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                     lg:col-span-3 lg:col-start-5 lg:row-start-3 
+                     lg:col-span-3 lg:col-start-5 lg:row-start-3  relative
                      bg-[url('/images/watermelon.png')] bg-no-repeat bg-cover bg-center"
           variants={item}
-        />
+        >
+          <div className="absolute w-full h-full bg-gradient-to-t from-black/72 to-black/0 top-0 left-0 "></div>
+          <p className="absolute bottom-0 px-10 py-12">Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.</p>
+        </motion.div>
 
         <motion.div
           className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                     lg:col-span-4 lg:row-span-3 lg:col-start-8 lg:row-start-1
+                     lg:col-span-4 lg:row-span-3 lg:col-start-8 lg:row-start-1 relative
                      bg-[url('/images/scotchbonnet.png')] bg-no-repeat bg-cover bg-center"
           variants={item}
-        />
+        >
+          <div className="absolute w-full h-full bg-gradient-to-t from-black/72 to-black/0 top-0 left-0 "></div>
+          <p className="absolute bottom-0 px-10 py-12">Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.</p>
+        </motion.div>
       </div>
 
       {/* View More Link */}

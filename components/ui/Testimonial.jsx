@@ -63,7 +63,7 @@ const Testimonial = () => {
       <div className="relative w-full flex justify-center h-full overflow-hidden">
         <motion.div
           ref={containerRef}
-          className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory w-full lg:w-[80%] no-scrollbar cursor-grab"
+          className="flex overflow-x-hidden overflow-y-hidden h-full scroll-smooth snap-x snap-mandatory w-full lg:w-[80%] no-scrollbar cursor-grab"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           onDragEnd={handleDragEnd}

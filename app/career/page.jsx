@@ -1,4 +1,5 @@
 "use client";
+
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import { jobs } from "@/assets/data.js";
@@ -8,15 +9,14 @@ import { motion } from "framer-motion";
 const CareerPage = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      {/* 1. Navigation Bar */}
+      {/* Navigation Bar */}
       <Navbar />
 
-      {/* 2. Hero Section */}
+      {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.2 }}
         className="w-full h-[70vh] flex items-center justify-center flex-col"
       >
         <div className="relative px-[5vw] w-[90vw] rounded-4xl h-[40vh] overflow-hidden">
@@ -39,11 +39,12 @@ const CareerPage = () => {
             </p>
           </div>
         </div>
+
+        {/* Quote */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: false }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="mx-auto px-4 text-center mt-20"
         >
           <p className="text-2xl italic text-gray-700 font-medium">
@@ -53,20 +54,18 @@ const CareerPage = () => {
         </motion.div>
       </motion.section>
 
-      {/* 4. Available Opportunities Section */}
+      {/* Available Opportunities Section */}
       <motion.section
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: false, amount: 0.3 }}
         className="mx-auto px-4 sm:px-6 lg:px-8 w-[90vw] py-12 mb-20"
       >
         {/* Heading and Count */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false }}
           className="flex justify-between items-end mb-8 border-b border-gray-200 pb-4"
         >
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900">
@@ -77,15 +76,25 @@ const CareerPage = () => {
           </span>
         </motion.div>
 
-        {/* Job Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Job Cards Grid with stagger animation */}
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: {},
+            show: {
+              transition: { staggerChildren: 0.15 },
+            },
+          }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {jobs.map((job, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: false }}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                show: { opacity: 1, y: 0 },
+              }}
             >
               <JobCard
                 title={job.title}
@@ -95,8 +104,10 @@ const CareerPage = () => {
               />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </motion.section>
+
+      {/* Footer */}
       <Footer />
     </div>
   );
