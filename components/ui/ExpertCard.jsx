@@ -12,7 +12,7 @@ const ExpertCard = ({ name, title, bio, imageUrl }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg p-6 h-[70vh] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-green-100">
     {/* Profile Image Placeholder */}
-    <div className="w-28 h-28 rounded-full bg-green-200 mb-4 overflow-hidden border-4 border-white shadow-md">
+    <div className="  mb-4 overflow-hidden">
       {/* Using a placeholder for the expert image */}
       <img
         src={imageUrl}

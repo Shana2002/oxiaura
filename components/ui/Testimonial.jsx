@@ -39,7 +39,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="px-[5vw] py-20 text-center h-screen">
+    <div className="px-[5vw] py-20 text-center h-full lg:h-screen">
       <motion.div
         initial={{ opacity: 0, y: -100 }}
         whileInView={{ opacity: 1, y: 0 }}

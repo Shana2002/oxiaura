@@ -23,19 +23,19 @@ const teamMembers = [
     name: "Mr. Jagath Premal",
     title: "Director",
     bio: "Mr. Jagath Premal has over 30 years of experience in top management roles in Sri Lanka's plantation and insurance sectors and Director of Principal officer Fairwell Insurance Brokers, earning national and international awards.",
-    imageUrl: "https://oxiaura.com/wp-content/uploads/2025/01/222.jpg",
+    imageUrl: "/images/Chairman.png",
   },
   {
     name: "Dr. Susantha Kosgolla",
     title: "Director",
     bio: "International Nelson mandela pease award 2019 winner . lanka abhimani Honorary title . PHD honor National American business university . Member of Lions club international. Sectary of Young Men Buddhist Association (YMBA – Kurunegala ) . Chairmen of Oxiflame Cosmetics (Pvt) Ltd. Chairmen of OlixCeylon (Pvt) Ltd. Member of Million Dollar Round Table .",
-    imageUrl: "https://oxiaura.com/wp-content/uploads/2025/01/9.jpg",
+    imageUrl: "/images/MD.png",
   },
   {
     name: "Sharman Kulathilaka",
-    title: "Lead R&D Scientist",
+    title: "Cheif Executive Officer",
     bio: "35 years in Insurance industry experience.  Retired ad GM(Sales) People Insurance PLC.  Dip in MKTG(SLIM) . MBA(UK) , MSLIM ,MCIM",
-    imageUrl: "https://oxiaura.com/wp-content/uploads/2025/09/Untitled-1.png",
+    imageUrl: "/images/CEO.png",
   },
 ];
 
