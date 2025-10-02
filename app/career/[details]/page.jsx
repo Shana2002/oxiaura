@@ -1,6 +1,5 @@
 "use client"
 import React from 'react';
-import { Search, User, Mail, Phone, MapPin } from 'lucide-react';
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
 import { useParams } from 'next/navigation';
@@ -11,7 +10,7 @@ const CareerDetailsPage = () => {
   const {details} = useParams();
   const jobData = jobs.find((item)=>item.slug.toLowerCase().replace(/\s+/g, "-")===details.toLowerCase())
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-hidden">
       <Navbar />
       <main className="mx-auto py-8 px-[5vw]">
         {/* Career Hero Banner */}
@@ -81,7 +80,7 @@ const CareerDetailsPage = () => {
               onClick={() => console.log('Apply Now clicked!')}
               className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-green-300"
             >
-              Apply now
+              Send CV to info@oxiaura.com
             </button>
           </section>
         </div>

@@ -1,43 +1,42 @@
+"use client";
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import StorySecion from "@/components/ui/StorySecion";
 import { plantationBlogs } from "@/assets/data.js";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Home() {
-  const stories = [
-    {
-      image: "/images/Chille.png",
-      title: "Red Chilli project",
-      desc: "From farm to flavor—our red chillies...",
-    },
-    {
-      image: "/images/plant3.png",
-      title: "Red Chilli project",
-      desc: "From farm to flavor—our red chillies...",
-    },
-    {
-      image: "/images/plant3.png",
-      title: "Red Chilli project",
-      desc: "From farm to flavor—our red chillies...",
-    },
-  ];
-
   return (
     <div className="bg-white">
       <Navbar />
-      <section className="overflow-hidden h-[70vh] flex items-center justify-center flex-col">
-        <div
-          className={`relative w-[90vw] h-[50vh]  rounded-4xl flex items-center `}
+
+      {/* Hero Section */}
+      <motion.section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
+        className="overflow-hidden h-[70vh] flex items-center justify-center flex-col"
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false }}
+          className="relative w-[90vw] h-[50vh] rounded-4xl flex items-center"
           style={{
             backgroundImage: `url(${plantationBlogs[0].image})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
+          {/* Overlay */}
           <div className="absolute w-full h-full bg-black opacity-40 rounded-4xl "></div>
-          <div className="px-[5vw] z-30">
-            <h1 className="text-3xl md:text-4xl font-bold text-white">
+
+          {/* Hero Text */}
+          <div className="px-[5vw] z-30 text-white">
+            <h1 className="text-3xl md:text-4xl font-bold">
               {plantationBlogs[0].title}
             </h1>
             <p className="mt-3 max-w-2xl line-clamp-2">
@@ -51,14 +50,22 @@ export default function Home() {
               Read full article
             </Link>
           </div>
-        </div>
-      </section>
-      <StorySecion
-        title="Top rated stories"
-        stories={plantationBlogs.slice(1, 4)}
-      />
-      {/* <StorySecion title="Posted by Oxiaura" stories={stories} />
-      <StorySecion title="Everything Green" stories={stories} /> */}
+        </motion.div>
+      </motion.section>
+
+      {/* Story Section with fade-up animation */}
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        <StorySecion
+          title="Top rated stories"
+          stories={plantationBlogs.slice(1, 4)}
+        />
+      </motion.div>
+
       <Footer />
     </div>
   );
