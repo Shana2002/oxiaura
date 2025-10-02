@@ -32,7 +32,7 @@ const teamMembers = [
     imageUrl: "/images/MD.png",
   },
   {
-    name: "Sharman Kulathilaka",
+    name: "Mr. Sharman Kulatilake",
     title: "Cheif Executive Officer",
     bio: "35 years in Insurance industry experience.  Retired ad GM(Sales) People Insurance PLC.  Dip in MKTG(SLIM) . MBA(UK) , MSLIM ,MCIM",
     imageUrl: "/images/CEO.png",
@@ -44,25 +44,25 @@ const services = [
     title: "Premium Plantation Products",
     description:
       "From Agarwood to Vanilla and Snake Chilli, we cultivate quality.",
-    image:"/images/what_we_1.png"
+    image: "/images/what_we_1.png"
   },
   {
     title: "Responsible Investment Opportunities",
     description:
       "Grow with us through sustainable agriculture ventures and property investments.",
-    image:"/images/what_we_2.png"
+    image: "/images/what_we_2.png"
   },
   {
     title: "Strong Distribution, Local Care",
     description:
       "We deliver superior products to international markets with transparency and eco-conscious practices.",
-    image:"/images/what_we_3.png"
+    image: "/images/what_we_3.png"
   },
 ];
 
 export default function App() {
   return (
-    <div className="bg-gradient-to-r from-[#f5fff1] to-white text-black">
+    <div className="bg-gradient-to-r from-[#f5fff1] to-white text-black overflow-x-hidden">
       <Navbar />
       {/* Mission Section */}
       <motion.div
@@ -121,19 +121,32 @@ export default function App() {
             {/* First box: full width on mobile, large on desktop */}
             <MissionBox
               title="Who we Are"
-              description="Oxiaura Group, established in 1999, is a diversified conglomerate with operations spanning distribution, manufacturing, plantations, and vehicle sales. The group’s portfolio includes partnerships with major brands like AMW and Lanka Wall Tile, Lanka Flow Tile, Ruhuna Foods, Edna, along with ventures in furniture and manufacturing food, cosmetics and food supplement. In addition, it runs Amunukuttiya Plantation and Thisari Traders, specializing in the import and sale of Japanese vehicles. Oxiaura Group is committed to growth, innovation, and sustainability across its diverse business sectors."
+              description=" Oxiaura Group, established in 1996, is a 
+diversified conglomerate with operations 
+spanning imports, distribution, 
+manufacturing and plantation . The 
+group’s portfolio includes partnerships 
+with major brands like Lanka Wall Tiles, 
+Lanka Floor Tiles, Edna, AMW  along with 
+ventures in foods, cosmetics and food 
+supplements. In addition, it runs 
+specializing in the import and sale of 
+Japanese vehicles and bath ware, 
+accessories. Oxiaura Group is  committed 
+to growth, innovation, and sustainability 
+across its diverse business sectors."
               className="w-full md:col-span-2"
             />
 
             {/* Second and third boxes: stacked on mobile, side-by-side on desktop */}
             <MissionBox
               title="Our Mission"
-              description="We aim to create a sustainable future."
+              description=" To be the foremost agricultural company in sri lanka"
               className="w-full"
             />
             <MissionBox
               title="Our Vision"
-              description="Driving innovation for ecological and financial sustainability."
+              description=" To adopt the best agricultural practice and deliver highest return to our valued customers and stake holders."
               className="w-full"
             />
           </div>
