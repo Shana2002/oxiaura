@@ -74,7 +74,7 @@ const Testimonial = () => {
                            backdrop-blur-[6.4px]
                            flex items-center justify-center flex-col gap-5"
               >
-                <p className="text-center text-2xl px-10 text-white">
+                <p className="text-center text-sm lg:text-xl px-10 text-white">
                   {testimonial.comment}
                 </p>
                 <img

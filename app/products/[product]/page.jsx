@@ -45,7 +45,7 @@ const App = () => {
   );
 
   const FeatureBlock = ({ title, content }) => (
-    <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 h-full w-5/12">
+    <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 h-full lg:w-5/12">
       <h3 className="text-2xl font-semibold text-[#006633] mb-3">{title}</h3>
       <p className="text-gray-600 leading-relaxed">
         {content}
@@ -62,7 +62,7 @@ const App = () => {
     ];
 
     return (
-      <div className="max-w-6xl mx-auto px-4 py-16">
+      <div className="max-w-6xl mx-auto px-4 py-16 h-screen">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">Project Timeline</h2>
         <div className="w-1/4 mx-auto border-b-2 border-[#66cc33] mb-12"></div>
 

@@ -62,8 +62,8 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
-              Contact
+            <Link href="/career" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
+              Career
             </Link>
           </li>
         </ul>
@@ -119,7 +119,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/about-us"
+                href="/about"
                 className="text-gray-800 hover:text-green-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
@@ -146,7 +146,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/blog"
+                href="/blogs"
                 className="text-gray-800 hover:text-green-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
@@ -155,11 +155,11 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/contact"
+                href="/Career"
                 className="text-gray-800 hover:text-green-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Contact
+                Career
               </Link>
             </li>
           </ul>
