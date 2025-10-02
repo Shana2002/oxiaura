@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion"; // ✅ import motion
+import { motion } from "framer-motion";
 import Comma from "@/assets/images/comma.png";
 import { testimonials } from "@/assets/data.js";
 
@@ -14,7 +14,6 @@ const Testimonial = () => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % testimonials.length);
     }, 6000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -28,92 +27,99 @@ const Testimonial = () => {
     }
   }, [current]);
 
-  // Motion variants for cards
   const cardVariant = {
     hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+  };
+
+  // Handle drag end
+  const handleDragEnd = (event, info) => {
+    const containerWidth = containerRef.current.offsetWidth;
+    if (info.offset.x < -50 && current < testimonials.length - 1) {
+      setCurrent(current + 1);
+    } else if (info.offset.x > 50 && current > 0) {
+      setCurrent(current - 1);
+    }
   };
 
   return (
-    <div className="px-[5vw] py-20 text-center h-full lg:h-screen">
+    <section className="px-6 lg:px-[5vw] py-16 lg:py-32 ">
+      {/* Section Header */}
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.6 }}
         viewport={{ amount: 0.3 }}
-        className="flex items-center justify-center gap-5"
+        className="flex flex-col lg:flex-row items-center justify-center gap-4 mb-16"
       >
-        <hr className="border-white mb-8 w-1/8 border-2" />
-        <h2 className="text-4xl font-semibold mb-10 text-white">
+        <hr className="border-white w-16 lg:w-32 border-2" />
+        <h2 className="text-3xl lg:text-5xl font-bold text-white text-center">
           What Clients Say
         </h2>
-        <hr className="border-white mb-8 w-1/8 border-2" />
+        <hr className="border-white w-16 lg:w-32 border-2" />
       </motion.div>
 
-      <div className="mx-auto flex flex-col items-center gap-6 w-full h-[70vh] overflow-hidden rounded-lg shadow p-5">
-        <div
+      {/* Carousel */}
+      <div className="relative w-full flex justify-center h-full overflow-hidden">
+        <motion.div
           ref={containerRef}
-          className="flex overflow-hidden h-[70vh] w-full rounded-lg shadow"
+          className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory w-full lg:w-[80%] no-scrollbar cursor-grab"
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          onDragEnd={handleDragEnd}
         >
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              className="flex-shrink-0 w-full flex flex-col items-center justify-center p-6 relative"
+              className="flex-shrink-0 w-full over snap-center"
               initial="hidden"
               whileInView="visible"
-              viewport={{ amount: 0.3 }} // triggers every time 30% visible
+              viewport={{ amount: 0.3 }}
               variants={cardVariant}
             >
-              <div
-                className="w-full h-full rounded-3xl bg-[rgba(255,255,255,0.4)]
-                           shadow-[0_4px_30px_rgba(0,0,0,0.1)]
-                           backdrop-blur-[6.4px]
-                           flex items-center justify-center flex-col gap-5"
-              >
-                <p className="text-center text-sm lg:text-xl px-10 text-white">
+              <div className="relative bg-white/20 backdrop-blur-md rounded-3xl shadow-xl p-8 lg:p-12 flex flex-col items-center text-center gap-6">
+                <Image
+                  alt="quote"
+                  src={Comma}
+                  className="absolute top-4 left-4 w-10 lg:w-16 opacity-30"
+                />
+                <p className="text-white text-base lg:text-lg leading-relaxed px-4 lg:px-16">
                   {testimonial.comment}
                 </p>
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="size-25 rounded-full"
-                />
+                <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-full overflow-hidden border-4 border-white/50">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div>
-                  <h3 className="font-bold text-xl text-white mt-4">
+                  <h3 className="text-white font-semibold text-lg lg:text-xl">
                     {testimonial.name}
                   </h3>
-                  <h3 className="font-bold text-white">
+                  <p className="text-white/80 text-sm lg:text-base">
                     {testimonial.position}
-                  </h3>
+                  </p>
                 </div>
               </div>
-              <Image
-                alt="customer-image"
-                src={Comma}
-                className="absolute top-0 left-0 w-1/12"
-              />
             </motion.div>
           ))}
-        </div>
-
-        {/* Indicator Dots */}
-        <div className="flex justify-center mt-4 space-x-2">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrent(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === current ? "bg-green-500 scale-125" : "bg-gray-300"
-              }`}
-            />
-          ))}
-        </div>
+        </motion.div>
       </div>
-    </div>
+
+      {/* Indicator Dots */}
+      <div className="flex justify-center mt-8 gap-3">
+        {testimonials.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === current ? "bg-green-500 scale-125" : "bg-gray-400"
+            }`}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 

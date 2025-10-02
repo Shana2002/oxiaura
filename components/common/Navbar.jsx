@@ -76,13 +76,13 @@ export default function Navbar() {
           <input
             type="search"
             placeholder="Search"
-            className="border border-green-600 rounded-full px-4 py-1.5 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-green-600"
+            className="border border-green-600 rounded-full px-4 py-1.5 pr-10 text-sm focus:outline-none focus:ring-0 focus:ring-green-600"
           />
           <button
             type="submit"
-            className="absolute right-0 top-0 w-8 h-full flex items-center justify-center rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors p-"
+            className="absolute right-[-2] top-[-2] w-10 h-10 flex items-center justify-center rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors p-"
           >
-            <Search size={25} />
+            <Search size={20} />
           </button>
         </div>
 
@@ -162,7 +162,24 @@ export default function Navbar() {
                 Career
               </Link>
             </li>
+            <li>
+              
+            </li>
           </ul>
+          <div className="relative  text-black p-6 flex justify-center items-center mt-[-2vh] gap-2">
+          <input
+            type="search"
+            placeholder="Search"
+            className="border border-green-600 rounded-full px-4 py-1.5 pr-10 text-sm focus:outline-none focus:ring-0 focus:ring-green-600"
+          />
+          <button
+            type="submit"
+            className=" w-10 h-10 flex items-center justify-center rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors p-"
+          >
+            <Search size={25} />
+          </button>
+        </div>
+          
         </div>
       )}
     </header>
