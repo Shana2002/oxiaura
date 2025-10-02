@@ -3,35 +3,13 @@ import React from 'react';
 import { Search, User, Mail, Phone, MapPin } from 'lucide-react';
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
-
-// Mock Data for the Job Posting (directly from the image content)
-const jobData = {
-  title: 'Business Administrator',
-  level: 'Senior',
-  description: "At OxiAura Plantation Pvt. Ltd., we combine eco-friendly practices with modern innovation to deliver high-quality agricultural products that shape a greener, better-fed world. This role is crucial to coordinating daily operations, managing project timelines, and ensuring seamless communication across departments. This position is ideal for someone who is highly organized, detail-oriented, and passionate about driving efficiency within a growing, sustainability-focused organization.",
-  qualifications: [
-    "Bachelor's degree in Business Administration, Management, Finance, or related field (Master's degree is an added advantage).",
-    "Strong knowledge of business operations, budgeting, and reporting tools.",
-    "Excellent communication and leadership skills.",
-    "Strong computer skills, with proficiency in MS Office Suite and business management software."
-  ],
-  experience: [
-    "Minimum of 3 years of experience in business administration, office management, or operations coordination.",
-    "Proven track record of managing administrative functions, vendor relations, and business reporting.",
-    "Experience in agriculture, FMCG, or manufacturing sectors is an advantage but not mandatory."
-  ],
-  offers: [
-    "Competitive salary package with performance-based bonuses.",
-    "Opportunities for career growth and professional development.",
-    "A supportive, team-oriented and collaborative environment.",
-    "Exposure to international markets and innovative plantation projects.",
-    "Employee welfare benefits, including healthcare coverage and training programs."
-  ],
-  salary: "LKR 90,000 - 120,000 per month (based on qualifications and experience)."
-};
+import { useParams } from 'next/navigation';
+import {jobs} from '@/assets/data.js'
 
 
 const CareerDetailsPage = () => {
+  const {details} = useParams();
+  const jobData = jobs.find((item)=>item.slug.toLowerCase().replace(/\s+/g, "-")===details.toLowerCase())
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
