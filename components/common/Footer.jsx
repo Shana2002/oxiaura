@@ -1,9 +1,16 @@
 import Link from "next/link";
 import React from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaEnvelope } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPhone,
+  FaEnvelope,
+} from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
-import GroupLogoWhite from "@/assets/images/logo_group_white.png";
+import GroupLogoWhite from "@/assets/images/logo/logo_group_white.png";
 import Image from "next/image";
+import { companies } from "@/assets/data";
 
 const Footer = () => {
   return (
@@ -12,10 +19,14 @@ const Footer = () => {
         {/* Left Section */}
         <div className="md:w-1/4">
           <div className="w-1/2 flex items-center gap-2">
-            <Link href={"/"}><Image src={GroupLogoWhite} alt="white-oxaiura-logo" /></Link>
+            <Link href={"/"}>
+              <Image src={GroupLogoWhite} alt="white-oxaiura-logo" />
+            </Link>
           </div>
           <p className="mt-4 text-sm">
-            Oxiaura Plantation Pvt. Ltd. specializes in sustainable plantation management, eco-friendly products, and investment opportunities, focusing on innovation and growth.
+            Oxiaura Plantation Pvt. Ltd. specializes in sustainable plantation
+            management, eco-friendly products, and investment opportunities,
+            focusing on innovation and growth.
           </p>
           <div className="mt-4 space-y-2 text-sm">
             <p className="flex items-center gap-2">
@@ -40,48 +51,80 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-2">Welcome</h3>
             <ul className="space-y-1 text-sm">
-              <li><Link href={"/plantation"}>Home</Link></li>
-              <li><Link href={"/plantation/about"}>About</Link></li>
-              <li><Link href={"/plantation/products"}>Products</Link></li>
-              <li><Link href={"/plantation/contact"}>Contact us</Link></li>
+              <li>
+                <Link href={"/plantation"}>Home</Link>
+              </li>
+              <li>
+                <Link href={"/plantation/about"}>About</Link>
+              </li>
+              <li>
+                <Link href={"/plantation/products"}>Products</Link>
+              </li>
+              <li>
+                <Link href={"/plantation/contact"}>Contact us</Link>
+              </li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-2">Products</h3>
             <ul className="space-y-1 text-sm">
-              <li><Link href={"/"}>Agarwood</Link></li>
-              <li><Link href={"/"}>TJC Mango</Link></li>
-              <li><Link href={"/"}>Vanila</Link></li>
-              <li><Link href={"/"}>Sandalwood</Link></li>
+              <li>
+                <Link href={"/"}>Agarwood</Link>
+              </li>
+              <li>
+                <Link href={"/"}>TJC Mango</Link>
+              </li>
+              <li>
+                <Link href={"/"}>Vanila</Link>
+              </li>
+              <li>
+                <Link href={"/"}>Sandalwood</Link>
+              </li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-2">Partnerships</h3>
             <ul className="space-y-1 text-sm">
-              <li><Link href={"/"}>Olix</Link></li>
+              <li>
+                <Link href={"/"}>Olix</Link>
+              </li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-2">Groups</h3>
             <ul className="space-y-1 text-sm">
-              <li><Link href={"/"}>Excel Lanka Travels</Link></li>
-              <li><Link href={"/"}>Oxiaura Cosmetics</Link></li>
-              <li><Link href={"/"}>JK Holdings</Link></li>
-              <li><Link href={"/"}>JK Logistics</Link></li>
+              <li>
+                <Link href={"/"}>Excel Lanka Travels</Link>
+              </li>
+              <li>
+                <Link href={"/"}>Oxiaura Cosmetics</Link>
+              </li>
+              <li>
+                <Link href={"/"}>JK Holdings</Link>
+              </li>
+              <li>
+                <Link href={"/"}>JK Logistics</Link>
+              </li>
             </ul>
           </div>
         </div>
 
-        {/* Image placeholders */}
-        <div className="md:w-1/4 grid grid-cols-3 gap-2">
-          {Array(6)
-            .fill(0)
-            .map((_, i) => (
+        {/* Logo Section */}
+        <div className="md:w-1/4 grid grid-cols-3 gap-3">
+          {companies.map((company, i) => (
+            <Link key={i} href={company.link}>
               <div
-                key={i}
-                className="bg-gray-300 h-16 w-full rounded-md"
-              ></div>
-            ))}
+                className="bg-white rounded-md flex items-center justify-center aspect-square p-2"
+                style={{ backgroundColor: company.bgcolor }}
+              >
+                <img
+                  src={company.logo}
+                  alt={company.name + " logo"}
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
 

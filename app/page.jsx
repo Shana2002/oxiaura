@@ -7,14 +7,13 @@ import { motion } from "framer-motion";
 import DirectorCard from "@/components/ui/DirectorCard";
 import GetInTouch from "@/components/common/GetInTouch";
 import Footer from "@/components/common/Footer";
-import GroupBackground from "@/assets/images/group_bg.png";
-import GroupLogoWhite from "@/assets/images/logo_group_white.png";
+import GroupBackground from "@/assets/images/bg/group_bg.png";
+import GroupLogoWhite from "@/assets/images/logo/logo_group_white.png";
 import { VisionMissionCard } from "@/components/ui/Cards";
 import PillarsGrid from "@/components/common/PillarsGrid";
 import { teamMembers } from "@/assets/data.js";
 import GroupNavbar from "@/components/common/GroupNavbar";
 
-const LOCAL_IMAGE_PATH = "/Oxiaura Group.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
