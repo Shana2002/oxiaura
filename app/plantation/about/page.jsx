@@ -6,6 +6,11 @@ import MissionBox from "@/components/ui/MissionBox";
 import Footer from "@/components/common/Footer";
 import ExpertCard from "@/components/ui/ExpertCard";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import plant1 from "@/public/images/plants/plant1.png";
+import plant2 from "@/public/images/plants/plant2.png";
+import plant3 from "@/public/images/plants/plant3.png";
+import teagarden from '@/public/images/teagarden.png'
 
 // Custom component for the Service/Product Card
 const ServiceCard = ({ title, description, icon: Icon }) => (
@@ -44,19 +49,19 @@ const services = [
     title: "Premium Plantation Products",
     description:
       "From Agarwood to Vanilla and Snake Chilli, we cultivate quality.",
-    image: "/images/what_we_1.png"
+    image: "/images/what_we_1.png",
   },
   {
     title: "Responsible Investment Opportunities",
     description:
       "Grow with us through sustainable agriculture ventures and property investments.",
-    image: "/images/what_we_2.png"
+    image: "/images/what_we_2.png",
   },
   {
     title: "Strong Distribution, Local Care",
     description:
       "We deliver superior products to international markets with transparency and eco-conscious practices.",
-    image: "/images/what_we_3.png"
+    image: "/images/what_we_3.png",
   },
 ];
 
@@ -81,24 +86,35 @@ export default function App() {
 
         <div className="w-full max-w-[1200px] h-[60vh]">
           <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-3 md:grid-rows-2 gap-3 h-full">
+            {/* Plant 1 */}
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.7 }}
-              className="row-span-1 md:row-span-2 bg-[url('/images/plant1.png')] bg-no-repeat bg-cover bg-center rounded-3xl"
-            ></motion.div>
+              className="relative row-span-1 md:row-span-2 rounded-3xl overflow-hidden"
+            >
+              <Image src={plant1} alt="Plant 1" fill className="object-cover" />
+            </motion.div>
+
+            {/* Plant 2 */}
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="bg-[url('/images/plant2.png')] bg-no-repeat bg-cover bg-center rounded-3xl"
-            ></motion.div>
+              className="relative rounded-3xl overflow-hidden"
+            >
+              <Image src={plant2} alt="Plant 2" fill className="object-cover" />
+            </motion.div>
+
+            {/* Plant 3 */}
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="bg-[url('/images/plant3.png')] bg-no-repeat bg-cover bg-center rounded-3xl"
-            ></motion.div>
+              className="relative rounded-3xl overflow-hidden"
+            >
+              <Image src={plant3} alt="Plant 3" fill className="object-cover" />
+            </motion.div>
           </div>
         </div>
       </motion.div>
@@ -182,9 +198,20 @@ across its diverse business sectors."
       </section>
 
       {/* Why Choose Oxiaura Section */}
-      <section className="relative h-[60vh] md:h-[70vh] bg-green-900 overflow-hidden bg-[url('/images/teagarden.png')] bg-no-repeat bg-cover bg-center">
+      <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 top-0 w-full">
+          <Image
+            src={teagarden}
+            alt="Tea Garden"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black to-[rgba(12,57,60,0)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black to-[rgba(12,57,60,0)] -z-0"></div>
 
         {/* Content */}
         <div className="relative z-10 mx-4 md:mx-[5vw] h-full flex flex-col justify-center text-white text-center md:text-left">

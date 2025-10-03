@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const MissionBox = ({ title, description, className, image }) => {
   const design = image
@@ -18,15 +19,21 @@ const MissionBox = ({ title, description, className, image }) => {
       <h1 className={design}>{title}</h1>
 
       {image && (
-        <div className="h-64 w-full overflow-hidden rounded-lg my-4">
-          <motion.img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover"
+        <div className="relative h-64 w-full overflow-hidden rounded-lg my-4">
+          <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-          />
+            className="absolute inset-0"
+          >
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </motion.div>
         </div>
       )}
 
