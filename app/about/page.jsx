@@ -67,6 +67,7 @@ export default function App() {
       {/* Mission Section */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
+        viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="h-screen flex flex-col w-full items-center justify-center px-4 md:px-0"

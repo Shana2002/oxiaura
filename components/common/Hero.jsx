@@ -18,9 +18,9 @@ export default function Hero() {
   };
 
   const images = [
-    { src: "/images/Chille.png", alt: "Red Chilies" },
-    { src: "/images/agarwood.png", alt: "Natural Wood" },
-    { src: "/images/vanila.png", alt: "Vanilla Pods" },
+    { src: "/images/plantation_image1.jpg", alt: "Red Chilies" },
+    { src: "/images/plantation_image2.png", alt: "Natural Wood" },
+    { src: "/images/plantation_image3.webp", alt: "Vanilla Pods" },
   ];
 
   const [index, setIndex] = useState(0);

@@ -7,9 +7,6 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: "Oxiaura Plantation",
   description: "Oxiaura Plantaion",
-  icons:{
-    icon:"/favicon.ico"
-  }
 };
 
 export default function RootLayout({ children }) {
@@ -20,7 +17,7 @@ export default function RootLayout({ children }) {
       >
          {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/your-number "
+        href="https://wa.me/+94764336544"
         className="fixed bottom-6 right-6 bg-green-600 p-4 rounded-full text-white shadow-lg hover:bg-green-700 z-1000"
       >
         <FaWhatsapp className="text-2xl" />

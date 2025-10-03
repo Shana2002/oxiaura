@@ -155,7 +155,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/Career"
+                href="/career"
                 className="text-gray-800 hover:text-green-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >

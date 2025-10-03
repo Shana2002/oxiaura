@@ -19,6 +19,7 @@ export default function Home() {
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="relative text-center py-16 md:py-24 bg-cover bg-center h-[60vh] flex items-center justify-center"
         style={{ backgroundImage: "url('/placeholder-leaves.png')" }}
       >
