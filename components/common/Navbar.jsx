@@ -30,39 +30,39 @@ export default function Navbar() {
     >
       {/* Left: Logo */}
       <nav className="flex items-center gap-6">
-        <Link href="/" className="flex items-center">
+        <Link href="/plantation" className="flex items-center">
           <img src={"/images/logo1.png"} alt="OXIAURA Logo" className="h-10 w-auto" />
         </Link>
 
         {/* Nav links */}
         <ul className="hidden lg:flex gap-6 list-none">
           <li>
-            <Link href="/" className="text-gray-800  font-semibold hover:text-green-600 transition-colors">
+            <Link href="/plantation" className="text-gray-800  font-semibold hover:text-green-600 transition-colors">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
+            <Link href="/plantation/about" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
               About
             </Link>
           </li>
           <li>
-            <Link href="/products" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
+            <Link href="/plantation/products" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
               Products
             </Link>
           </li>
           <li>
-            <Link href="/plans" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
+            <Link href="/plantation/investment" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
               Investment plans
             </Link>
           </li>
           <li>
-            <Link href="/blogs" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
+            <Link href="/plantation/blogs" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
               Blog
             </Link>
           </li>
           <li>
-            <Link href="/career" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
+            <Link href="/plantation/career" className="text-gray-800 font-semibold hover:text-green-600 transition-colors">
               Career
             </Link>
           </li>
@@ -110,7 +110,7 @@ export default function Navbar() {
           <ul className="flex flex-col items-center gap-4 py-4">
             <li>
               <Link
-                href="/"
+                href="/plantation"
                 className="text-gray-800 hover:text-green-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
@@ -119,7 +119,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/about"
+                href="/plantation/about"
                 className="text-gray-800 hover:text-green-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
@@ -128,7 +128,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/products"
+                href="/plantation/products"
                 className="text-gray-800 hover:text-green-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
@@ -137,7 +137,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/plans"
+                href="/plantation/investment"
                 className="text-gray-800 hover:text-green-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
@@ -146,7 +146,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/blogs"
+                href="/plantation/blogs"
                 className="text-gray-800 hover:text-green-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
@@ -155,7 +155,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/career"
+                href="/plantation/career"
                 className="text-gray-800 hover:text-green-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >

@@ -2,6 +2,8 @@ import Link from "next/link";
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaEnvelope } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
+import GroupLogoWhite from "@/assets/images/logo_group_white.png";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -9,7 +11,9 @@ const Footer = () => {
       <div className="mx-auto px-[5vw] py-10 flex flex-col md:flex-row justify-between gap-8">
         {/* Left Section */}
         <div className="md:w-1/4">
-          <h1 className="text-3xl font-bold flex items-center gap-2">OXIAURA</h1>
+          <div className="w-1/2 flex items-center gap-2">
+            <Link href={"/"}><Image src={GroupLogoWhite} alt="white-oxaiura-logo" /></Link>
+          </div>
           <p className="mt-4 text-sm">
             Oxiaura Plantation Pvt. Ltd. specializes in sustainable plantation management, eco-friendly products, and investment opportunities, focusing on innovation and growth.
           </p>
@@ -36,10 +40,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-2">Welcome</h3>
             <ul className="space-y-1 text-sm">
-              <li><Link href={"/"}>Home</Link></li>
-              <li><Link href={"/about"}>About</Link></li>
-              <li><Link href={"/products"}>Products</Link></li>
-              <li><Link href={"/contact"}>Contact us</Link></li>
+              <li><Link href={"/plantation"}>Home</Link></li>
+              <li><Link href={"/plantation/about"}>About</Link></li>
+              <li><Link href={"/plantation/products"}>Products</Link></li>
+              <li><Link href={"/plantation/contact"}>Contact us</Link></li>
             </ul>
           </div>
           <div>
