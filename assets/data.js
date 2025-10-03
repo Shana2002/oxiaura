@@ -376,3 +376,23 @@ export const jobs = [
     imageUrl: "https://placehold.co/400x320/0284c7/ffffff?text=Sales+Role",
   },
 ];
+export const teamMembers = [
+  {
+    name: "Mr. Jagath Premal",
+    title: "Director",
+    bio: "Mr. Jagath Premal has over 30 years of experience in top management roles in Sri Lanka's plantation and insurance sectors and Director of Principal officer Fairwell Insurance Brokers, earning national and international awards.",
+    imageUrl: "/images/Chairman.png",
+  },
+  {
+    name: "Dr. Susantha Kosgolla",
+    title: "Director",
+    bio: "International Nelson mandela pease award 2019 winner . lanka abhimani Honorary title . PHD honor National American business university . Member of Lions club international. Sectary of Young Men Buddhist Association (YMBA – Kurunegala ) . Chairmen of Oxiflame Cosmetics (Pvt) Ltd. Chairmen of OlixCeylon (Pvt) Ltd. Member of Million Dollar Round Table .",
+    imageUrl: "/images/MD.png",
+  },
+  {
+    name: "Mr. Sharman Kulatilake",
+    title: "Cheif Executive Officer",
+    bio: "35 years in Insurance industry experience.  Retired ad GM(Sales) People Insurance PLC.  Dip in MKTG(SLIM) . MBA(UK) , MSLIM ,MCIM",
+    imageUrl: "/images/CEO.png",
+  },
+];
