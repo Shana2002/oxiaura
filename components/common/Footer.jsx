@@ -112,15 +112,16 @@ const Footer = () => {
         {/* Logo Section */}
         <div className="md:w-1/4 grid grid-cols-3 gap-3">
           {companies.map((company, i) => (
-            <Link key={i} href={company.link}>
+            <Link key={i} href={company.link} className="relative">
               <div
-                className="bg-white rounded-md flex items-center justify-center aspect-square p-2"
+                className="relative bg-white rounded-md flex items-center justify-center aspect-square p-2 overflow-hidden"
                 style={{ backgroundColor: company.bgcolor }}
               >
-                <img
+                <Image
                   src={company.logo}
                   alt={company.name + " logo"}
-                  className="max-h-full max-w-full object-contain"
+                  fill
+                  className="object-contain"
                 />
               </div>
             </Link>

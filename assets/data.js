@@ -207,21 +207,21 @@ export const testimonials = [
     position: "Investment Analyst",
     comment:
       "Investing in Oxaiura Plantation has been an exceptional experience. Their sustainable farming practices and attention to detail ensure not only high-quality produce but also long-term value creation. The team’s transparency and professionalism provide confidence to investors seeking both ethical and profitable opportunities.",
-    image: "/images/testimonials/ravindra.png",
+    image: "/images/testimonials/ravindra.jpg",
   },
   {
     name: "Anjali Fernando",
     position: "Portfolio Manager",
     comment:
       "Oxaiura Plantation demonstrates remarkable operational efficiency and commitment to sustainability. Their innovative cultivation methods and strategic approach to market expansion make them a standout choice for investors looking for consistent returns and responsible agricultural investments.",
-    image: "/images/testimonials/anjali.png",
+    image: "/images/testimonials/anjali.jpg",
   },
   {
     name: "Michael Jayawardena",
     position: "Agriculture Consultant",
     comment:
       "The plantation’s focus on quality, from soil management to crop processing, is impressive. Oxaiura’s dedication to research, sustainability, and global market readiness makes it a trustworthy partner for anyone seeking to invest in premium agricultural ventures.",
-    image: "/images/testimonials/michael.png",
+    image: "/images/testimonials/michael.jpeg",
   },
   {
     name: "Samantha Wijesinghe",
@@ -235,7 +235,7 @@ export const testimonials = [
     position: "Business Development Director",
     comment:
       "Oxaiura Plantation’s strategic approach to crop selection, production, and global distribution is exemplary. Their commitment to ethical practices and investor relations reflects a forward-thinking and trustworthy enterprise, making them a prime choice for long-term agricultural investments.",
-    image: "/images/testimonials/kamal.png",
+    image: "/images/testimonials/kamal.webp",
   },
 ];
 

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Plant from "@/assets/images/plant_img.png";
+import Plant from "@/assets/images/bg/plant_img.png";
 import { useState } from "react";
 
 export default function GetInTouch() {

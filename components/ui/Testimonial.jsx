@@ -29,7 +29,11 @@ const Testimonial = () => {
 
   const cardVariant = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
   };
 
   // Handle drag end
@@ -86,13 +90,15 @@ const Testimonial = () => {
                 <p className="text-white text-base lg:text-lg leading-relaxed px-4 lg:px-16">
                   {testimonial.comment}
                 </p>
-                <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-full overflow-hidden border-4 border-white/50">
-                  <img
+                <div className="relative w-24 h-24 lg:w-32 lg:h-32 rounded-full overflow-hidden border-4 border-white/50">
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
+
                 <div>
                   <h3 className="text-white font-semibold text-lg lg:text-xl">
                     {testimonial.name}

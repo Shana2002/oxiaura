@@ -1,6 +1,11 @@
 "use client"
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Agarwood from '@/public/images/plants/agarwood.png'
+import Vanila from '@/public/images/plants/vanila2.jpg'
+import Watermelon from '@/public/images/plants/watermelon.png'
+import scotchbonnet from '@/public/images/plants/scotchbonnet.png'
+import Image from "next/image";
 
 const ProductSection = () => {
   // Container variant for staggering children
@@ -28,55 +33,89 @@ const ProductSection = () => {
       viewport={{ amount: 0.3 }} // triggers when 30% visible
     >
       {/* Grid */}
-      <div className="grid w-full h-auto lg:h-[80vh] gap-4 md:gap-6 lg:gap-[17px] 
-                      grid-cols-1 sm:grid-cols-2 
-                      lg:grid-cols-[repeat(11,1fr)] lg:grid-rows-[repeat(3,1fr)]">
-        
-        <motion.div
-          className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                     lg:col-span-4 lg:row-span-3  relative
-                     bg-[url('/images/agarwood.png')] bg-no-repeat bg-cover bg-center"
-          variants={item}
-        >
-          <div className="absolute w-full h-full bg-gradient-to-t from-black/72 to-black/0 top-0 left-0 "></div>
-          <p className="absolute bottom-0 px-10 py-12">Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.</p>
-        </motion.div>
+      <div
+      className="grid w-full h-auto lg:h-[80vh] gap-4 md:gap-6 lg:gap-[17px] 
+                 grid-cols-1 sm:grid-cols-2 
+                 lg:grid-cols-[repeat(11,1fr)] lg:grid-rows-[repeat(3,1fr)]"
+    >
+      {/* Agarwood */}
+      <motion.div
+        className="relative bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
+                   lg:col-span-4 lg:row-span-3 overflow-hidden"
+        variants={item}
+      >
+        <Image
+          src={Agarwood}
+          alt="Agarwood"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/72 to-black/0"></div>
+        <p className="absolute bottom-0 px-10 py-12 text-white">
+          Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.
+        </p>
+      </motion.div>
 
-        <motion.div
-          className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                     lg:col-span-3 lg:row-span-2 lg:col-start-5 lg:row-start-1 relative
-                     bg-[url('/images/vanila.png')] bg-no-repeat bg-cover bg-center"
-          variants={item}
-        >
-          <div className="absolute w-full h-full bg-gradient-to-t from-black/72 to-black/0 top-0 left-0 "></div>
-          <p className="absolute bottom-0 px-10 py-12">Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.</p>
-        </motion.div>
+      {/* Vanilla */}
+      <motion.div
+        className="relative bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
+                   lg:col-span-3 lg:row-span-2 lg:col-start-5 lg:row-start-1 overflow-hidden"
+        variants={item}
+      >
+        <Image
+          src={Vanila}
+          alt="Vanilla"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/72 to-black/0"></div>
+        <p className="absolute bottom-0 px-10 py-12 text-white">
+          Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.
+        </p>
+      </motion.div>
 
-        <motion.div
-          className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                     lg:col-span-3 lg:col-start-5 lg:row-start-3  relative
-                     bg-[url('/images/watermelon.png')] bg-no-repeat bg-cover bg-center"
-          variants={item}
-        >
-          <div className="absolute w-full h-full bg-gradient-to-t from-black/72 to-black/0 top-0 left-0 "></div>
-          <p className="absolute bottom-0 px-10 py-12">Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.</p>
-        </motion.div>
+      {/* Watermelon */}
+      <motion.div
+        className="relative bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
+                   lg:col-span-3 lg:col-start-5 lg:row-start-3 overflow-hidden"
+        variants={item}
+      >
+        <Image
+          src={Watermelon}
+          alt="Watermelon"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/72 to-black/0"></div>
+        <p className="absolute bottom-0 px-10 py-12 text-white">
+          Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.
+        </p>
+      </motion.div>
 
-        <motion.div
-          className="bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
-                     lg:col-span-4 lg:row-span-3 lg:col-start-8 lg:row-start-1 relative
-                     bg-[url('/images/scotchbonnet.png')] bg-no-repeat bg-cover bg-center"
-          variants={item}
-        >
-          <div className="absolute w-full h-full bg-gradient-to-t from-black/72 to-black/0 top-0 left-0 "></div>
-          <p className="absolute bottom-0 px-10 py-12">Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.</p>
-        </motion.div>
-      </div>
+      {/* Scotch Bonnet */}
+      <motion.div
+        className="relative bg-white rounded-[20px] h-60 sm:h-72 lg:h-auto 
+                   lg:col-span-4 lg:row-span-3 lg:col-start-8 lg:row-start-1 overflow-hidden"
+        variants={item}
+      >
+        <Image
+          src={scotchbonnet}
+          alt="Scotch Bonnet"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/72 to-black/0"></div>
+        <p className="absolute bottom-0 px-10 py-12 text-white">
+          Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.
+        </p>
+      </motion.div>
+    </div>
 
       {/* View More Link */}
       <Link
-        href="/products"
-        className="px-6 py-2 mt-12 md:mt-16 bg-green-600 text-white rounded hover:bg-green-700 transition"
+        href="/plantation/products"
+        className="px-12 py-2 mt-12 md:mt-16 text-white  border-2 border-white rounded-4xl  transition hover:bg-white hover:text-black"
       >
         View More
       </Link>

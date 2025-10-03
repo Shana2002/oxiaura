@@ -123,7 +123,7 @@ export default function Hero() {
             From eco-conscious sourcing to worldwide delivery, Oxiaura is your bridge between nature and innovation.
           </p>
           <Link
-            href="#"
+            href="/plantation/products"
             className="relative flex items-center justify-between bg-black hover:bg-green-700 text-white rounded-full px-6 py-3 w-fit mx-auto lg:mx-0 transition duration-300"
           >
             <span className="pr-3">Discover Sustainability</span>

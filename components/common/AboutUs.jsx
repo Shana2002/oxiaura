@@ -2,8 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion"; // ✅ import motion
-import Mountain from '@/assets/images/mountain.png'
-import LogoLarge from '@/assets/images/logo_large.png'
+import Mountain from '@/assets/images/bg/mountain.png'
+import LogoLarge from '@/assets/images/logo/logo_large.png'
 
 export default function AboutUs() {
   // Variants for scroll animation
@@ -28,7 +28,7 @@ export default function AboutUs() {
 
       {/* Content Container */}
       <motion.div
-        className="flex flex-col md:flex-row justify-center items-center h-full md:min-h-[70vh] px-6 lg:px-16 pt-2 md:pt-0"
+        className="flex flex-col md:flex-row justify-center z-50 items-center h-full md:min-h-[70vh] px-6 lg:px-16 pt-2 md:pt-0"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"   // ✅ Animate when in view
@@ -61,7 +61,7 @@ export default function AboutUs() {
             sustainability, technology, and strong partnerships.
           </p>
           <Link
-            href="#"
+            href="/plantaion/about"
             className="mt-6 bg-black text-white px-8 py-3 rounded-full hover:bg-green-700 transition duration-300 shadow-lg"
           >
             Learn more

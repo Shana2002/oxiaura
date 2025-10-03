@@ -46,7 +46,6 @@ export default function PillarsGrid() {
                 <h3 className="text-lg font-semibold">{company.name}</h3>
                 <a
                   href={company.link}
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="mt-3 bg-green-700 font-bold hover:bg-green-800 text-white text-sm px-4 py-2 rounded-lg shadow"
                 >

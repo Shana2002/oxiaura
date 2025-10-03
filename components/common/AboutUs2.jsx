@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion"; // ✅ import motion
-import Plant from "@/assets/images/plant_img.png";
+import Plant from "@/assets/images/bg/plant_img.png";
 import ProductSection from "../ui/ProductSection";
 import Testimonial from "../ui/Testimonial";
 
@@ -25,10 +25,12 @@ export default function AboutUs2() {
       <div className="absolute top-0 w-full h-full bg-black/40"></div>
       
       {/* Top Gradient */}
-      <div className="absolute w-full h-100 -top-24 bg-gradient-to-b from-transparent via-[rgba(12,57,60,0.82)] to-transparent]"></div>
+      <div className="absolute w-full h-96  top-0 bg-gradient-to-b from-[#0C393C] to-[rgba(37,75,73,0)]"></div>
+      <div className="absolute w-full h-28  -top-28 bg-gradient-to-t from-[#0C393C] to-[rgba(37,75,73,0)]"></div>
+      {/* <div className="absolute w-full h-96  -top-44 bg-gradient-to-b from-transparent via-[rgba(12,57,60,0.82)] to-transparent"></div> */}
       
       {/* Mid Gradient */}
-      <div className="absolute w-full h-100 top-1/2 -translate-y-1/2 bg-gradient-to-t from-transparent via-[rgba(12,57,60,0.82)] to-transparent"></div>
+      {/* <div className="absolute w-full h-100 -translate-y-1/2 bg-gradient-to-t from-[#0C393C] to-[rgba(37,75,73,0)]"></div> */}
 
       {/* Content container */}
       <div className="relative z-30">
@@ -77,7 +79,7 @@ export default function AboutUs2() {
 
           {/* Image Container */}
           <motion.div
-            className="w-full md:w-2/3 relative order-1 md:order-2"
+            className="w-full  md:w-2/3 relative order-1 md:order-2"
             initial="hidden"
             whileInView="visible"
             viewport={{ amount: 0.3 }}
