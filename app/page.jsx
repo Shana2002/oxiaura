@@ -12,6 +12,7 @@ import GroupLogoWhite from "@/assets/images/logo_group_white.png";
 import { VisionMissionCard } from "@/components/ui/Cards";
 import PillarsGrid from "@/components/common/PillarsGrid";
 import { teamMembers } from "@/assets/data.js";
+import GroupNavbar from "@/components/common/GroupNavbar";
 
 const LOCAL_IMAGE_PATH = "/Oxiaura Group.jpg";
 
@@ -27,6 +28,8 @@ const fadeInUp = {
 const page = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      {/* Nav Bar */}
+      <GroupNavbar />
       {/* Hero Screen */}
       <section className="h-screen flex flex-col items-center justify-center relative">
         {/* Background Image */}
