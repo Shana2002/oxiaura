@@ -31,7 +31,7 @@ export default function DirectorCard({ name, title, bio, imageUrl, index }) {
         <h2 className="text-4xl font-bold text-black my-3 ">{name}</h2>
         <h3 className="text-green-600 text-lg font-semibold">{title}</h3>
         <div
-          className={`w-20 h-[2px] bg-green-600   my-2 ${
+          className={`w-20 h-[2px] bg-green-600   my-2 mx-auto md:mx-0 ${
             side === 1 ? "md:ml-auto" : ""
           }`}
         ></div>
