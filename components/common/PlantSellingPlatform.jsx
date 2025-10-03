@@ -27,21 +27,21 @@ const PlantSellingPlatform = () => {
   const plants = [
     {
       name: 'Agarwood Plant',
-      price: 45000,
+      price: 1500,
       description: 'Premium Agarwood saplings for aromatic resin production. High-value investment after 7-10 years.',
-      imageUrl: 'https://images.unsplash.com/photo-1570501704035-953e8d5bb2e3?w=400&h=300&fit=crop'
+      imageUrl: '/images/plants/agarwood.png'
     },
     {
       name: 'Sandalwood Plant',
-      price: 24000,
+      price: 1500,
       description: 'Quality Sandalwood plants for valuable heartwood. Sustainable cultivation with growth support.',
-      imageUrl: 'https://images.unsplash.com/photo-1580052614034-6c4c72c4e1b5?w=400&h=300&fit=crop'
+      imageUrl: '/images/plants/agarwood.png'
     },
     {
       name: 'TJC Mango Plant',
-      price: 7500,
+      price: 1850,
       description: 'Superior TJC mango saplings for juicy, sweet fruits. Fast-growing with high orchard yield.High return on investment.',
-      imageUrl: 'https://images.unsplash.com/photo-1589924691995-400dc9eb7e18?w=400&h=300&fit=crop'
+      imageUrl: '/images/plants/agarwood.png'
     }
   ];
 
