@@ -157,12 +157,12 @@ across its diverse business sectors."
 
             {/* Second and third boxes: stacked on mobile, side-by-side on desktop */}
             <MissionBox
-              title="Our Mission"
+              title="Our Vision"
               description=" To be the foremost agricultural company in sri lanka"
               className="w-full"
             />
             <MissionBox
-              title="Our Vision"
+              title="Our Mission"
               description=" To adopt the best agricultural practice and deliver highest return to our valued customers and stake holders."
               className="w-full"
             />

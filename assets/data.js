@@ -3,7 +3,7 @@ export const products = [
     title: "Agarwood",
     desc: "Agarwood, often referred to as the “Wood of the Gods,” is a rare and precious aromatic resin produced from Aquilaria trees when they become infected with a specific type of mold. Its deep, woody, and sweet fragrance has made it one of the most valued natural products in the world, widely used in perfumes, incense, and traditional medicines. Agarwood is also culturally significant in many Asian traditions, symbolizing purity, luxury, and spiritual connection. Due to its rarity and the long growth process, it is considered one of the most luxurious natural resources. Sustainable cultivation practices are now being developed to protect its future supply while meeting the high global demand.",
     subtitle: "Nature’s rare luxury",
-    image: "/images/agarwood.png",
+    image: "/images/plants/agarwood.png",
     slug: "agarwood",
     paragraphs: [
       {
@@ -128,7 +128,7 @@ export const products = [
     title: "Watermelon",
     desc: "Watermelon is a refreshing summer fruit, made up of over 90% water, making it perfect for hydration in hot climates. Its juicy red flesh is naturally sweet and rich in vitamins A, C, and antioxidants like lycopene, which promote heart health and reduce inflammation. Watermelon is enjoyed fresh, in juices, salads, and desserts across the world. Its seeds and rind also have nutritional and culinary uses in various cultures. Beyond health benefits, watermelon carries cultural associations of joy, refreshment, and community gatherings, making it a favorite fruit for celebrations and family occasions.",
     subtitle: "Refreshing summer delight",
-    image: "/images/watermelon.png",
+    image: "/images/plants/watermelon.png",
     slug: "watermelon",
     paragraphs: [
       {

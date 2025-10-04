@@ -5,7 +5,7 @@ const PlantCard = ({ name, price, location, description, imageUrl }) => (
     <img 
       src={imageUrl} 
       alt={name} 
-      className="w-full h-48 object-cover"
+      className="w-full h-[60vh] object-cover"
     />
     <div className="p-6">
       <h2 className="text-2xl font-bold text-green-800 mb-2 text-center">{name}</h2>
@@ -28,20 +28,20 @@ const PlantSellingPlatform = () => {
     {
       name: 'Agarwood Plant',
       price: 1500,
-      description: 'Premium Agarwood saplings for aromatic resin production. High-value investment after 7-10 years.',
-      imageUrl: '/images/plants/agarwood.png'
+      description: 'Premium Agarwood saplings for aromatic resin production. High-value investment after 5-8 years.',
+      imageUrl: '/images/plants/agarwood.webp'
     },
     {
       name: 'Sandalwood Plant',
       price: 1500,
       description: 'Quality Sandalwood plants for valuable heartwood. Sustainable cultivation with growth support.',
-      imageUrl: '/images/plants/agarwood.png'
+      imageUrl: '/images/plants/sandlewood.jpg'
     },
     {
       name: 'TJC Mango Plant',
       price: 1850,
       description: 'Superior TJC mango saplings for juicy, sweet fruits. Fast-growing with high orchard yield.High return on investment.',
-      imageUrl: '/images/plants/agarwood.png'
+      imageUrl: '/images/plants/tjcmango.jpg'
     }
   ];
 

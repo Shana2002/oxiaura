@@ -23,7 +23,7 @@ export default function AboutUs() {
       <Image
         src={Mountain}
         alt="about_us"
-        className="absolute bottom-[-7vh] md:bottom-[-40vh] w-screen md:h-[80vh] object-cover -z-0"
+        className="absolute bottom-[-7vh]  z-20 md:bottom-[-40vh] w-screen md:h-[80vh] object-cover -z-0"
       />
 
       {/* Content Container */}

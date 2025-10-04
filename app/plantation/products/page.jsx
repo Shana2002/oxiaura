@@ -60,7 +60,7 @@ export default function Home() {
             className="relative rounded-3xl overflow-hidden shadow-lg h-170 md:h-170"
           >
             <Image
-              src="/images/Chille.png"
+              src="/images/Scotch_Bonnet.png"
               alt="Chilli"
               fill
               className="object-cover brightness-75"
@@ -80,7 +80,7 @@ export default function Home() {
             className="relative rounded-3xl overflow-hidden shadow-lg h-200 md:h-200"
           >
             <Image
-              src="/images/agarwood.png"
+              src="/images/plants/agarwood.png"
               alt="Agarwood"
               fill
               className="object-cover brightness-75"
@@ -100,7 +100,7 @@ export default function Home() {
             className="relative rounded-3xl overflow-hidden shadow-lg h-170 md:h-170"
           >
             <Image
-              src="/images/vanila.png"
+              src="/images/plants/vanila2.jpg"
               alt="Green Bean"
               fill
               className="object-cover brightness-75"
