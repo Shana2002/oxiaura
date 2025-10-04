@@ -17,9 +17,9 @@ const CareerPage = () => {
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full h-[70vh] flex items-center justify-center flex-col"
+        className="w-full h-[70vh] flex items-center justify-center flex-col "
       >
-        <div className="relative px-[5vw] w-[90vw] rounded-4xl h-[40vh] overflow-hidden">
+        <div className="relative mt-[10vh] px-[5vw] w-[90vw] rounded-4xl h-[40vh] overflow-hidden">
           {/* Background Image */}
           <img
             src="/images/career_image_1.png"

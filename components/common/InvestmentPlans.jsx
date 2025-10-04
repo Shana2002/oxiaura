@@ -74,7 +74,7 @@ const InvestmentPlans = () => {
   ];
 
   return (
-      <div className="grid grid-cols-2 gap-4 min-h-screen m-[5vw] rounded-4xl bg-green-50 p-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 min-h-screen m-[5vw] rounded-4xl bg-green-50 p-10">
         {plans.map((plan, index) => (
           <PlanCard key={index} {...plan} />
         ))}

@@ -12,10 +12,10 @@ const page = () => {
       <Navbar />
       {/* hero section */}
       <section className="h-screen py-10 relative">
-        <div className="w-[100vw] h-[100vh] absolute bottom-0">
-          <Image src={InvestmentImg} fill alt="investment" />
+        <div className="w-[100vw] opacity-20 h-[100vh] absolute bottom-0">
+          <Image src={InvestmentImg} fill alt="investment" className="object-cover" />
         </div>
-        <div className="ml-[5vw] mt-[20vh]">
+        <div className="ml-[5vw] mt-[20vh] z-50">
           <h2 className="text-4xl text-black mb-3">
             Invest Smart. Reap Green.
           </h2>

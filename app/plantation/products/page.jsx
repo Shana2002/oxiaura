@@ -149,7 +149,7 @@ export default function Home() {
             desc={item.desc}
             subtitle={item.subtitle}
             image={item.image}
-            link={`/products/${item.slug}`}
+            link={`/plantation/products/${item.slug}`}
             side={index} // alternate layout
           />
         ))}
@@ -164,7 +164,7 @@ export default function Home() {
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {products.slice(4, 7).map((product, i) => (
-            <Link key={i} href={`/products/${product.slug}`}>
+            <Link key={i} href={`/plantation/products/${product.slug}`}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}

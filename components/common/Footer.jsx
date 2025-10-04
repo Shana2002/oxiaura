@@ -69,16 +69,16 @@ const Footer = () => {
             <h3 className="font-semibold mb-2">Products</h3>
             <ul className="space-y-1 text-sm">
               <li>
-                <Link href={"/"}>Agarwood</Link>
+                <Link href={"/plantation/products/agarwood"}>Agarwood</Link>
               </li>
               <li>
-                <Link href={"/"}>TJC Mango</Link>
+                <Link href={"/plantation/products/tjc-mango"}>TJC Mango</Link>
               </li>
               <li>
-                <Link href={"/"}>Vanila</Link>
+                <Link href={"/plantation/products/vanilla"}>Vanila</Link>
               </li>
               <li>
-                <Link href={"/"}>Sandalwood</Link>
+                <Link href={"/plantation/products/sandalwood"}>Sandalwood</Link>
               </li>
             </ul>
           </div>
@@ -97,7 +97,7 @@ const Footer = () => {
                 <Link href={"/"}>Excel Lanka Travels</Link>
               </li>
               <li>
-                <Link href={"/"}>Oxiaura Cosmetics</Link>
+                <Link href={"www.oxoaura.net/web"}>Oxiaura Cosmetics</Link>
               </li>
               <li>
                 <Link href={"/"}>JK Holdings</Link>
