@@ -17,18 +17,18 @@ export default function AboutUs() {
   };
 
   return (
-    <section className="relative bg-gradient-to-r from-[#CDFFB7] to-white min-h-screen overflow-hidden py-8 md:py-2 text-black">
+    <section className="relative bg-gradient-to-r from-[#CDFFB7] to-white h-[150vh] lg:[100vh]  overflow-hidden py-8 md:py-2 text-black">
       
       {/* Bottom Background Image */}
       <Image
         src={Mountain}
         alt="about_us"
-        className="absolute bottom-[-7vh]  z-20 md:bottom-[-40vh] w-screen md:h-[80vh] object-cover -z-0"
+        className="absolute bottom-[-7vh]  md:bottom-[-40vh] w-screen md:h-[80vh] object-cover -z-0"
       />
 
       {/* Content Container */}
       <motion.div
-        className="flex flex-col md:flex-row justify-center z-50 items-center h-full md:min-h-[70vh] px-6 lg:px-16 pt-2 md:pt-0"
+        className="flex flex-col md:flex-row justify-center z-auto items-center h-full md:min-h-[70vh] px-6 lg:px-16 pt-2 md:pt-0"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"   // ✅ Animate when in view
