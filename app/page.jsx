@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import DirectorCard from "@/components/ui/DirectorCard";
 import GetInTouch from "@/components/common/GetInTouch";
 import Footer from "@/components/common/Footer";
-import GroupBackground from "@/assets/images/bg/group_bg.png";
+import GroupBackground from "@/assets/images/bg/group_bg.jpg";
 import GroupLogoWhite from "@/assets/images/logo/logo_group_white.png";
 import { VisionMissionCard } from "@/components/ui/Cards";
 import PillarsGrid from "@/components/common/PillarsGrid";

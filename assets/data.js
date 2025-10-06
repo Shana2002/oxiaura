@@ -401,56 +401,56 @@ export const companies = [
   {
     name: "Oxiaura Plantation",
     logo: "/images/logo/plantaion.png",
-    bg: "/images/bg/plantation_bg.png",
+    bg: "/images/bg/plantation_bg.jpg",
     link: "/plantation",
     bgcolor:"#fff"
   },
   {
     name: "Olix Nano Tech",
     logo: "/images/logo/olix.png",
-    bg: "/images/bg/olix_bg.png",
+    bg: "/images/bg/Olix-background.jpg",
     link: "#",
     bgcolor:"#914695"
   },
   {
     name: "Oxiaura Cosmetics",
     logo: "/images/logo/cosmetics.jpg",
-    bg: "/images/bg/cosmetics.png",
+    bg: "/images/bg/Cosmetics-bg.jpg",
     link: "#",
     bgcolor:"#fff"
   },
   {
     name: "Excel Lanka",
     logo: "/images/logo/excellanka.png",
-    bg: "/images/bg/tours_bg.png",
+    bg: "/images/bg/Travel-bg.jpg",
     link: "#",
     bgcolor:"#9E1CA0"
   },
   {
     name: "JK Holdings",
     logo: "/images/logo/holdings.png",
-    bg: "/images/bg/holding_bg.png",
+    bg: "/images/bg/Holding-Bg.jpg",
     link: "#",
     bgcolor:"#1800AD"
   },
   {
     name: "JK Logistics",
     logo: "/images/logo/logistics.png",
-    bg: "/images/bg/logistics.png",
+    bg: "/images/bg/Logistics-bg.jpg",
     link: "#",
     bgcolor:"#191919"
   },
   {
     name: "Oxiaura Healthcare",
     logo: "/images/logo/healthcare.png",
-    bg: "/images/bg/healthcare_bg.png",
+    bg: "/images/bg/Healthcare-bg.jpg",
     link: "#",
     bgcolor:"#fff"
   },
   {
     name: "Oxiaura Realestate",
     logo: "/images/logo/realstate.png",
-    bg: "/images/bg/realestate.png",
+    bg: "/images/bg/Realestate back .jpg",
     link: "#",
     bgcolor:"#fff"
   },

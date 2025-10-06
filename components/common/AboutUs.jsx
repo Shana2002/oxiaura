@@ -17,7 +17,7 @@ export default function AboutUs() {
   };
 
   return (
-    <section className="relative bg-gradient-to-r from-[#CDFFB7] to-white h-[150vh] lg:[100vh]  overflow-hidden py-8 md:py-2 text-black">
+    <section className="relative bg-gradient-to-r from-[#CDFFB7] to-white h-[150vh] md:min-h-screen  overflow-hidden py-8 md:py-2 text-black">
       
       {/* Bottom Background Image */}
       <Image
