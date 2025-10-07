@@ -380,7 +380,7 @@ export const teamMembers = [
   {
     name: "Mr. Jagath Premal",
     title: "Director",
-    bio: "Mr. Jagath Premal has over 30 years of experience in top management roles in Sri Lanka's plantation and insurance sectors and Director of Principal officer Fairwell Insurance Brokers, earning national and international awards.",
+    bio: "Mr. Jagath Premal has over 30 years of experience in Senior management positions in Sri Lanka's plantation and insurance sector and also he working as the Principal officer at Fairwell Insurance Brokers, He has won national and international awards for his performance.",
     imageUrl: "/images/Chairman.png",
   },
   {
@@ -392,7 +392,7 @@ export const teamMembers = [
   {
     name: "Mr. Sharman Kulatilake",
     title: "Cheif Executive Officer",
-    bio: "35 years in Insurance industry experience.  Retired ad GM(Sales) People Insurance PLC.  Dip in MKTG(SLIM) . MBA(UK) , MSLIM ,MCIM",
+    bio: "Mr.Kulathilaka has over 35 years of Management Experience holding several senior management positions in multinational companies. His last held position was General Manager- Sales and Marketing. He also Expertise in the fields of HR , Training , People Development and Services. He is a qualified Charted Marketer having Diploma in Marketing(SLIM) and MBA (UK) and also member of SLIM and Charted Institute of Marketing UK/Canada and Organization of Professional Associations of Sri Lanka.",
     imageUrl: "/images/CEO.png",
   },
 ];

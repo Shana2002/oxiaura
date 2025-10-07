@@ -9,7 +9,7 @@ export default function PillarsGrid() {
       {/* Heading */}
       <h2 className="text-center text-3xl md:text-4xl font-bold mb-10">
         <span className="border-green-600 pb-2 text-green-700">
-          The Pillars of Oxiaura
+          The Strength of Oxiaura
         </span>
       </h2>
 

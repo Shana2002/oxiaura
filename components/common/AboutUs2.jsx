@@ -70,7 +70,7 @@ export default function AboutUs2() {
               the industry.
 
               <br className="mb-4" />
-              At Oxiaura, we believe sustainability is not an option—it’s the
+              At Oxiaura, we believe sustainability is not an option, it’s the
               foundation of long-term success. With every product we deliver, we
               aim to inspire trust, promote well-being, and shape a greener,
               more resilient future for the world.
