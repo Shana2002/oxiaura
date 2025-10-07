@@ -406,18 +406,18 @@ export const companies = [
     bgcolor:"#fff"
   },
   {
+    name: "Oxiaura Cosmetics",
+    logo: "/images/logo/cosmetics.jpg",
+    bg: "/images/bg/Cosmetics-bg.jpg",
+    link: "www.oxiuara.net",
+    bgcolor:"#fff"
+  },
+  {
     name: "Olix Nano Tech",
     logo: "/images/logo/olix.png",
     bg: "/images/bg/Olix-background.jpg",
     link: "#",
     bgcolor:"#914695"
-  },
-  {
-    name: "Oxiaura Cosmetics",
-    logo: "/images/logo/cosmetics.jpg",
-    bg: "/images/bg/Cosmetics-bg.jpg",
-    link: "#",
-    bgcolor:"#fff"
   },
   {
     name: "Excel Lanka",

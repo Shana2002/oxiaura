@@ -65,7 +65,7 @@ const page = () => {
             OXIAURA
           </h1>
           <h2 className="text-2xl sm:text-4xl lg:text-6xl">
-            Group of Companies
+            Group
           </h2>
         </motion.div>
       </section>
