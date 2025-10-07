@@ -61,7 +61,16 @@ const Footer = () => {
                 <Link href={"/plantation/products"}>Products</Link>
               </li>
               <li>
-                <Link href={"/plantation/contact"}>Contact us</Link>
+                <Link href={"/plantation/investment"}>Investment</Link>
+              </li>
+              <li>
+                <Link href={"/plantation/career"}>Career</Link>
+              </li>
+              <li>
+                <Link href={"/plantation/blog"}>Blog</Link>
+              </li>
+              <li>
+                <Link href={"/plantation/gallery"}>Gallery</Link>
               </li>
             </ul>
           </div>
