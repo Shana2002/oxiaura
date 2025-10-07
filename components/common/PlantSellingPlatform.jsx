@@ -10,13 +10,7 @@ const PlantCard = ({ name, price, location, description, imageUrl }) => (
     <div className="p-6">
       <h2 className="text-2xl font-bold text-green-800 mb-2 text-center">{name}</h2>
       <p className="text-gray-600 mb-4 text-center">{description}</p>
-      <div className="space-y-2 mb-4">
-        <div className="flex justify-between">
-          <span className="text-gray-500">Price per Plant:</span>
-          <span className="font-semibold text-green-700">LKR {price.toLocaleString()}</span>
-        </div>
-      </div>
-      <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+      <button className="w-full bg-black hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300">
         Contact Us
       </button>
     </div>

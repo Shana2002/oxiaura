@@ -409,7 +409,7 @@ export const companies = [
     name: "Oxiaura Cosmetics",
     logo: "/images/logo/cosmetics.jpg",
     bg: "/images/bg/Cosmetics-bg.jpg",
-    link: "www.oxiuara.net",
+    link: "https://oxiaura.net",
     bgcolor:"#fff"
   },
   {
