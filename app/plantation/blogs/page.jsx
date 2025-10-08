@@ -44,7 +44,7 @@ export default function Home() {
             </p>
 
             <Link
-              href={`/blogs/${plantationBlogs[0].slug}`}
+              href={`/plantation/blogs/${plantationBlogs[0].slug}`}
               className="inline-block mt-10 bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-200"
             >
               Read full article

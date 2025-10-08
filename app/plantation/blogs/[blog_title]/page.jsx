@@ -24,7 +24,7 @@ const MainArticle = ({ data }) => {
                 {/* Featured Image */}
                 <div className="lg:col-span-2 relative rounded-lg overflow-hidden shadow-xl aspect-[16/9] lg:aspect-auto">
                     <img
-                        src="/images/blog_header.png"
+                        src={data.image}
                         alt="Plantation acquisition landscape"
                         className="w-full h-full object-cover"
                         onError={(e) => e.target.src = "https://placehold.co/1200x675/16a34a/ffffff?text=Image+Not+Available"}

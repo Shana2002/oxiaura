@@ -3,7 +3,7 @@ import React from 'react'
 
 const StoryCard = ({image,title,description,slug}) => {
   return (
-    <Link href={`/blogs/${slug}`}>
+    <Link href={`/plantation/blogs/${slug}`}>
         <div className="rounded-2xl overflow-hidden shadow-md relative">
         <img src={image} alt={title} className="w-full h-[50vh] object-cover" />
         <div className="absolute inset-0 bg-black/40 text-white p-4 flex flex-col justify-end">

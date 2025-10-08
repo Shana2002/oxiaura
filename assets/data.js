@@ -242,54 +242,98 @@ export const testimonials = [
 
 export const plantationBlogs = [
   {
-    title: "Sustainable Practices at Oxaiura Plantation",
-    slug: "sustainable-practices-at-oxaiura-plantation",
-    image: "/images/blog_header.png",
-    description: `Oxaiura Plantation is committed to sustainable agriculture, emphasizing eco-friendly practices and responsible resource management. From soil conservation to water management, the plantation employs advanced techniques to minimize environmental impact while ensuring high-quality yields. Sustainable farming at Oxaiura is not just a practice but a philosophy that permeates every step, from seed selection to harvest. 
-
-The plantation implements crop rotation, organic fertilizers, and integrated pest management to maintain soil fertility and biodiversity. These practices help prevent soil degradation, improve crop resilience, and reduce dependency on chemical inputs. By adopting renewable energy sources and efficient irrigation systems, Oxaiura reduces water and energy consumption, further aligning with global sustainability standards. 
-
-Beyond environmental stewardship, the plantation emphasizes social responsibility. Workers are provided with fair wages, safe working conditions, and continuous training to enhance skills and knowledge in modern agricultural practices. The integration of sustainability into business strategy ensures that Oxaiura Plantation not only produces premium crops but also contributes positively to the ecosystem and local communities.
-
-Investors and stakeholders recognize that these sustainable practices enhance long-term value, ensuring consistent quality and market competitiveness. By focusing on both environmental and social dimensions, Oxaiura Plantation exemplifies how agriculture can thrive in harmony with nature, promoting a resilient and responsible business model that benefits everyone involved.`,
+    title: "The Global Demand for Agarwood: Market Trends & Opportunities",
+    slug: "global-demand-agarwood",
+    image: "/images/blog/agrwood.jpg",
+    description: `Agarwood, also known as oud, is a highly prized resin obtained from the Aquilaria tree. Revered for its rich, complex fragrance, agarwood has been integral to cultural practices and luxury products for centuries. In recent years, the global demand for agarwood has surged, driven by its applications in perfumery, wellness, and traditional ceremonies. This article delves into the current market trends and opportunities within the agarwood industry.
+Market Growth and Projections
+The global agarwood chip market was valued at approximately USD 10.06 billion in 2024 and is projected to grow to USD 17.61 billion by 2033, reflecting a CAGR of 6.41% during the forecast period Straits Research. Similarly, the agarwood essential oil market is expected to expand from USD 0.25 billion in 2023 to USD 0.435 billion by 2032, with a CAGR of 6.35% Market Research Future.
+Regional Insights
+•	Asia-Pacific: Dominates the agarwood market, with countries like China, India, and Vietnam being major producers and consumers. The region's rich cultural heritage and growing demand for luxury products contribute to its market leadership.
+•	Middle East & Africa: Holds a significant market share, accounting for 30.32% in 2024. The region's deep-rooted traditions in incense and fragrance use bolster its demand for agarwood Persistence Market Research.
+•	Europe & North America: Emerging markets with increasing interest in natural and exotic fragrances. The growing wellness trend and inclination towards sustainable products are driving demand in these regions.
+Applications and Consumer Trends
+•	Perfumery- Agarwood's unique scent profile makes it a sought-after ingredient in high-end perfumes. Brands like Jo Malone and Lancôme are incorporating oud into their fragrance lines to cater to evolving consumer preferences The Times.
+•	Wellness and Aromatherapy- The therapeutic properties of agarwood essential oil, including its anti-inflammatory and anti-anxiety effects, have led to its integration into wellness products and aromatherapy practices Persistence Market Research.
+•	Traditional and Cultural Uses- In regions like Southeast Asia and the Middle East, agarwood continues to play a vital role in religious rituals and cultural ceremonies, maintaining its traditional significance.
+Sustainable Sourcing and Challenges
+The increasing demand for agarwood poses challenges related to sustainability. Overharvesting and illegal logging threaten the Aquilaria tree populations. To address these concerns, sustainable cultivation practices and legal frameworks are being emphasized to ensure the long-term viability of agarwood production.
+Opportunities for Plantation Companies
+For plantation companies like OxiAura Plantation Pvt. Ltd., there are several avenues to capitalize on the growing agarwood market:
+•	Establishing Agarwood Plantations- Investing in the cultivation of Aquilaria trees can provide a sustainable source of agarwood, meeting the rising demand while promoting environmental stewardship.
+•	Value-Added Products- Developing and marketing agarwood-based products, such as essential oils and incense, can open new revenue streams and cater to diverse consumer preferences.
+•	Export Opportunities- With the global market expanding, exporting agarwood products to regions with high demand can enhance business growth and brand recognition.
+•	Research and Development Engaging in R&D to improve cultivation techniques and product quality can lead to innovations that set a company apart in the competitive market.
+The global demand for agarwood is experiencing robust growth, driven by its applications in luxury products, wellness, and cultural practices. For plantation companies, this presents a unique opportunity to invest in sustainable agarwood production, develop value-added products, and explore international markets. By aligning with consumer trends and emphasizing sustainability, businesses can thrive in the burgeoning agarwood industry.
+`,
   },
   {
-    title: "Global Market Impact of Oxaiura Crops",
-    image: "/images/Chille.png",
-    slug: "global-market-impact-of-oxaiura-crops",
-    description: `Oxaiura Plantation’s crops have consistently demonstrated exceptional performance in the global market, reflecting the quality and care invested in cultivation. By focusing on premium crops like Agarwood, TJC Mango, and Vanilla, the plantation has positioned itself as a trusted supplier to international buyers who value quality, authenticity, and sustainability.
-
-The global demand for luxury and high-quality agricultural products is increasing, and Oxaiura Plantation leverages its reputation to secure lucrative contracts worldwide. The plantation employs rigorous quality control measures to meet international standards, ensuring that every batch of crops satisfies stringent regulatory requirements. From proper post-harvest handling to controlled storage and logistics, Oxaiura guarantees that products arrive fresh, intact, and ready for high-value markets.
-
-Furthermore, Oxaiura participates in international trade fairs, expos, and certifications to strengthen its brand recognition. By maintaining traceability and transparency, the plantation assures buyers of ethical sourcing and sustainable cultivation, which is increasingly valued in global markets. This proactive engagement enhances investor confidence and reinforces Oxaiura’s position as a market leader in premium agricultural commodities.
-
-In addition, Oxaiura monitors global trends in agricultural products, adjusting cultivation practices and crop selections to meet emerging demands. The plantation’s focus on quality, innovation, and market responsiveness ensures a competitive edge, driving growth, profitability, and long-term sustainability. Stakeholders benefit from both the financial returns and the prestige associated with high-demand, ethically produced crops.`,
+    title: "Sales Teams: The True Asset Driving Business Growth",
+    slug: "sales-team-assets",
+    image: "/images/blog/sales_team.jpg",
+    description: `Every thriving business relies on multiple departments working in harmony — but few contribute as directly to growth, revenue, and brand reputation as the sales team. At OxiAura Plantation Pvt. Ltd., our sales professionals are more than just revenue generators — they are the face of our company, the bridge between our products and customers, and the driving force behind our expansion.
+Why Sales Teams Are More Than Just Numbers
+1.	Revenue Generators:
+Sales teams bring in the income that keeps a company operational and fuels growth. Their ability to understand customer needs, offer solutions, and close deals directly impacts the bottom line.
+2.	Brand Ambassadors:
+Every interaction with a client or partner is an opportunity to strengthen the brand’s reputation. A sales professional represents the company’s values, quality, and reliability in every conversation.
+3.	Market Intelligence:
+Through customer interactions, sales teams gather crucial information about market trends, competitor strategies, and emerging opportunities. This feedback helps the company adapt, innovate, and stay ahead.
+4.	Relationship Builders:
+Strong relationships lead to repeat business, referrals, and loyalty. Sales teams maintain connections that can translate into long-term partnerships and sustainable growth.
+Numbers alone don’t drive success — people do. The passion, dedication, and strategic thinking of the sales team turn leads into loyal customers. By understanding customer pain points and offering tailored solutions, they provide value that goes far beyond a simple transaction.
+A capable sales team works hand-in-hand with marketing, operations, and product development teams. They help forecast demand, identify gaps in the market, and suggest innovations that improve both product offerings and service delivery.
+A strong sales team is not just a department — it’s a strategic asset that fuels business growth, strengthens relationships, and drives innovation. At OxiAura Plantation Pvt. Ltd., we recognize that our sales professionals are at the heart of our success, turning strategy into results and vision into reality.
+.`,
   },
   {
     title: "Technological Innovation in Modern Plantations",
-    image: "/images/Chille.png",
+    image: "/images/blog/technology.jpg",
     slug: "technological-innovation-in-modern-plantations",
-    description: `Oxaiura Plantation integrates cutting-edge technology to enhance crop productivity, quality, and sustainability. From precision agriculture tools to automated irrigation systems, technology enables the plantation to monitor conditions in real-time, optimize resource use, and minimize losses. 
-
-Advanced soil sensors measure moisture, nutrient levels, and pH, allowing for precise adjustments in fertilization and irrigation. Drone monitoring provides aerial imaging to detect pest infestations, crop health variations, and growth patterns. By leveraging these technologies, Oxaiura ensures that every plant receives optimal care, improving both yield and quality while reducing waste and environmental impact.
-
-In addition, the plantation uses data analytics to forecast production trends, plan harvest schedules, and align supply with market demands. Integrated farm management software tracks every stage of cultivation, providing actionable insights that enhance decision-making and operational efficiency. These technological advancements make Oxaiura a leader in modern plantation practices, combining traditional knowledge with innovative solutions.
-
-Employees are trained to operate and maintain these technologies effectively, fostering a culture of continuous improvement and adaptation. Investors and partners benefit from predictable, high-quality output, risk mitigation, and improved operational transparency. The adoption of technology reinforces Oxaiura Plantation’s commitment to excellence, sustainability, and global competitiveness in the agricultural sector.`,
+    description: `Every thriving business relies on multiple departments working in harmony — but few contribute as directly to growth, revenue, and brand reputation as the sales team. At OxiAura Plantation Pvt. Ltd., our sales professionals are more than just revenue generators — they are the face of our company, the bridge between our products and customers, and the driving force behind our expansion.
+Why Sales Teams Are More Than Just Numbers
+1.	Revenue Generators:
+Sales teams bring in the income that keeps a company operational and fuels growth. Their ability to understand customer needs, offer solutions, and close deals directly impacts the bottom line.
+2.	Brand Ambassadors:
+Every interaction with a client or partner is an opportunity to strengthen the brand’s reputation. A sales professional represents the company’s values, quality, and reliability in every conversation.
+3.	Market Intelligence:
+Through customer interactions, sales teams gather crucial information about market trends, competitor strategies, and emerging opportunities. This feedback helps the company adapt, innovate, and stay ahead.
+4.	Relationship Builders:
+Strong relationships lead to repeat business, referrals, and loyalty. Sales teams maintain connections that can translate into long-term partnerships and sustainable growth.
+The Human Element
+Numbers alone don’t drive success — people do. The passion, dedication, and strategic thinking of the sales team turn leads into loyal customers. By understanding customer pain points and offering tailored solutions, they provide value that goes far beyond a simple transaction.
+Supporting Growth and Strategy
+A capable sales team works hand-in-hand with marketing, operations, and product development teams. They help forecast demand, identify gaps in the market, and suggest innovations that improve both product offerings and service delivery.
+A strong sales team is not just a department — it’s a strategic asset that fuels business growth, strengthens relationships, and drives innovation. At OxiAura Plantation Pvt. Ltd., we recognize that our sales professionals are at the heart of our success, turning strategy into results and vision into reality.
+`,
   },
   {
-    title: "Cultural and Economic Significance of Plantation Crops",
-    image: "/images/Chille.png",
-    slug: "cultural-and-economic-significance-of-plantation-crops",
-    description: `The crops cultivated at Oxaiura Plantation carry profound cultural and economic importance. Agarwood, Vanilla, TJC Mango, and other premium crops are not only valuable commodities but also embody centuries-old traditions, culinary heritage, and regional identity. 
-
-Agarwood, for example, is revered in many Asian cultures for its aromatic properties, spiritual significance, and use in perfumes and incense. Vanilla is celebrated globally for its rich flavor and culinary versatility. TJC Mango is prized for its taste, nutritional value, and symbolic status as the 'king of fruits.' By cultivating such crops, Oxaiura Plantation preserves heritage while catering to modern markets.
-
-Economically, these crops generate significant revenue streams for local communities and investors. The plantation creates employment opportunities, supports ancillary industries like processing, packaging, and logistics, and contributes to regional economic growth. Its commitment to sustainable practices ensures that these economic benefits do not come at the expense of environmental or social well-being.
-
-By blending cultural preservation with economic development, Oxaiura Plantation demonstrates how agriculture can be both profitable and socially responsible. Investors gain from high-value products with global demand, while communities benefit from sustainable employment and skill development. The plantation exemplifies a balanced approach where tradition, economy, and sustainability coexist harmoniously.`,
+    title: "The Faces Behind the Plantation: Meet the Team Driving OxiAura’s Success",
+    image: "/images/blog/vanila.jpg",
+    slug: "faces-behind-plantation",
+    description: `At OxiAura Plantation Pvt. Ltd., we often talk about sustainability, innovation, and high-quality agricultural products. But behind every thriving plantation, there’s a dedicated team of people whose passion, hard work, and expertise bring our vision to life. In this blog, we shine a light on the faces behind the plantation — the people making our mission possible.
+The Team That Makes It Happen
+From the field staff tending the crops to the managers planning operations, every individual plays a crucial role:
+•	Plantation Workers: The backbone of our operations. They ensure that every tree and plant receives the care it needs — from planting and nurturing to harvesting. Their knowledge of the land and dedication to sustainable practices is invaluable.
+•	Field Supervisors: They coordinate daily activities, monitor crop health, and guide the team to achieve productivity targets. Their leadership ensures efficiency while maintaining our commitment to eco-friendly practices.
+•	Agronomists & Specialists: Experts in plant health, soil management, and crop quality, they bring science and innovation to every hectare of our plantation. Their insights help us implement modern techniques that improve yields and sustainability.
+•	Operations & Management Team: From coordinating logistics to maintaining supply chains, the management team ensures that every process runs smoothly. Their strategic planning and oversight help the plantation grow efficiently while keeping long-term goals in mind.
+A Culture of Collaboration and Care
+At OxiAura, our team isn’t just a group of employees — we’re a community united by a shared mission. Regular training sessions, skill development programs, and team-building activities ensure that our people thrive both professionally and personally. We believe that a motivated and happy team is essential to sustainable success.
+Stories That Inspire
+Every day, our team members contribute in ways big and small:
+•	A plantation worker carefully tending seedlings ensures that future harvests will flourish.
+•	A field supervisor identifies an early pest issue, preventing potential crop loss.
+•	The management team implements innovative irrigation techniques, conserving water while improving yields.
+These small yet significant contributions collectively define the success of our plantation.
+Why People Matter
+Sustainability isn’t just about trees or crops — it’s about people. By investing in the welfare, growth, and development of our team, OxiAura ensures that our plantations not only thrive today but are poised for long-term success. The faces behind the plantation represent commitment, expertise, and a shared vision for a greener future.
+Next time you see a high-quality product from OxiAura Plantation, remember that it represents the dedication and hard work of our incredible team. They are the true heart of our operations — the faces behind the plantation who make sustainability, innovation, and quality a reality.
+`,
   },
 ];
+
+
 
 export const jobs = [
   {
