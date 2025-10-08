@@ -29,7 +29,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-6xl text-gray-700 mb-2"
+            className="text-xl md:text-6xl text-gray-700 mb-2"
           >
             From Plantation to You
           </motion.p>
@@ -67,7 +67,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-xl font-semibold">Red Chilli</h3>
+              <h3 className="text-xl font-semibold">Scotch Bonnet</h3>
               <p className="text-sm">Spicy delight</p>
             </div>
           </motion.div>

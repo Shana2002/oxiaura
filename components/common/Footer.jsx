@@ -11,6 +11,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import GroupLogoWhite from "@/assets/images/logo/logo_group_white.png";
 import Image from "next/image";
 import { companies } from "@/assets/data";
+import { FaLocationPin } from "react-icons/fa6";
 
 const Footer = ({image,desc}) => {
   return (
@@ -37,6 +38,9 @@ const Footer = ({image,desc}) => {
             </p>
             <p className="flex items-center gap-2">
               <FaEnvelope /> info@oxiaura.com
+            </p>
+            <p className="flex items-center gap-2">
+              <FaLocationPin /> No. 5/1/2 Galle Rd, <br />Panadura .
             </p>
           </div>
           <div className="mt-4 flex gap-4">

@@ -12,14 +12,14 @@ const PlanCard = ({
   <div className="bg-white border-2 border-green-200 rounded-2xl shadow-sm flex flex-col justify-between h-full px-8 py-10">
     <div>
       <div className="flex justify-between items-center">
-        <h2 className="text-green-700 text-7xl font-bold mb-2">{title}</h2>
+        <h2 className="text-green-700 text-7xl font-bold mb-2 text-center">{title}</h2>
 
         <Image
           src={icon}
           alt="Plant Icon"
           width={96} // 24 * 4 (Tailwind spacing scale)
           height={96}
-          className="object-cover"
+          className="object-cover hidden lg:block"
         />
       </div>
 
@@ -104,7 +104,7 @@ const InvestmentPlans = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-4 min-h-screen m-[5vw] rounded-4xl bg-green-50 p-10">
+    <div className="grid grid-cols-1 gap-4 min-h-screen lg:m-[5vw] rounded-4xl bg-green-50 p-10">
       {plans.map((plan, index) => (
         <PlanCard key={index} {...plan} />
       ))}

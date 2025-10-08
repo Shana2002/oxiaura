@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 const ProductHorizontalCard = ({ title, subtitle, desc,image,  link,side }) => {
 
-    const col = side % 2 !== 0 ? "flex-row-reverse" : "flex-row"
+    const col = side % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
     const textSide = side % 2 !== 0 ? "text-right" : "text-left";
     return (
-    <div className= {`flex ${col} items-center justify-center md:justify-between mb-16 gap-6`}>
-      <div className="md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0 mx-auto">
-        <div className="relative w-full h-64 md:h-[60vh] rounded-lg overflow-hidden">
+    <div className= {`flex ${col} items-center flex-col justify-center md:justify-between mb-16 gap-6 px-[5vw] md:px-0`}>
+      <div className="md:w-1/2 flex justify-center flex-col md:flex-row md:justify-end mb-8 md:mb-0 mx-auto">
+        <div className="relative w-64 md:w-full h-64 md:h-[60vh] rounded-lg overflow-hidden">
           <Image
             src={image}
             alt="Scotch Bonnet"
