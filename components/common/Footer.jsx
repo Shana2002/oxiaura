@@ -12,7 +12,7 @@ import GroupLogoWhite from "@/assets/images/logo/logo_group_white.png";
 import Image from "next/image";
 import { companies } from "@/assets/data";
 
-const Footer = () => {
+const Footer = ({image,desc}) => {
   return (
     <footer className="bg-green-700 text-white">
       <div className="mx-auto px-[5vw] py-10 flex flex-col md:flex-row justify-between gap-8">
@@ -20,13 +20,13 @@ const Footer = () => {
         <div className="md:w-1/4">
           <div className="w-1/2 flex items-center gap-2">
             <Link href={"/"}>
-              <Image src={GroupLogoWhite} alt="white-oxaiura-logo" />
+              <Image src={image?image:GroupLogoWhite} alt="white-oxaiura-logo" />
             </Link>
           </div>
           <p className="mt-4 text-sm">
-            Oxiaura Plantation Pvt. Ltd. specializes in sustainable plantation
+            {desc? desc : `Oxiaura Plantation Pvt. Ltd. specializes in sustainable plantation
             management, eco-friendly products, and investment opportunities,
-            focusing on innovation and growth.
+            focusing on innovation and growth.`}
           </p>
           <div className="mt-4 space-y-2 text-sm">
             <p className="flex items-center gap-2">
