@@ -53,7 +53,7 @@ const ProductSection = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/72 to-black/0"></div>
         <p className="absolute bottom-0 px-10 py-12 text-white">
-          Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.
+          Precious and aromatic, Agarwood embodies depth and warmth, connecting nature’s rarest essence to timeless craftsmanship.
         </p>
       </motion.div>
 
@@ -71,7 +71,7 @@ const ProductSection = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/72 to-black/0"></div>
         <p className="absolute bottom-0 px-10 py-12 text-white">
-          Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.
+          Grown with care, our Vanilla brings a soft sweetness and fragrant richness — nature’s touch in every pod.
         </p>
       </motion.div>
 
@@ -89,7 +89,7 @@ const ProductSection = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/72 to-black/0"></div>
         <p className="absolute bottom-0 px-10 py-12 text-white">
-          Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.
+          Juicy, refreshing, and vibrant — Watermelon captures the taste of pure summer, cultivated with sustainable care.
         </p>
       </motion.div>
 
@@ -107,7 +107,7 @@ const ProductSection = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/72 to-black/0"></div>
         <p className="absolute bottom-0 px-10 py-12 text-white">
-          Nurtured by nature, our bananas bring freshness, flavor, and eco-conscious farming together.
+          Bold and fiery, Scotch Bonnet delivers a burst of heat and tropical flavor, grown from passion and nature’s spice.
         </p>
       </motion.div>
     </div>

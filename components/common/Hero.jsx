@@ -18,7 +18,7 @@ export default function Hero() {
   };
 
   const images = [
-    { src: "/images/plantation_image1.jpg", alt: "Red Chilies" },
+    { src: "/images/Agarwood-Home.jpg", alt: "Agarwood" },
     { src: "/images/plantation_image2.png", alt: "Natural Wood" },
     { src: "/images/plantation_image3.webp", alt: "Vanilla Pods" },
   ];

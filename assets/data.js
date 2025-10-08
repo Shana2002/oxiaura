@@ -23,6 +23,7 @@ export const products = [
       },
     ],
     watching: 100,
+    subImages:["/images/plants/agarwood/1.jpg","/images/plants/agarwood/2.png","/images/plants/agarwood/3.jpg",]
   },
   {
     title: "Vanilla",
