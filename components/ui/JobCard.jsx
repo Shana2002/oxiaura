@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const JobCard = ({ title, description, imageUrl,slug }) => {
   return (
-    <Link href={`/career/${slug}`}>
+    <Link href={`/plantation/career/${slug}`}>
         <div className="relative w-full overflow-hidden rounded-xl shadow-lg transition duration-300 hover:shadow-2xl hover:scale-[1.01]">
           {/* Background Image */}
           <img

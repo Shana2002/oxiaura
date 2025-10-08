@@ -337,77 +337,81 @@ Next time you see a high-quality product from OxiAura Plantation, remember that 
 
 export const jobs = [
   {
-    title: "Business Admin (Senior)",
+    title: "Zonal Manager",
     level: "Senior",
-    slug:"business-admin-senior",
+    slug:"zonal-manager",
     description:
-      "At OxiAura Plantation Pvt. Ltd., we combine eco-friendly practices with modern innovation to deliver high-quality agricultural products that shape a greener, better-fed world. This role is crucial to coordinating daily operations, managing project timelines, and ensuring seamless communication across departments. This position is ideal for someone who is highly organized, detail-oriented, and passionate about driving efficiency within a growing, sustainability-focused organization.",
+      "At OxiAura Plantation Pvt. Ltd., we are committed to transforming agriculture through sustainable innovation and responsible practices. As a Zonal Manager, you will oversee plantation operations within your designated region, ensuring targets are met efficiently while maintaining our high standards of quality and sustainability. This role is ideal for a results-driven professional with strong leadership, strategic thinking, and team management skills, who is passionate about building a greener, more productive future.",
     qualifications: [
-      "Bachelor's degree in Business Administration, Management, Finance, or related field (Master's degree is an added advantage).",
-      "Strong knowledge of business operations, budgeting, and reporting tools.",
-      "Excellent communication and leadership skills.",
-      "Strong computer skills, with proficiency in MS Office Suite and business management software.",
+      "Bachelor’s degree in Agriculture, Business Management, or a related field (Master’s degree is an added advantage)",
+      "Strong understanding of plantation operations, supply chain management, and field productivity",
+      "Excellent leadership, analytical, and communication skills",
+      "Proficiency in MS Office Suite and reporting tools",
+      "Ability to manage multi-site operations and coordinate with cross-functional teams",
     ],
     experience: [
-      "Minimum of 3 years of experience in business administration, office management, or operations coordination.",
-      "Proven track record of managing administrative functions, vendor relations, and business reporting.",
-      "Experience in agriculture, FMCG, or manufacturing sectors is an advantage but not mandatory.",
+      "Minimum of 5 years’ experience in plantation management, agricultural supervision, or zonal/regional operations.",
+      "Proven experience in handling multiple projects, meeting productivity goals, and managing large teams.",
+      "Prior experience in agriculture, FMCG, or plantation-based industries will be a strong advantage.",
     ],
     offers: [
-      "Competitive salary package with performance-based bonuses.",
-      "Opportunities for career growth and professional development.",
-      "A supportive, team-oriented and collaborative environment.",
-      "Exposure to international markets and innovative plantation projects.",
-      "Employee welfare benefits, including healthcare coverage and training programs.",
+      "Attractive salary package with performance-based incentives.",
+      "Career growth within a rapidly expanding and sustainability-focused organization.",
+      "Comprehensive employee benefits, including healthcare and welfare programs.",
+      "Training and development opportunities to enhance leadership and operational excellence.",
+      "Exposure to innovative plantation projects and international collaborations.",
     ],
     salary:
-      "LKR 90,000 - 120,000 per month (based on qualifications and experience).",
-    imageUrl: "https://placehold.co/400x320/0284c7/ffffff?text=Admin+Role",
+      "LKR 120,000 – 160,000 per month (based on experience and qualifications).",
+    imageUrl: "/images/jobs/zonal.jpg",
   },
   {
-    title: "IT Engineer (Software)",
+    title: "Regional Manager",
     level: "Senior",
-    slug:"it-engineer-software",
+    slug:"regional-manager",
     description:
-      "At OxiAura Plantation Pvt. Ltd., we combine eco-friendly practices with modern innovation to deliver high-quality agricultural products that shape a greener, better-fed world. This role is crucial to coordinating daily operations, managing project timelines, and ensuring seamless communication across departments. This position is ideal for someone who is highly organized, detail-oriented, and passionate about driving efficiency within a growing, sustainability-focused organization.",
+      "At OxiAura Plantation Pvt. Ltd., we combine eco-friendly practices with modern innovation to deliver high-quality agricultural products that help shape a greener and more sustainable world. As a Regional Manager, you will be responsible for overseeing operations across multiple plantation zones, ensuring productivity, quality, and efficiency. This role requires a strategic thinker with strong leadership and coordination skills to manage teams, drive growth, and align regional operations with the company’s sustainability goals.",
     qualifications: [
-      "Bachelor's degree in Business Administration, Management, Finance, or related field (Master's degree is an added advantage).",
-      "Strong knowledge of business operations, budgeting, and reporting tools.",
-      "Excellent communication and leadership skills.",
-      "Strong computer skills, with proficiency in MS Office Suite and business management software.",
+      "Bachelor’s degree in Agriculture, Business Management, or a related discipline (Master's degree is an added advantage).",
+      "In-depth knowledge of plantation management, agribusiness operations, and supply chain processes.",
+      "Strong leadership, analytical, and decision-making abilities.",
+      "Excellent communication and interpersonal skills for managing cross-functional teams.",
+      "Proficiency in MS Office Suite and business management software.",
+
     ],
     experience: [
-      "Minimum of 3 years of experience in business administration, office management, or operations coordination.",
-      "Proven track record of managing administrative functions, vendor relations, and business reporting.",
-      "Experience in agriculture, FMCG, or manufacturing sectors is an advantage but not mandatory.",
+      "Minimum of 5–7 years’ experience in plantation, agricultural, or regional operations management.",
+      "Proven track record in managing multi-site operations, achieving productivity targets, and leading large teams.",
+      "Experience in FMCG, agribusiness, or manufacturing sectors is an added advantage.",
     ],
     offers: [
       "Competitive salary package with performance-based bonuses.",
-      "Opportunities for career growth and professional development.",
-      "A supportive, team-oriented and collaborative environment.",
-      "Exposure to international markets and innovative plantation projects.",
-      "Employee welfare benefits, including healthcare coverage and training programs.",
+      "Professional development and leadership training opportunities.",
+      "Collaborative and sustainability-focused work environment.",
+      "Exposure to innovative plantation and international projects.",
+      "Employee welfare benefits, including healthcare coverage and growth incentives.",
     ],
     salary:
       "LKR 90,000 - 120,000 per month (based on qualifications and experience).",
-    imageUrl: "https://placehold.co/400x320/0284c7/ffffff?text=IT+Role",
+    imageUrl: "/images/jobs/regional.jpg",
   },
   {
-    title: "Sales Representative (Intern)",
+    title: "Branch Manager",
     level: "Senior",
-    slug:"sales-representative-intern",
+    slug:"branch-manager",
     description:
-      "At OxiAura Plantation Pvt. Ltd., we combine eco-friendly practices with modern innovation to deliver high-quality agricultural products that shape a greener, better-fed world. This role is crucial to coordinating daily operations, managing project timelines, and ensuring seamless communication across departments. This position is ideal for someone who is highly organized, detail-oriented, and passionate about driving efficiency within a growing, sustainability-focused organization.",
+      "At OxiAura Plantation Pvt. Ltd., we are dedicated to advancing sustainable agriculture through innovation and eco-friendly practices. As a Branch Manager, you will be responsible for overseeing the daily operations of your assigned branch, managing staff, ensuring operational efficiency, and driving business performance. This role is ideal for a motivated leader who can balance administrative management with field-level coordination and inspire teams to achieve company goals aligned with our sustainability vision.",
     qualifications: [
-      "Bachelor's degree in Business Administration, Management, Finance, or related field (Master's degree is an added advantage).",
-      "Strong knowledge of business operations, budgeting, and reporting tools.",
-      "Excellent communication and leadership skills.",
-      "Strong computer skills, with proficiency in MS Office Suite and business management software.",
+      "Bachelor’s degree in Business Management, Agriculture, or a related field.",
+      "Strong understanding of business operations, team management, and customer relations.",
+      "Excellent leadership, communication, and problem-solving skills.",
+      "Proficiency in MS Office Suite and basic business software tools.",
+      "Ability to plan, organize, and oversee multiple ongoing projects effectively.",
     ],
     experience: [
-      "Minimum of 3 years of experience in business administration, office management, or operations coordination.",
-      "Proven track record of managing administrative functions, vendor relations, and business reporting.",
-      "Experience in agriculture, FMCG, or manufacturing sectors is an advantage but not mandatory.",
+     "Minimum of 3–5 years’ experience in branch or operations management.",
+     "Proven track record in managing teams, meeting branch targets, and ensuring operational excellence.",
+     "Experience in agriculture, plantation, FMCG, or manufacturing sectors will be a significant advantage.",
     ],
     offers: [
       "Competitive salary package with performance-based bonuses.",
@@ -418,9 +422,11 @@ export const jobs = [
     ],
     salary:
       "LKR 90,000 - 120,000 per month (based on qualifications and experience).",
-    imageUrl: "https://placehold.co/400x320/0284c7/ffffff?text=Sales+Role",
-  },
+    imageUrl: "/images/jobs/branch.jpg",
+  }
 ];
+
+
 export const teamMembers = [
   {
     name: "Mr. Jagath Premal",
