@@ -58,7 +58,7 @@ const page = () => {
           <Image
             src={GroupLogoWhite}
             alt="oxiaura-group-white"
-            className="mx-auto mb-4 w-1/3 sm:w-1/4 md:w-1/6"
+            className="hidden mx-auto mb-4 w-1/3 sm:w-1/4 md:w-1/6"
           />
           <h3 className="text-3xl sm:text-5xl lg:text-6xl">Welcome to</h3>
           <h1 className="text-5xl sm:text-7xl lg:text-[15vh] font-bold">
