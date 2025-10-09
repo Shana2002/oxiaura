@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const PlanCard = ({
   title,
@@ -8,16 +10,29 @@ const PlanCard = ({
   investmentType,
   returnDuration,
   keyBenefits,
+  index,
 }) => (
-  <div className="bg-white border-2 border-green-200 rounded-2xl shadow-sm flex flex-col justify-between h-full px-8 py-10">
+  <motion.div
+    className="bg-white border-2 border-green-200 rounded-2xl shadow-sm flex flex-col justify-between h-full px-8 py-10"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{
+      duration: 0.6,
+      delay: index * 0.2, // Stagger effect between cards
+      ease: "easeOut",
+    }}
+   // viewport={{ once: true }} // animates only once when scrolled into view
+  >
     <div>
       <div className="flex justify-between items-center">
-        <h2 className="text-green-700 text-7xl font-bold mb-2 text-center">{title}</h2>
+        <h2 className="text-green-700 text-7xl font-bold mb-2 text-center">
+          {title}
+        </h2>
 
         <Image
           src={icon}
           alt="Plant Icon"
-          width={96} // 24 * 4 (Tailwind spacing scale)
+          width={96}
           height={96}
           className="object-cover hidden lg:block"
         />
@@ -29,10 +44,13 @@ const PlanCard = ({
       <p className="text-gray-700 text-xl">
         <strong>Return Duration:</strong> {returnDuration}
       </p>
-      <h3 className="text-green-700 font-semibold mt-6 text-2xl">Key benefits</h3>
+
+      <h3 className="text-green-700 font-semibold mt-6 text-2xl">
+        Key Benefits
+      </h3>
       <ul className="list-disc pl-5">
-        {keyBenefits.map((benefit, index) => (
-          <li key={index} className="text-gray-600 mt-2">
+        {keyBenefits.map((benefit, i) => (
+          <li key={i} className="text-gray-600 mt-2">
             {benefit}
           </li>
         ))}
@@ -40,16 +58,16 @@ const PlanCard = ({
     </div>
 
     {/* Download Button */}
-    <div className="mt-4 lg:-mt-10 flex justify-end">
+    {/* <div className="mt-4 lg:-mt-10 flex justify-end">
       <Link
-        href="/sample-agreement.pdf" // Replace with your actual file path
+        href="/sample-agreement.pdf"
         download
         className="bg-black text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-green-700 transition"
       >
         Download Sample Agreement
       </Link>
-    </div>
-  </div>
+    </div> */}
+  </motion.div>
 );
 
 const InvestmentPlans = () => {

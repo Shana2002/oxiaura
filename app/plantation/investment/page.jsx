@@ -5,7 +5,7 @@ import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import InvestmentPlans from "@/components/common/InvestmentPlans";
 import PlantSellingPlatform from "@/components/common/PlantSellingPlatform";
-import Investment1 from "@/assets/images/investment1.png";
+import Investment1 from "@/assets/images/bg/handshake.png";
 import Link from "next/link";
 
 const page = () => {
