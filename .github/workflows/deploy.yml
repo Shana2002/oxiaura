@@ -32,6 +32,7 @@ jobs:
 
             echo "🔁 Restarting PM2 process..."
             pm2 restart oxiaura || pm2 start npm --name "oxiaura" -- start
+            pm2 save
 
             echo "🔄 Reloading Nginx..."
             systemctl reload nginx || sudo service nginx reload

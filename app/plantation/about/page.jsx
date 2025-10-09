@@ -49,7 +49,7 @@ const services = [
   {
     title: "Premium Plantation Products",
     description:
-      "From Agarwood to Vanilla and Snake Chilli, we cultivate quality.",
+      "From Agarwood to Vanilla and TJC Mango, we cultivate quality.",
     image: "/images/what_we_1.png",
   },
   {
@@ -223,7 +223,7 @@ across its diverse business sectors."
             We combine rigorous financial analysis with deep environmental
             expertise. Our commitment to transparency, coupled with our unique
             portfolio of vetted, high-impact green projects, ensures both your
-            financial and ethical returns are maximized.
+            financial and ethical returns are secured and maximized.
           </p>
         </div>
       </section>
