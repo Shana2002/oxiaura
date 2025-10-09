@@ -121,7 +121,7 @@ export default function Navbar() {
 
         {/* Profile button */}
         <Link
-          href="/profile"
+          href="/plantation/profile"
           className="w-10 h-10 flex items-center justify-center rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors"
         >
           <User size={20} />
