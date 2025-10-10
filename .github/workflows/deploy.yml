@@ -31,7 +31,7 @@ jobs:
             npm run build
 
             echo "🔁 Restarting PM2 process..."
-            pm2 restart oxiaura || pm2 start npm --name "oxiaura" -- start
+            pm2 restart oxiaura || pm2 start npm --name "oxiaura" --run start
             pm2 save
 
             echo "🔄 Reloading Nginx..."

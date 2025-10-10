@@ -1,13 +1,17 @@
+import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
+import NotFound from "@/components/common/NotFound";
 import React from "react";
 
 const page = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-white w-screen h-screen flex items-center justify-center">
-        <h1 className="text-9xl text-green-700">Feature Comming Soon.....</h1>
+      <div className="relative flex flex-col items-center justify-center min-h-screen text-center bg-white text-green-900 overflow-hidden">
+        
+        <NotFound navigate={"/plantation"} />
       </div>
+      <Footer />
     </>
   );
 };
