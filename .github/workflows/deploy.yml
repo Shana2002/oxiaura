@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -13,28 +14,33 @@ jobs:
       - name: Checkout latest code
         uses: actions/checkout@v4
 
-      - name: Deploy to Hostinger VPS via SSH
+      - name: Deploy to Hostinger VPS via SSH (with tmux)
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
+            echo "🚀 Starting Oxiaura deployment on VPS..."
+
             cd /var/www/oxiaura
-            echo "📦 Pulling latest Oxiaura code..."
+
+            echo "📦 Pulling latest code..."
             git pull origin main
 
             echo "📦 Installing dependencies..."
             npm install --omit=dev
 
-            echo "🏗️ Building Oxiaura Next.js app..."
+            echo "🏗️ Building Next.js app..."
             npm run build
 
-            echo "🔁 Restarting PM2 process..."
-            pm2 restart oxiaura || pm2 start npm --name "oxiaura" --run start
-            pm2 save
+            echo "🧹 Killing old tmux session if running..."
+            tmux kill-session -t oxiaura || true
+
+            echo "🖥️ Starting new tmux session for Oxiaura..."
+            tmux new -d -s oxiaura "cd /var/www/oxiaura && npm run start"
 
             echo "🔄 Reloading Nginx..."
-            systemctl reload nginx || sudo service nginx reload
+            sudo systemctl reload nginx || sudo service nginx reload
 
-            echo "✅ Oxiaura deployment complete!"
+            echo "✅ Deployment complete! App running in tmux session 'oxiaura'"
