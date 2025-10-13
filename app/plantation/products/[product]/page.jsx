@@ -95,78 +95,85 @@ const App = () => {
     },
   ];
   const Timeline = ({ steps }) => {
-    // Function to calculate Y offset along a curve (sine wave for smooth curve)
-    const getY = (index, total) => {
-      const amplitude = 120; // Height of the curve
-      const baseY = 100; // Base top offset
-      const t = index / (total - 1); // normalized position (0 to 1)
-      return baseY + Math.sin(t * Math.PI) * amplitude;
-    };
+  const getY = (index, total) => {
+    const amplitude = 120;
+    const baseY = 100;
+    const t = index / (total - 1);
+    return baseY + Math.sin(t * Math.PI) * amplitude;
+  };
 
-    return (
-      <div className="mx-auto px-4 py-[5vw]">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
-          Project Timeline
-        </h2>
-        <div className="w-1/4 mx-auto border-b-2 border-[#66cc33] mb-12"></div>
-        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px]">
-          {/* SVG Path for Timeline */}
-          {/* <svg
-            className="absolute w-full h-full"
-            viewBox="0 0 1000 300"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M 50 250 C 300 50, 700 50, 950 250"
-              fill="none"
-              stroke="#66cc33"
-              strokeWidth="4"
-              vectorEffect="non-scaling-stroke"
-            />
-          </svg> */}
+  return (
+    <div className="mx-auto px-4 py-[5vw]">
+      <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
+        Project Timeline
+      </h2>
+      <div className="w-1/4 mx-auto border-b-2 border-[#66cc33] mb-12"></div>
 
-          {/* Timeline Steps */}
-          {steps.map((step, index) => {
-            const leftPercent = (index / (steps.length - 1)) * 90 + 5; // X position along the path
-            const topPx = getY(index, steps.length); // Y position along the curve
+      {/* --- Desktop View (Curved layout) --- */}
+      <div className="relative hidden md:block w-full h-[400px] md:h-[500px]">
+        {steps.map((step, index) => {
+          const leftPercent = (index / (steps.length - 1)) * 90 + 5;
+          const topPx = getY(index, steps.length);
+          return (
+            <div
+              key={step.id}
+              className="absolute w-1/3 text-center transform -translate-x-1/2"
+              style={{
+                left: `${leftPercent}%`,
+                top: `${topPx}px`,
+              }}
+            >
+              <div className="flex flex-col items-center">
+                {/* Dots */}
+                <div className="relative">
+                  <div className="w-8 h-8 rounded-full bg-[#006633] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                  <div className="w-4 h-4 rounded-full bg-[#66cc33] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-white"></div>
+                </div>
 
-            return (
-              <div
-                key={step.id}
-                className="absolute w-1/3 text-center transform -translate-x-1/2"
-                style={{
-                  left: `${leftPercent}%`,
-                  top: `${topPx}px`,
-                }}
-              >
-                {/* Point */}
-                <div className="flex flex-col items-center">
-                  <div className="relative">
-                    <div className="w-8 h-8 rounded-full bg-[#006633] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-                    <div className="w-4 h-4 rounded-full bg-[#66cc33] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-white"></div>
+                {/* Text */}
+                <div className="mt-12">
+                  <div className="text-6xl font-black text-gray-200 opacity-70 mb-2 leading-none">
+                    {step.id}
                   </div>
-
-                  {/* Content */}
-                  <div className="mt-12">
-                    <div className="text-6xl font-black text-gray-200 opacity-70 mb-2 leading-none">
-                      {step.id}
-                    </div>
-                    <div className="text-lg font-bold text-[#006633] mb-2">
-                      {step.title}
-                    </div>
-                    <p className="text-sm text-gray-600 max-w-xs mx-auto">
-                      {step.detail}
-                    </p>
+                  <div className="text-lg font-bold text-[#006633] mb-2">
+                    {step.title}
                   </div>
+                  <p className="text-sm text-gray-600 max-w-xs mx-auto">
+                    {step.detail}
+                  </p>
                 </div>
               </div>
-            );
-          })}
-        </div>
-        <div className="h-[250px] sm:h-[300px]"></div> {/* Spacer */}
+            </div>
+          );
+        })}
       </div>
-    );
-  };
+
+      {/* --- Mobile & Tablet View (Vertical stacked layout) --- */}
+      <div className="flex flex-col space-y-8 md:hidden">
+        {steps.map((step) => (
+          <div
+            key={step.id}
+            className="bg-white shadow-md rounded-xl p-6 border border-green-100 flex flex-col items-center text-center"
+          >
+            <div className="w-10 h-10 rounded-full bg-[#006633] flex items-center justify-center mb-4">
+              <div className="w-4 h-4 bg-[#66cc33] rounded-full border-2 border-white"></div>
+            </div>
+            <div className="text-3xl font-bold text-gray-200 opacity-70 leading-none">
+              {step.id}
+            </div>
+            <h3 className="text-lg font-bold text-[#006633] mt-2">
+              {step.title}
+            </h3>
+            <p className="text-gray-600 text-sm mt-2">{step.detail}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="h-[250px] sm:h-[300px]"></div> {/* Spacer for desktop */}
+    </div>
+  );
+};
+
 
   // --- Main Render Function ---
 

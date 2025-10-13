@@ -51,7 +51,7 @@ const GroupNavbar = ({always=false}) => {
         <div className="hidden md:flex items-center gap-8 text-black font-semibold text-lg">
           <Link href="/">Home</Link>
           <Link href="/plantation">Plantation</Link>
-          <Link href="https://oxiaura.net">Cosmetics</Link>
+          <Link href="https://oxiaura.net" target="_blank">Cosmetics</Link>
           <Link href="/">Excel Lanka</Link>
 
           {/* Members Dropdown */}
@@ -70,31 +70,31 @@ const GroupNavbar = ({always=false}) => {
                 className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-md rounded-lg"
               >
                 <Link
-                  href="/members/team"
+                  href="/under-construction"
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Olix
                 </Link>
                 <Link
-                  href="/members/partners"
+                  href="/under-construction"
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   JK Holding
                 </Link>
                 <Link
-                  href="/members/join"
+                  href="/under-construction"
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   JK Logistics
                 </Link>
                 <Link
-                  href="/members/join"
+                  href="/under-construction"
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Oxiaura Healthcare
                 </Link>
                 <Link
-                  href="/members/join"
+                  href="/under-construction"
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Oxiaura Realestate
@@ -103,7 +103,7 @@ const GroupNavbar = ({always=false}) => {
             )}
           </div>
 
-          <Link href="/">Gallery</Link>
+          <Link href="/gallery">Gallery</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -119,13 +119,13 @@ const GroupNavbar = ({always=false}) => {
       {menuOpen && (
         <div className="md:hidden bg-white shadow-lg border-t border-gray-200">
           <div className="flex flex-col items-start px-[5vw] py-4 text-black font-medium space-y-3">
-            <Link href="/" onClick={() => setMenuOpen(false)}>
+            <Link href="/plantation" onClick={() => setMenuOpen(false)}>
               Plantation
             </Link>
-            <Link href="/" onClick={() => setMenuOpen(false)}>
+            <Link href="https://oxiaura.net" target="_blank" onClick={() => setMenuOpen(false)}>
               Cosmetics
             </Link>
-            <Link href="/" onClick={() => setMenuOpen(false)}>
+            <Link href="/under-construction" onClick={() => setMenuOpen(false)}>
               Excel Lanka
             </Link>
 
@@ -139,29 +139,29 @@ const GroupNavbar = ({always=false}) => {
               </button>
               {dropdownOpen && (
                 <div className="flex flex-col ml-4 mt-2 space-y-2 text-gray-700">
-                  <Link href="/members/team" onClick={() => setMenuOpen(false)}>
+                  <Link href="/under-construction" onClick={() => setMenuOpen(false)}>
                     Olix
                   </Link>
                   <Link
-                    href="/members/partners"
+                    href="/under-construction"
                     onClick={() => setMenuOpen(false)}
                   >
                     JK Holding
                   </Link>
-                  <Link href="/members/join" onClick={() => setMenuOpen(false)}>
+                  <Link href="/under-construction" onClick={() => setMenuOpen(false)}>
                     JK Logistics
                   </Link>
-                  <Link href="/members/join" onClick={() => setMenuOpen(false)}>
+                  <Link href="/under-construction" onClick={() => setMenuOpen(false)}>
                     Oxiaura Healthcare
                   </Link>
-                  <Link href="/members/join" onClick={() => setMenuOpen(false)}>
+                  <Link href="/under-construction" onClick={() => setMenuOpen(false)}>
                     Oxiaura Realestate
                   </Link>
                 </div>
               )}
             </div>
 
-            <Link href="/" onClick={() => setMenuOpen(false)}>
+            <Link href="/gallery" onClick={() => setMenuOpen(false)}>
               Gallery
             </Link>
           </div>

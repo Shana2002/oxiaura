@@ -1,40 +1,38 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion"; // ✅ import motion
-import Mountain from '@/assets/images/bg/mountain.png'
-import LogoLarge from '@/assets/images/logo/logo_large.png'
+import Mountain from "@/assets/images/bg/mountain.png";
+import LogoLarge from "@/assets/images/logo/logo_large.png";
 
 export default function AboutUs() {
   // Variants for scroll animation
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 1, ease: "easeOut" } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
     },
   };
 
   return (
     <section className="relative bg-gradient-to-r from-[#CDFFB7] to-white h-[100vh] md:min-h-screen  overflow-hidden py-8 md:py-2 text-black">
-      
       {/* Bottom Background Image */}
       <Image
         src={Mountain}
         alt="about_us"
-        className="absolute bottom-[-7vh]  md:bottom-[-40vh] w-screen md:h-[80vh] object-cover -z-0"
+        className="absolute bottom-[-7vh] md:bottom-[-40vh] w-screen md:h-[80vh] object-cover z-0" // z-0 is fine
       />
 
       {/* Content Container */}
       <motion.div
-        className="flex flex-col md:flex-row justify-center z-auto items-center h-full md:min-h-[70vh] px-6 lg:px-16 pt-2 md:pt-0"
+        className="relative z-10 flex flex-col md:flex-row justify-center items-center h-full md:min-h-[70vh] px-6 lg:px-16 pt-2 md:pt-0"
         variants={containerVariants}
         initial="hidden"
-        whileInView="visible"   // ✅ Animate when in view
-        viewport={{ amount: 0.3 }} // trigger once, 30% visible
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
       >
-      
         {/* Logo Section */}
         <div className="w-full md:w-1/2 flex items-center justify-center mb-10 md:mb-0">
           <Image

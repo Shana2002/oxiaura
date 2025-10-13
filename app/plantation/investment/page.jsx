@@ -7,6 +7,7 @@ import InvestmentPlans from "@/components/common/InvestmentPlans";
 import PlantSellingPlatform from "@/components/common/PlantSellingPlatform";
 import Investment1 from "@/assets/images/bg/handshake.png";
 import Link from "next/link";
+import GetInTouch from "@/components/common/GetInTouch";
 
 const page = () => {
   return (
@@ -45,12 +46,13 @@ const page = () => {
           <h1 className="text-6xl font-bold text-green-500">Sustainable Growth Partnerships</h1>
           <h2 className="text-5xl font-bold text-black">Cultivating the Future Together</h2>
           <p className="justify-start text-black text-1xl">Partner with Oxiaura Plantation to shape a greener tomorrow.We collaborate with farmers, environmental innovators, and organizations committed to sustainable agriculture and eco-friendly development. Together, we nurture growth, empower communities, and create lasting environmental impact.</p>
-          <Link href={"/"} className="bg-black px-6 py-2 rounded-2xl mt-5">Contact us</Link>
+          <Link href={"#contact"} className="bg-black px-6 py-2 rounded-2xl mt-5">Contact us</Link>
         </div>
       </section>
 
       <InvestmentPlans />
       <PlantSellingPlatform />
+      <GetInTouch link={"contact"}/>
       <Footer />
     </div>
   );

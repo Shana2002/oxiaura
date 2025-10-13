@@ -241,10 +241,11 @@ across its diverse business sectors."
             Our Experts
           </motion.h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-stretch">
             {teamMembers.map((member, i) => (
               <motion.div
                 key={i}
+                className="h-full"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: i * 0.2 }}

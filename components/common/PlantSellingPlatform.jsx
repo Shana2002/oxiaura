@@ -1,6 +1,6 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const PlantCard = ({ name, price, description, imageUrl, index }) => (
   <motion.div
@@ -10,18 +10,22 @@ const PlantCard = ({ name, price, description, imageUrl, index }) => (
     transition={{ duration: 0.8, delay: index * 0.2 }}
     // viewport={{ once: true }}
   >
-    <img
-      src={imageUrl}
-      alt={name}
-      className="w-full h-[60vh] object-cover"
-    />
+    <img src={imageUrl} alt={name} className="w-full h-[60vh] object-cover" />
     <div className="p-6">
-      <h2 className="text-2xl font-bold text-green-800 mb-2 text-center">{name}</h2>
+      <h2 className="text-2xl font-bold text-green-800 mb-2 text-center">
+        {name}
+      </h2>
       <p className="text-gray-600 mb-4 text-center">{description}</p>
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="w-full bg-black hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300"
+        onClick={() => {
+          const contactSection = document.getElementById("contact");
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
       >
         Contact Us
       </motion.button>
@@ -32,23 +36,26 @@ const PlantCard = ({ name, price, description, imageUrl, index }) => (
 const PlantSellingPlatform = () => {
   const plants = [
     {
-      name: 'Agarwood Plant',
+      name: "Agarwood Plant",
       price: 1500,
-      description: 'Premium Agarwood saplings for aromatic resin production. High-value investment after 5-8 years.',
-      imageUrl: '/images/plants/agarwood.webp'
+      description:
+        "Premium Agarwood saplings for aromatic resin production. High-value investment after 5-8 years.",
+      imageUrl: "/images/plants/agarwood.webp",
     },
     {
-      name: 'Sandalwood Plant',
+      name: "Sandalwood Plant",
       price: 1500,
-      description: 'Quality Sandalwood plants for valuable heartwood. Sustainable cultivation with growth support.',
-      imageUrl: '/images/plants/sandlewood.jpg'
+      description:
+        "Quality Sandalwood plants for valuable heartwood. Sustainable cultivation with growth support.",
+      imageUrl: "/images/plants/sandlewood.jpg",
     },
     {
-      name: 'TJC Mango Plant',
+      name: "TJC Mango Plant",
       price: 1850,
-      description: 'Superior TJC mango saplings for juicy, sweet fruits. Fast-growing with high orchard yield. High return on investment.',
-      imageUrl: '/images/plants/tjcmango.jpg'
-    }
+      description:
+        "Superior TJC mango saplings for juicy, sweet fruits. Fast-growing with high orchard yield. High return on investment.",
+      imageUrl: "/images/plants/tjcmango.jpg",
+    },
   ];
 
   return (
@@ -66,9 +73,12 @@ const PlantSellingPlatform = () => {
           transition={{ duration: 0.8 }}
           //viewport={{ once: true }}
         >
-          <h1 className="text-4xl font-bold text-green-800 mb-4">Premium Plant Marketplace</h1>
+          <h1 className="text-4xl font-bold text-green-800 mb-4">
+            Premium Plant Marketplace
+          </h1>
           <p className="text-xl text-gray-600">
-            Discover high-quality agarwood, sandalwood, and mango plants with guaranteed pricing and delivery.
+            Discover high-quality agarwood, sandalwood, and mango plants with
+            guaranteed pricing and delivery.
           </p>
         </motion.div>
 

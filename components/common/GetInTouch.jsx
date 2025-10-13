@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Plant from "@/assets/images/bg/plant_img.png";
 import { useState } from "react";
 
-export default function GetInTouch() {
+export default function GetInTouch({link}) {
   const [formData, setFormData] = useState({
     email: "",
     name: "",
@@ -41,10 +41,13 @@ export default function GetInTouch() {
     setLoading(true);
 
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbwclfJTtDLVImiAIo42GmdFnOEkNyP5b1o2TJwZTvD17AgYToDZJEDRfXbg9C8vp7U/exec", {
-        method: "POST",
-        body: JSON.stringify(formData),
-      });
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbwclfJTtDLVImiAIo42GmdFnOEkNyP5b1o2TJwZTvD17AgYToDZJEDRfXbg9C8vp7U/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(formData),
+        }
+      );
 
       setSuccess(true);
       setFormData({ email: "", name: "", message: "" });
@@ -56,7 +59,7 @@ export default function GetInTouch() {
   };
 
   return (
-    <section className="bg-white py-20 px-5 md:px-20 flex flex-col md:flex-row gap-10 text-black">
+    <section className="bg-white py-20 px-5 md:px-20 flex flex-col md:flex-row gap-10 text-black" id={link}>
       {/* Left Image + Partnerships */}
       <motion.div
         className="md:w-2/4 flex flex-col gap-6"
@@ -70,11 +73,17 @@ export default function GetInTouch() {
         </div>
 
         <div className="flex items-center bg-gray-100 rounded-lg p-4">
-          <p className="flex-1 bg-transparent outline-none px-2 py-2 text-gray-700">
-            
-          </p>
+          <p className="flex-1 bg-transparent outline-none px-2 py-2 text-gray-700"></p>
           <p className="font-semibold">info@oxiaura.com</p>
-          <span className="ml-4 w-10 h-10 flex items-center justify-center bg-black text-white rounded-full cursor-pointer">
+          <span
+            className="ml-4 w-10 h-10 flex items-center justify-center bg-black text-white rounded-full cursor-pointer"
+            onClick={() =>
+              window.open(
+                "https://mail.google.com/mail/?view=cm&fs=1&to=info@oxiaura.com&su=Hello&body=Hi%20there,",
+                "_blank" // opens Gmail in a new tab
+              )
+            }
+          >
             &rarr;
           </span>
         </div>
