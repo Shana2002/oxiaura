@@ -23,7 +23,7 @@ export const products = [
       },
     ],
     watching: 100,
-    subImages:["/images/plants/agarwood/1.jpg","/images/plants/agarwood/2.png","/images/plants/agarwood/3.jpg",]
+    subImages: ["/images/plants/agarwood/1.jpg", "/images/plants/agarwood/2.png", "/images/plants/agarwood/3.jpg",]
   },
   {
     title: "Vanilla",
@@ -337,9 +337,39 @@ Next time you see a high-quality product from OxiAura Plantation, remember that 
 
 export const jobs = [
   {
+    title: "HR & Admin Executive",
+    level: "Senior",
+    slug: "hr-admin-executive",
+    description:
+      "At OxiAura Plantation Pvt. Ltd., we are dedicated to cultivating a culture of excellence, integrity, and sustainable growth. As an HR & Admin Executive, you will play a key role in managing human resources operations and administrative functions to ensure the smooth and efficient running of our organization. This position is ideal for a proactive professional with strong interpersonal, organizational, and problem-solving skills who thrives in a dynamic work environment.",
+    qualifications: [
+      "Bachelor’s degree or Diploma in Human Resource Management, Business Administration, or a related field (Professional HR qualifications such as CIPM are an added advantage).",
+      "Comprehensive understanding of HR practices, labor laws, and administrative procedures.",
+      "Excellent communication, leadership, and interpersonal skills.",
+      "Proficiency in MS Office Suite and HR management systems.",
+      "Strong organizational and multitasking abilities with attention to detail.",
+    ],
+    experience: [
+      "Minimum 3+ years of proven experience in Human Resources management.",
+      "Strong background in recruitment, employee relations, and performance management.",
+      "Hands-on experience with HR policies, compliance, and labor law practices.",
+      "Prior experience in training & development, payroll, and benefits administration is an advantage.",
+    ],
+    offers: [
+      "Attractive and negotiable salary package based on experience and qualifications.",
+      "Opportunity to work in a sustainability-driven and growing organization.",
+      "Employee welfare benefits and performance-based rewards.",
+      "Career development and training programs to enhance professional growth.",
+      "Collaborative work environment promoting innovation and continuous improvement.",
+    ],
+    salary:
+      "Negotiable — based on qualifications, experience, and performance.",
+    imageUrl: "/images/jobs/hr-admin.jpg",
+  },
+  {
     title: "Zonal Manager",
     level: "Senior",
-    slug:"zonal-manager",
+    slug: "zonal-manager",
     description:
       "At OxiAura Plantation Pvt. Ltd., we are committed to transforming agriculture through sustainable innovation and responsible practices. As a Zonal Manager, you will oversee plantation operations within your designated region, ensuring targets are met efficiently while maintaining our high standards of quality and sustainability. This role is ideal for a results-driven professional with strong leadership, strategic thinking, and team management skills, who is passionate about building a greener, more productive future.",
     qualifications: [
@@ -368,7 +398,7 @@ export const jobs = [
   {
     title: "Regional Manager",
     level: "Senior",
-    slug:"regional-manager",
+    slug: "regional-manager",
     description:
       "At OxiAura Plantation Pvt. Ltd., we combine eco-friendly practices with modern innovation to deliver high-quality agricultural products that help shape a greener and more sustainable world. As a Regional Manager, you will be responsible for overseeing operations across multiple plantation zones, ensuring productivity, quality, and efficiency. This role requires a strategic thinker with strong leadership and coordination skills to manage teams, drive growth, and align regional operations with the company’s sustainability goals.",
     qualifications: [
@@ -398,7 +428,7 @@ export const jobs = [
   {
     title: "Branch Manager",
     level: "Senior",
-    slug:"branch-manager",
+    slug: "branch-manager",
     description:
       "At OxiAura Plantation Pvt. Ltd., we are dedicated to advancing sustainable agriculture through innovation and eco-friendly practices. As a Branch Manager, you will be responsible for overseeing the daily operations of your assigned branch, managing staff, ensuring operational efficiency, and driving business performance. This role is ideal for a motivated leader who can balance administrative management with field-level coordination and inspire teams to achieve company goals aligned with our sustainability vision.",
     qualifications: [
@@ -409,9 +439,9 @@ export const jobs = [
       "Ability to plan, organize, and oversee multiple ongoing projects effectively.",
     ],
     experience: [
-     "Minimum of 3–5 years’ experience in branch or operations management.",
-     "Proven track record in managing teams, meeting branch targets, and ensuring operational excellence.",
-     "Experience in agriculture, plantation, FMCG, or manufacturing sectors will be a significant advantage.",
+      "Minimum of 3–5 years’ experience in branch or operations management.",
+      "Proven track record in managing teams, meeting branch targets, and ensuring operational excellence.",
+      "Experience in agriculture, plantation, FMCG, or manufacturing sectors will be a significant advantage.",
     ],
     offers: [
       "Competitive salary package with performance-based bonuses.",
@@ -454,55 +484,55 @@ export const companies = [
     logo: "/images/logo/plantaion.png",
     bg: "/images/bg/plantation_bg.jpg",
     link: "/plantation",
-    bgcolor:"#fff"
+    bgcolor: "#fff"
   },
   {
     name: "Oxiaura Cosmetics",
     logo: "/images/logo/cosmetics.jpg",
     bg: "/images/bg/Cosmetics-bg.jpg",
     link: "https://oxiaura.net",
-    bgcolor:"#fff"
+    bgcolor: "#fff"
   },
   {
     name: "Olix Nano Tech",
     logo: "/images/logo/olix.png",
     bg: "/images/bg/Olix-background.jpg",
     link: "/under-construction",
-    bgcolor:"#914695"
+    bgcolor: "#914695"
   },
   {
     name: "Excel Lanka",
     logo: "/images/logo/excellanka.png",
     bg: "/images/bg/Travel-bg.jpg",
     link: "/under-construction",
-    bgcolor:"#9E1CA0"
+    bgcolor: "#9E1CA0"
   },
   {
     name: "JK Holdings",
     logo: "/images/logo/holdings.png",
     bg: "/images/bg/Holding-Bg.jpg",
     link: "/under-construction",
-    bgcolor:"#1800AD"
+    bgcolor: "#1800AD"
   },
   {
     name: "JK Logistics",
     logo: "/images/logo/logistics.png",
     bg: "/images/bg/Logistics-bg.jpg",
     link: "/under-construction",
-    bgcolor:"#191919"
+    bgcolor: "#191919"
   },
   {
     name: "Oxiaura Healthcare",
     logo: "/images/logo/healthcare.png",
     bg: "/images/bg/Healthcare-bg.jpg",
     link: "/under-construction",
-    bgcolor:"#fff"
+    bgcolor: "#fff"
   },
   {
     name: "Oxiaura Realestate",
     logo: "/images/logo/realstate.png",
     bg: "/images/bg/Realestate back .jpg",
     link: "/under-construction",
-    bgcolor:"#fff"
+    bgcolor: "#fff"
   },
 ];

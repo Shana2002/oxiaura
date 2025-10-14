@@ -35,10 +35,12 @@ jobs:
             npm run build
 
             echo "🧹 Killing old tmux session if running..."
-            tmux kill-session -t oxiaura || true
+            tmux kill-session -t oxiaura-session || true
 
             echo "🖥️ Starting new tmux session for Oxiaura..."
-            tmux new -d -s oxiaura "cd /var/www/oxiaura && npm run start"
+            tmux new-session -s oxiaura-session -d 
+
+            tmux send-keys -t oxiaura-session 'npm run start' Enter
 
             echo "🔄 Reloading Nginx..."
             sudo systemctl reload nginx || sudo service nginx reload
