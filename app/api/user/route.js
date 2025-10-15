@@ -1,1 +1,0 @@
-`now i want to create admin panel i create admin route and make in login page when place dashboard if login ok to go admin/page.jsx it contain admin layout with navigation panel home,users,products.plans,jobs,blogs tabs to manage how to make route to safe `
