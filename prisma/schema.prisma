@@ -6,7 +6,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../app/generated/prisma"
 }
 
 datasource db {
@@ -86,6 +85,16 @@ model Company {
   bg      String
   link    String
   bgcolor String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  username  String   @unique       // Ensure emails are unique
+  password  String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
