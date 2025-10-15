@@ -1,0 +1,92 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Products {
+  id         Int     @id @default(autoincrement())
+  title      String
+  subtitle   String
+  desc       String   @db.Text
+  image      String
+  slug       String   @unique
+  watching   Int
+  subImages  String[] // Array of sub image URLs
+  paragraphs Json     // Store paragraphs as JSON array
+
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Testimonial {
+  id        Int      @id @default(autoincrement())
+  name      String
+  position  String
+  comment   String   @db.Text
+  image     String   // URL of the testimonial image
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Blog {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  image       String
+  description String   @db.Text  // Use Text for long content
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Job {
+  id            Int      @id @default(autoincrement())
+  title         String
+  level         String
+  slug          String   @unique
+  description   String   @db.Text
+  qualifications Json     // Array of qualifications
+  experience    Json     // Array of required experience
+  offers        Json     // Array of offered benefits
+  salary        String
+  imageUrl      String
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model TeamMember {
+  id       Int      @id @default(autoincrement())
+  name     String
+  title    String
+  bio      String   @db.Text
+  imageUrl String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model Company {
+  id      Int     @id @default(autoincrement())
+  name    String
+  logo    String
+  bg      String
+  link    String
+  bgcolor String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
