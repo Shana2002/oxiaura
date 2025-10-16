@@ -470,12 +470,6 @@ export const teamMembers = [
     bio: "Mr. Kosgolla won International Nelson Mandela award in 2019. He obtained his honorary PHD from national American Business University. Presently he perform duties as chairman of Olix Ceylon (Pvt) Ltd. and former chairman oxiflame cosmetics (Pvt) Ltd. He is member of lion club international and former sectary of YMBA Kurunegala.",
     imageUrl: "/images/MD.png",
   },
-  {
-    name: "Mr. Sharman Kulatilake",
-    title: "Cheif Executive Officer",
-    bio: "Mr.Kulathilaka has over 35 years of Management Experience holding several senior management positions in multinational companies. His last held position was General Manager- Sales and Marketing. He also Expertise in the fields of HR , Training , People Development and Services. He is a qualified Charted Marketer having Diploma in Marketing(SLIM) and MBA (UK) and also member of SLIM and Charted Institute of Marketing UK/Canada and Organization of Professional Associations of Sri Lanka.",
-    imageUrl: "/images/CEO.png",
-  },
 ];
 
 export const companies = [
