@@ -5,10 +5,50 @@ import Navbar from "@/components/common/Navbar";
 import ProductHorizontalCard from "@/components/ui/ProductHorizontalCard";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { products } from "@/assets/data.js";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  
+  const [products,setProducts] = useState([]);
+  const [loading,setLoading] = useState(false);
+  const [error,setError] = useState(false);
+  useEffect(() => {
+    const fetchProducts = async ()=>{
+      try {
+        setLoading(true);
+        const res = await fetch("/api/products");
+        if(!res.ok) throw new Error("faiild to fetch prodcuts");
+        const data = await res.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error Fetching products.",error);
+        setError("failed to load products");
+      } finally{
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  // ✅ Handle loading & error states
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p className="text-gray-600 text-lg">Loading products...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p className="text-red-600 text-lg">{error}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
