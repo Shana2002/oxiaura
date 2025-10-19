@@ -4,15 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import DirectorCard from "@/components/ui/DirectorCard";
 import GetInTouch from "@/components/common/GetInTouch";
 import Footer from "@/components/common/Footer";
 import GroupBackground from "@/assets/images/bg/group_bg.jpg";
 import GroupLogoWhite from "@/assets/images/logo/logo_group_white.png";
 import { VisionMissionCard } from "@/components/ui/Cards";
 import PillarsGrid from "@/components/common/PillarsGrid";
-import { teamMembers } from "@/assets/data.js";
 import GroupNavbar from "@/components/common/GroupNavbar";
+import DirectorSection from "@/components/common/DirectorSection";
 
 
 const fadeInUp = {
@@ -126,39 +125,7 @@ const page = () => {
       </motion.div>
 
       {/* Director Section */}
-      <section className="min-h-screen w-[90vw] flex flex-col items-center mx-auto py-12 px-6">
-        <motion.h1
-          className="text-green-700 text-3xl sm:text-4xl font-bold mb-10 text-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
-          Guided by Visionaries
-        </motion.h1>
-
-        <div className="flex flex-col gap-10 items-center">
-          {teamMembers.map((data, i) => (
-            <motion.div
-              key={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              custom={i}
-              className="w-full"
-            >
-              <DirectorCard
-                name={data.name}
-                title={data.title}
-                imageUrl={data.imageUrl}
-                bio={data.bio}
-                index={i}
-              />
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      <DirectorSection fadeInUp={fadeInUp} />
 
       {/* Get in touch */}
       <motion.div

@@ -2,8 +2,26 @@
 
 import Image from "next/image";
 import {companies} from '@/assets/data.js'
+import { useEffect, useState } from "react";
 
 export default function PillarsGrid() {
+  const [companies,setCompanies] = useState([]);
+  const [error,setError]= useState(false);
+
+  useEffect(()=>{
+    const fetchCompaniese = async()=>{
+      try {
+        const res = await fetch("/api/companies");
+        if(!res.ok) throw new Error ("Failed to fetch companeis");
+        const data = await res.json();
+        setCompanies(data);
+      } catch (error) {
+        console.error("failed to fetch data: ",error);
+        setError(true);
+      }
+    };
+    fetchCompaniese();
+  },[]);
   return (
     <section className="py-12 px-6 md:px-12 lg:px-20 bg-white">
       {/* Heading */}
@@ -48,6 +66,7 @@ export default function PillarsGrid() {
                   href={company.link}
                   rel="noopener noreferrer"
                   className="mt-3 bg-green-700 font-bold hover:bg-green-800 text-white text-sm px-4 py-2 rounded-lg shadow"
+                  target={company.blank ? "_blank" : "_self"}
                 >
                   Visit Site
                 </a>

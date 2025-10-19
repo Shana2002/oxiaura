@@ -1,5 +1,6 @@
+"use client"
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -10,10 +11,26 @@ import {
 import { IoLogoWhatsapp } from "react-icons/io";
 import GroupLogoWhite from "@/assets/images/logo/logo_group_white.png";
 import Image from "next/image";
-import { companies } from "@/assets/data";
 import { FaLocationPin } from "react-icons/fa6";
 
 const Footer = ({image,desc}) => {
+  const [companies,setCompanies] = useState([]);
+    const [error,setError]= useState(false);
+  
+    useEffect(()=>{
+      const fetchCompaniese = async()=>{
+        try {
+          const res = await fetch("/api/companies");
+          if(!res.ok) throw new Error ("Failed to fetch companeis");
+          const data = await res.json();
+          setCompanies(data);
+        } catch (error) {
+          console.error("failed to fetch data: ",error);
+          setError(true);
+        }
+      };
+      fetchCompaniese();
+    },[]);
   return (
     <footer className="bg-green-700 text-white">
       <div className="mx-auto px-[5vw] py-10 flex flex-col md:flex-row justify-between gap-8">
@@ -125,7 +142,7 @@ const Footer = ({image,desc}) => {
         {/* Logo Section */}
         <div className="md:w-1/4 grid grid-cols-3 gap-3">
           {companies.map((company, i) => (
-            <Link key={i} href={company.link} className="relative">
+            <Link key={i} href={company.link} className="relative" target={company.blank ? "_blank" : "_self"}>
               <div
                 className="relative bg-white rounded-md flex items-center justify-center aspect-square p-2 overflow-hidden"
                 style={{ backgroundColor: company.bgcolor }}
