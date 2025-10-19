@@ -1,11 +1,19 @@
 import { getPrismaClient } from "../lib/prisma.js";
-import {testimonials,blogSeedData, jobs, teamMembers, companies} from '../assets/data.js'
+import {testimonials,blogSeedData, jobs, teamMembers, companies, products} from '../assets/data.js'
 import { time } from "framer-motion";
 
 
 const prisma = getPrismaClient();
 
 async function main() {
+
+    if(products && products.length>0){
+        await prisma.products.createMany({
+            data:products,
+            skipDuplicates: true,
+        })
+    }
+
     // testimonials data seed
     if(testimonials && testimonials.length>0){
         await prisma.testimonial.createMany({
