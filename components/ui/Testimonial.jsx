@@ -3,19 +3,35 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Comma from "@/assets/images/comma.png";
-import { testimonials } from "@/assets/data.js";
 
 const Testimonial = () => {
+  const [testimonials, setTestimonials] = useState([]);
   const [current, setCurrent] = useState(0);
   const containerRef = useRef(null);
 
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const res = await fetch("/api/testimonials");
+        if (!res.ok) throw new Error("Failed to fetch testimonials");
+        const data = await res.json();
+        setTestimonials(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
+
   // Auto scroll every 6 seconds
   useEffect(() => {
+    if (testimonials.length === 0) return; // wait until data is loaded
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % testimonials.length);
     }, 6000);
     return () => clearInterval(interval);
-  }, []);
+  }, [testimonials]);
 
   // Scroll to current testimonial
   useEffect(() => {

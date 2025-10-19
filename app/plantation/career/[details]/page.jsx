@@ -1,16 +1,41 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import { useParams } from "next/navigation";
-import { jobs } from "@/assets/data.js";
+import StatusPage from "@/components/common/Status";
 
 const CareerDetailsPage = () => {
   const { details } = useParams();
-  const jobData = jobs.find(
-    (item) =>
-      item.slug.toLowerCase().replace(/\s+/g, "-") === details.toLowerCase()
-  );
+  const [jobData, setJobData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if (!details) return;
+
+    const fetchJob = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch(`/api/careers/${details}`);
+        if (!res.ok) throw new Error("Job not found");
+        const data = await res.json();
+        setJobData(data);
+      } catch (err) {
+        console.error(err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJob();
+  }, [details]);
+
+  if (loading) return <StatusPage type="loading" title="Loading Job..." />;
+  if (error) return <StatusPage type="error" title="Job Not Found" subtitle={error} />;
+  if (!jobData) return <StatusPage type="error" title="Job Not Available" />;
+
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       <Navbar />

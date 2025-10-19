@@ -2,11 +2,41 @@
 
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
-import { jobs } from "@/assets/data.js";
+import StatusPage from "@/components/common/Status";
 import JobCard from "@/components/ui/JobCard";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const CareerPage = () => {
+  const [jobs, setJobs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch("/api/careers");
+        if (!res.ok) throw new Error("Failed to fetch jobs");
+        const data = await res.json();
+        setJobs(data);
+      } catch (err) {
+        console.error(err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJobs();
+  }, []);
+
+  if (loading) return <StatusPage type="loading" title="Loading Careers..." />;
+  if (error) return <StatusPage type="error" title="Failed to load jobs" subtitle={error} />;
+
+  if (!jobs.length)
+    return <StatusPage type="error" title="No Jobs Available" subtitle="Please check back later." />;
+
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Navigation Bar */}

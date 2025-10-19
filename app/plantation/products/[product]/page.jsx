@@ -1,45 +1,47 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
-  Search,
-  ShoppingCart,
-  User,
   MessageSquare,
-  Menu,
-  X,
-  ArrowRight,
 } from "lucide-react";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
-import { products } from "@/assets/data.js";
 import { useParams } from "next/navigation";
 import Image from "next/image";
+import StatusPage from "@/components/common/Status";
 
 // Main App component
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { product } = useParams(); // get dynamic route param
-  const productData = products.find(
-    (item) =>
-      item.slug.toLowerCase().replace(/\s+/g, "-") === product.toLowerCase()
-  );
+  const [productData, setProductData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { product } = useParams(); // dynamic route param
 
-  if (!productData) {
-    return (
-      <div className="min-h-screen flex flex-col bg-white">
-        <Navbar />
-        <main className="flex flex-col items-center justify-center flex-grow">
-          <h1 className="text-5xl font-bold text-red-600">
-            Product not available
-          </h1>
-          <p className="text-gray-600 mt-2">
-            The product you are looking for doesn’t exist.
-          </p>
-        </main>
-        <Footer />
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (!product) return;
+
+    const fetchProduct = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch(`/api/products/${product}`);
+        if (!res.ok) throw new Error("Failed to fetch product");
+
+        const data = await res.json();
+        setProductData(data);
+      } catch (err) {
+        console.error(err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProduct();
+  }, [product]);
+
+  if (error) return <StatusPage type="error" title={"Error"} subtitle={error} />
+
+  if (loading) return <StatusPage title={"product loading....."} />
 
   const MetricBar = () => (
     <div className="relative px-[5vw] my-5 mx-auto mt-[-30px] sm:mt-[-40px] ">

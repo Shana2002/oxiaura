@@ -4,14 +4,13 @@ import React from "react";
 import Navbar from "@/components/common/Navbar";
 import MissionBox from "@/components/ui/MissionBox";
 import Footer from "@/components/common/Footer";
-import ExpertCard from "@/components/ui/ExpertCard";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import plant1 from "@/public/images/plants/plant1.png";
 import plant2 from "@/public/images/plants/plant2.png";
 import plant3 from "@/public/images/plants/plant3.png";
 import teagarden from '@/public/images/teagarden.png'
-import {teamMembers} from '@/assets/data.js'
+import PlantationTeam from "@/components/common/PlantationTeam";
 
 // Custom component for the Service/Product Card
 const ServiceCard = ({ title, description, icon: Icon }) => (
@@ -241,20 +240,7 @@ across its diverse business sectors."
             Our Experts
           </motion.h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-stretch">
-            {teamMembers.map((member, i) => (
-              <motion.div
-                key={i}
-                className="h-full"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <ExpertCard {...member} />
-              </motion.div>
-            ))}
-          </div>
+          <PlantationTeam />
         </div>
       </section>
 

@@ -2,11 +2,36 @@
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import StorySecion from "@/components/ui/StorySecion";
-import { plantationBlogs } from "@/assets/data.js";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import StatusPage from "@/components/common/Status";
 
 export default function Home() {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch("/api/blogs");
+        if (!res.ok) throw new Error("Failed to fetch blogs");
+
+        const data = await res.json();
+        setBlogs(data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+  if (loading) {
+    return (
+      <StatusPage title={"loading blogs"} />
+    );}
   return (
     <div className="bg-white">
       <Navbar />
@@ -26,7 +51,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="relative w-[90vw] h-[50vh] rounded-4xl flex items-center"
           style={{
-            backgroundImage: `url(${plantationBlogs[0].image})`,
+            backgroundImage: `url(${blogs[0].image})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -37,14 +62,14 @@ export default function Home() {
           {/* Hero Text */}
           <div className="px-[5vw] z-30 text-white">
             <h1 className="text-3xl md:text-4xl font-bold">
-              {plantationBlogs[0].title}
+              {blogs[0].title}
             </h1>
             <p className="mt-3 max-w-2xl line-clamp-2">
-              {plantationBlogs[0].description}
+              {blogs[0].content[0].text}
             </p>
 
             <Link
-              href={`/plantation/blogs/${plantationBlogs[0].slug}`}
+              href={`/plantation/blogs/${blogs[0].slug}`}
               className="inline-block mt-10 bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-200"
             >
               Read full article
@@ -62,7 +87,7 @@ export default function Home() {
       >
         <StorySecion
           title="Top rated stories"
-          stories={plantationBlogs.slice(1, 4)}
+          stories={blogs.slice(1, 4)}
         />
       </motion.div>
 
