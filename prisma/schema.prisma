@@ -28,12 +28,19 @@ model Products {
   updatedAt  DateTime @updatedAt
 }
 
+enum TestimonialStatus {
+  APPROVE
+  REJECTED
+  NEW
+}
+
 model Testimonial {
   id        Int      @id @default(autoincrement())
   name      String
   position  String
   comment   String   @db.Text
   image     String   // URL of the testimonial image
+  status    TestimonialStatus @default(NEW)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -44,7 +51,7 @@ model Blog {
   title       String
   slug        String   @unique
   image       String
-  description String   @db.Text  // Use Text for long content
+  content     Json
 
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
@@ -66,12 +73,19 @@ model Job {
   updatedAt     DateTime @updatedAt
 }
 
+enum ShowAtType {
+  PLANTATION
+  GROUP
+  TOURS
+}
+
 model TeamMember {
   id       Int      @id @default(autoincrement())
   name     String
   title    String
   bio      String   @db.Text
   imageUrl String
+  showAt    ShowAtType[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -85,6 +99,7 @@ model Company {
   bg      String
   link    String
   bgcolor String
+  blank   Boolean @default(false)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

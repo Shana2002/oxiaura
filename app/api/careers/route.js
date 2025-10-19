@@ -1,19 +1,19 @@
 import { getPrismaClient } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
-// route api/products
-// Get all products
+// route api/job
+// Get all job
 export async function GET(req) {
   try {
     const prisma = getPrismaClient();
-    const products = await prisma.products.findMany({
+    const job = await prisma.job.findMany({
         orderBy:{
             id:'asc',
         }
     });
-    return NextResponse.json(products);
+    return NextResponse.json(job);
   } catch (error) {
-    console.error("GET /api/products error:", error);
+    console.error("GET /api/job error:", error);
     return NextResponse.json(
       { message: "Internal server error" },
       { status: 500 }
@@ -21,21 +21,21 @@ export async function GET(req) {
   }
 }
 
-// create product
+// create job
 // export async function POST(req) {
 //   try {
 //     const prisma = getPrismaClient();
-//     const product = await req.json();
-//     const createdProduct = await prisma.products.create({
-//       data: product,
+//     const job = await req.json();
+//     const createdjob = await prisma.job.create({
+//       data: job,
 //     });
 
 //     return NextResponse.json(
-//       { message: "Product created successfully", product: createdProduct },
+//       { message: "job created successfully", job: createdjob },
 //       { status: 201 }
 //     );
 //   } catch (error) {
-//      console.error("POST /api/products error:", error);
+//      console.error("POST /api/job error:", error);
 //     return NextResponse.json(
 //       { message: "Internal server error" },
 //       { status: 500 }

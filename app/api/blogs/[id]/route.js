@@ -1,23 +1,23 @@
 import { getPrismaClient } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
-// get one product using name
+// get one blog using name
 export async function GET(req, { params }) {
   try {
     const prisma = getPrismaClient();
     const { id } = params;
-    const product = await prisma.products.findUnique({
+    const blog = await prisma.blog.findUnique({
       where: {
         slug: id,
       },
     });
-    if (!product) {
+    if (!blog) {
       return NextResponse.json(
-        { message: "Product not found" },
+        { message: "blog not found" },
         { status: 404 }
       );
     }
-    return NextResponse.json(product);
+    return NextResponse.json(blog);
   } catch (error) {
     console.error(error);
     return NextResponse.json(
@@ -27,19 +27,19 @@ export async function GET(req, { params }) {
   }
 }
 
-// update product data using id
+// // update blog data using id
 // export async function PUT(req, { params }) {
 //   try {
 //     const prisma = getPrismaClient();
 //     const updatedData = await req.json();
 //     const { id } = params;
-//     const updateProduct = await prisma.products.update({
+//     const updateblog = await prisma.blog.update({
 //       where: {
 //         id: id,
 //       },
 //       data: updatedData,
 //     });
-//     return NextResponse.json({ message: "Product Updated" });
+//     return NextResponse.json({ message: "blog Updated" });
 //   } catch (error) {
 //     console.error(error);
 //     return NextResponse.json(
@@ -53,12 +53,12 @@ export async function GET(req, { params }) {
 //   try {
 //     const prisma = getPrismaClient();
 //     const { id } = params;
-//     const deleteProduct = prisma.products.delete({
+//     const deleteblog = prisma.blog.delete({
 //       where: {
 //         id: id,
 //       },
 //     });
-//     return NextResponse.json({ message: "Product Deleted successfully" });
+//     return NextResponse.json({ message: "blog Deleted successfully" });
 //   } catch (error) {
 //     console.error(error);
 //     return NextResponse.json(

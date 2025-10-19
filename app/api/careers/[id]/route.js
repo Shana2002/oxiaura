@@ -1,23 +1,23 @@
 import { getPrismaClient } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
-// get one product using name
+// get one job using name
 export async function GET(req, { params }) {
   try {
     const prisma = getPrismaClient();
     const { id } = params;
-    const product = await prisma.products.findUnique({
+    const job = await prisma.job.findUnique({
       where: {
         slug: id,
       },
     });
-    if (!product) {
+    if (!job) {
       return NextResponse.json(
-        { message: "Product not found" },
+        { message: "job not found" },
         { status: 404 }
       );
     }
-    return NextResponse.json(product);
+    return NextResponse.json(job);
   } catch (error) {
     console.error(error);
     return NextResponse.json(
@@ -27,19 +27,19 @@ export async function GET(req, { params }) {
   }
 }
 
-// update product data using id
+// update job data using id
 // export async function PUT(req, { params }) {
 //   try {
 //     const prisma = getPrismaClient();
 //     const updatedData = await req.json();
 //     const { id } = params;
-//     const updateProduct = await prisma.products.update({
+//     const updatejob = await prisma.job.update({
 //       where: {
 //         id: id,
 //       },
 //       data: updatedData,
 //     });
-//     return NextResponse.json({ message: "Product Updated" });
+//     return NextResponse.json({ message: "job Updated" });
 //   } catch (error) {
 //     console.error(error);
 //     return NextResponse.json(
@@ -53,12 +53,12 @@ export async function GET(req, { params }) {
 //   try {
 //     const prisma = getPrismaClient();
 //     const { id } = params;
-//     const deleteProduct = prisma.products.delete({
+//     const deletejob = prisma.job.delete({
 //       where: {
 //         id: id,
 //       },
 //     });
-//     return NextResponse.json({ message: "Product Deleted successfully" });
+//     return NextResponse.json({ message: "job Deleted successfully" });
 //   } catch (error) {
 //     console.error(error);
 //     return NextResponse.json(

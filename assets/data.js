@@ -209,6 +209,7 @@ export const testimonials = [
     comment:
       "Investing in Oxaiura Plantation has been an exceptional experience. Their sustainable farming practices and attention to detail ensure not only high-quality produce but also long-term value creation. The team’s transparency and professionalism provide confidence to investors seeking both ethical and profitable opportunities.",
     image: "/images/testimonials/userimg.webp",
+    status:"APPROVE"
   },
   {
     name: "Anjali Fernando",
@@ -216,6 +217,7 @@ export const testimonials = [
     comment:
       "Oxaiura Plantation demonstrates remarkable operational efficiency and commitment to sustainability. Their innovative cultivation methods and strategic approach to market expansion make them a standout choice for investors looking for consistent returns and responsible agricultural investments.",
     image: "/images/testimonials/userimg.webp",
+    status:"APPROVE"
   },
   {
     name: "Michael Jayawardena",
@@ -223,6 +225,7 @@ export const testimonials = [
     comment:
       "The plantation’s focus on quality, from soil management to crop processing, is impressive. Oxaiura’s dedication to research, sustainability, and global market readiness makes it a trustworthy partner for anyone seeking to invest in premium agricultural ventures.",
     image: "/images/testimonials/userimg.webp",
+    status:"APPROVE"
   },
   {
     name: "Samantha Wijesinghe",
@@ -230,6 +233,7 @@ export const testimonials = [
     comment:
       "I am highly satisfied with my engagement with Oxaiura Plantation. Their professional management, combined with transparent reporting and innovative cultivation techniques, ensures excellent investment growth while supporting sustainable agriculture. It is rare to find a company that balances profitability with environmental responsibility so well.",
     image: "/images/testimonials/userimg.webp",
+    status:"APPROVE"
   },
   {
     name: "Kamal Senanayake",
@@ -237,6 +241,7 @@ export const testimonials = [
     comment:
       "Oxaiura Plantation’s strategic approach to crop selection, production, and global distribution is exemplary. Their commitment to ethical practices and investor relations reflects a forward-thinking and trustworthy enterprise, making them a prime choice for long-term agricultural investments.",
     image: "/images/testimonials/userimg.webp",
+    status:"APPROVE"
   },
 ];
 
@@ -470,12 +475,6 @@ export const teamMembers = [
     bio: "Mr. Kosgolla won International Nelson Mandela award in 2019. He obtained his honorary PHD from national American Business University. Presently he perform duties as chairman of Olix Ceylon (Pvt) Ltd. and former chairman oxiflame cosmetics (Pvt) Ltd. He is member of lion club international and former sectary of YMBA Kurunegala.",
     imageUrl: "/images/MD.png",
   },
-  {
-    name: "Mr. Sharman Kulatilake",
-    title: "Cheif Executive Officer",
-    bio: "Mr.Kulathilaka has over 35 years of Management Experience holding several senior management positions in multinational companies. His last held position was General Manager- Sales and Marketing. He also Expertise in the fields of HR , Training , People Development and Services. He is a qualified Charted Marketer having Diploma in Marketing(SLIM) and MBA (UK) and also member of SLIM and Charted Institute of Marketing UK/Canada and Organization of Professional Associations of Sri Lanka.",
-    imageUrl: "/images/CEO.png",
-  },
 ];
 
 export const companies = [
@@ -536,3 +535,16 @@ export const companies = [
     bgcolor: "#fff"
   },
 ];
+
+export const blogSeedData = plantationBlogs.map(blog => ({
+  title: blog.title,
+  slug: blog.slug,
+  image: blog.image,
+  content: blog.description
+    .split("\n")
+    .filter(p => p.trim() !== "")
+    .map(p => ({
+      type: "paragraph",
+      text: p.trim(),
+    })),
+}));
