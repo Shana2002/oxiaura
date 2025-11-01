@@ -472,7 +472,7 @@ export const teamMembers = [
   {
     name: "Dr. Susantha Kosgolla",
     title: "Director",
-    bio: "Mr. Kosgolla won International Nelson Mandela award in 2019. He obtained his honorary PHD from national American Business University. Presently he perform duties as chairman of Olix Ceylon (Pvt) Ltd. and former chairman oxiflame cosmetics (Pvt) Ltd. He is member of lion club international and former sectary of YMBA Kurunegala.",
+    bio: "Mr. Kosgolla has over 36 years experiance in marketing and management of Insurance and FMCG market. He obtained honorary PHD from American National Business University. He won International Nelson Mandela award 2019. Presently he perform duties as chairman of Olix Ceylon (Pvt) Ltd. and former chairman oxiflame cosmetics (Pvt) Ltd.He is also a member of Lions Club International and many organization of social works. He has been an active social worker over 30 years.",
     imageUrl: "/images/MD.png",
   },
 ];
