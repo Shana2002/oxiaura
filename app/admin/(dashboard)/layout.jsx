@@ -8,7 +8,7 @@ export default function AdminLayout({ children }) {
           <a href="/admin/users" className="block hover:bg-gray-700 p-2 rounded">👥 Users</a>
           <a href="/admin/products" className="block hover:bg-gray-700 p-2 rounded">📦 Products</a>
           <a href="/admin/plans" className="block hover:bg-gray-700 p-2 rounded">💎 Plans</a>
-          <a href="/admin/jobs" className="block hover:bg-gray-700 p-2 rounded">🧰 Jobs</a>
+          <a href="/admin/careers" className="block hover:bg-gray-700 p-2 rounded">🧰 Careers</a>
           <a href="/admin/blogs" className="block hover:bg-gray-700 p-2 rounded">📰 Blogs</a>
         </nav>
       </aside>
