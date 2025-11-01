@@ -1,4 +1,5 @@
 import { getPrismaClient } from "@/lib/prisma";
+import { verifyAdmin } from "@/lib/verifyAdmin";
 import { NextResponse } from "next/server";
 
 // route api/products
@@ -23,7 +24,9 @@ export async function GET(req) {
 
 // create product
 export async function POST(req) {
+  
   try {
+    await verifyAdmin(req);
     const prisma = getPrismaClient();
     const product = await req.json();
     const createdProduct = await prisma.products.create({
