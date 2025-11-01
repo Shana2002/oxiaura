@@ -1,4 +1,5 @@
 import { getPrismaClient } from "@/lib/prisma";
+import { verifyAdmin } from "@/lib/verifyAdmin";
 import { NextResponse } from "next/server";
 
 // route api/blogs
@@ -22,23 +23,24 @@ export async function GET(req) {
 }
 
 // create blog
-// export async function POST(req) {
-//   try {
-//     const prisma = getPrismaClient();
-//     const blog = await req.json();
-//     const createdblog = await prisma.blog.create({
-//       data: blog,
-//     });
+export async function POST(req) {
+  try {
+    await verifyAdmin(req);
+    const prisma = getPrismaClient();
+    const blog = await req.json();
+    const createdblog = await prisma.blog.create({
+      data: blog,
+    });
 
-//     return NextResponse.json(
-//       { message: "blog created successfully", blog: createdblog },
-//       { status: 201 }
-//     );
-//   } catch (error) {
-//      console.error("POST /api/blogs error:", error);
-//     return NextResponse.json(
-//       { message: "Internal server error" },
-//       { status: 500 }
-//     );
-//   }
-// }
+    return NextResponse.json(
+      { message: "blog created successfully", blog: createdblog },
+      { status: 201 }
+    );
+  } catch (error) {
+     console.error("POST /api/blogs error:", error);
+    return NextResponse.json(
+      { message: "Internal server error" },
+      { status: 500 }
+    );
+  }
+}

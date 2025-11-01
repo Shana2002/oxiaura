@@ -81,40 +81,39 @@ const MainArticle = ({ data }) => {
       </div>
 
       {/* Article Body */}
-      <div className="mx-auto mt-12 space-y-6 text-lg text-gray-800 leading-relaxed">
-        {data.content?.map((block, index) => {
-          switch (block.type) {
-            case "paragraph":
-              return <p key={index}>{block.text}</p>;
-            case "image":
-              return (
-                <div key={index} className="my-6">
-                  <img
-                    src={block.url}
-                    alt={block.caption || "Blog image"}
-                    className="w-full rounded-lg"
-                  />
-                  {block.caption && (
-                    <p className="text-sm text-gray-500 mt-1">
-                      {block.caption}
+      <div className="pt-4 space-y-4 text-gray-700">
+            {data.content.map((item, i) => {
+              switch (item.type) {
+                case "paragraph":
+                  return (
+                    <p key={i} className="text-lg leading-relaxed whitespace-pre-line">
+                      {item.value}
                     </p>
-                  )}
-                </div>
-              );
-            case "quote":
-              return (
-                <blockquote
-                  key={index}
-                  className="border-l-4 border-green-500 pl-4 italic text-gray-700"
-                >
-                  {block.text}
-                </blockquote>
-              );
-            default:
-              return null;
-          }
-        })}
-      </div>
+                  );
+                case "subtitle":
+                  return (
+                    <h2 key={i} className="text-2xl font-semibold pt-2">
+                      {item.value}
+                    </h2>
+                  );
+                case "image":
+                  return (
+                    <img
+                      key={i}
+                      src={item.value}
+                      alt={`content-image-${i}`}
+                      className="w-full rounded-lg object-cover"
+                      onError={(e) =>
+                        (e.target.src =
+                          "https://placehold.co/800x400/16a34a/ffffff?text=Image+Not+Available")
+                      }
+                    />
+                  );
+                default:
+                  return null;
+              }
+            })}
+          </div>
     </section>
   );
 };
