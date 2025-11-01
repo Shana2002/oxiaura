@@ -22,23 +22,23 @@ export async function GET(req) {
 }
 
 // // create testimonials
-// export async function POST(req) {
-//   try {
-//     const prisma = getPrismaClient();
-//     const teamMember = await req.json();
-//     const createdteamMember = await prisma.teamMember.create({
-//       data: teamMember,
-//     });
+export async function POST(req) {
+  try {
+    const prisma = getPrismaClient();
+    const teamMember = await req.json();
+    const createdteamMember = await prisma.teamMember.create({
+      data: teamMember,
+    });
 
-//     return NextResponse.json(
-//       { message: "testimonials created successfully", testimonials: createdteamMember },
-//       { status: 201 }
-//     );
-//   } catch (error) {
-//      console.error("POST /api/team error:", error);
-//     return NextResponse.json(
-//       { message: "Internal server error" },
-//       { status: 500 }
-//     );
-//   }
-// }
+    return NextResponse.json(
+      { message: "testimonials created successfully", testimonials: createdteamMember },
+      { status: 201 }
+    );
+  } catch (error) {
+     console.error("POST /api/team error:", error);
+    return NextResponse.json(
+      { message: "Internal server error" },
+      { status: 500 }
+    );
+  }
+}
