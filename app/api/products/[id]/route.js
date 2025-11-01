@@ -28,26 +28,26 @@ export async function GET(req, { params }) {
 }
 
 // update product data using id
-// export async function PUT(req, { params }) {
-//   try {
-//     const prisma = getPrismaClient();
-//     const updatedData = await req.json();
-//     const { id } = params;
-//     const updateProduct = await prisma.products.update({
-//       where: {
-//         id: id,
-//       },
-//       data: updatedData,
-//     });
-//     return NextResponse.json({ message: "Product Updated" });
-//   } catch (error) {
-//     console.error(error);
-//     return NextResponse.json(
-//       { message: "Internal server error" },
-//       { status: 500 }
-//     );
-//   }
-// }
+export async function PUT(req, { params }) {
+  try {
+    const prisma = getPrismaClient();
+    const updatedData = await req.json();
+    const { id } = await params;
+    const updateProduct = await prisma.products.update({
+      where: {
+        id: Number(id),
+      },
+      data: updatedData,
+    });
+    return NextResponse.json({ message: "Product Updated" });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json(
+      { message: "Internal server error" },
+      { status: 500 }
+    );
+  }
+}
 
 // export async function DELETE(req, { params }) {
 //   try {

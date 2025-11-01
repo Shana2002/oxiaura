@@ -7,9 +7,9 @@ export async function GET(req) {
   try {
     const prisma = getPrismaClient();
     const products = await prisma.products.findMany({
-        orderBy:{
-            id:'asc',
-        }
+      orderBy: {
+        id: "asc",
+      },
     });
     return NextResponse.json(products);
   } catch (error) {
@@ -22,23 +22,28 @@ export async function GET(req) {
 }
 
 // create product
-// export async function POST(req) {
-//   try {
-//     const prisma = getPrismaClient();
-//     const product = await req.json();
-//     const createdProduct = await prisma.products.create({
-//       data: product,
-//     });
+export async function POST(req) {
+  try {
+    const prisma = getPrismaClient();
+    const product = await req.json();
+    const createdProduct = await prisma.products.create({
+      data: {
+        ...product,
+        watching: 1000,
+      },
+    });
 
-//     return NextResponse.json(
-//       { message: "Product created successfully", product: createdProduct },
-//       { status: 201 }
-//     );
-//   } catch (error) {
-//      console.error("POST /api/products error:", error);
-//     return NextResponse.json(
-//       { message: "Internal server error" },
-//       { status: 500 }
-//     );
-//   }
-// }
+    
+
+    return NextResponse.json(
+      { message: "Product created successfully", product: createdProduct },
+      { status: 201 }
+    );
+  } catch (error) {
+    console.error("POST /api/products error:", error);
+    return NextResponse.json(
+      { message: "Internal server error" },
+      { status: 500 }
+    );
+  }
+}

@@ -1,6 +1,6 @@
 export default function AdminLayout({ children }) {
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-gray-100 text-black overflow-hidden">
       <aside className="w-64 bg-gray-800 text-white p-4">
         <h2 className="text-xl font-bold mb-6">Admin Panel</h2>
         <nav className="space-y-3">
