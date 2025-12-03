@@ -138,25 +138,28 @@ const page = () => {
         </motion.h1>
 
         <div className="flex flex-col gap-10 items-center">
-          {teamMembers.map((data, i) => (
-            <motion.div
-              key={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              custom={i}
-              className="w-full"
-            >
-              <DirectorCard
-                name={data.name}
-                title={data.title}
-                imageUrl={data.imageUrl}
-                bio={data.bio}
-                index={i}
-              />
-            </motion.div>
-          ))}
+          {teamMembers
+            .filter((data) => data.target === 'all') // Filter for items where target is 'all'
+            .map((data, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+                custom={i}
+                className="w-full"
+              >
+                <DirectorCard
+                  name={data.name}
+                  title={data.title}
+                  imageUrl={data.imageUrl}
+                  bio={data.bio}
+                  index={i}
+                />
+              </motion.div>
+            ))}
+
         </div>
       </section>
 
