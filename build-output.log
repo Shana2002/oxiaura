@@ -1,0 +1,52 @@
+
+> oxiaura@0.1.0 build
+> next build --turbopack
+
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+   ▲ Next.js 15.5.7 (Turbopack)
+
+   Creating an optimized production build ...
+ ✓ Finished writing to disk in 46ms
+ ✓ Compiled successfully in 11.2s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/16) ...
+   Generating static pages (4/16) 
+   Generating static pages (8/16) 
+   Generating static pages (12/16) 
+ ✓ Generating static pages (16/16)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                            Size  First Load JS
+┌ ○ /                               14.4 kB         195 kB
+├ ○ /_not-found                         0 B         124 kB
+├ ○ /gallery                        1.87 kB         126 kB
+├ ○ /plantation                       26 kB         199 kB
+├ ○ /plantation/about               5.23 kB         197 kB
+├ ○ /plantation/blogs               2.41 kB         186 kB
+├ ƒ /plantation/blogs/[blog_title]    12 kB         158 kB
+├ ○ /plantation/career               2.9 kB         186 kB
+├ ƒ /plantation/career/[details]    2.42 kB         157 kB
+├ ○ /plantation/gallery             1.86 kB         138 kB
+├ ○ /plantation/investment          4.72 kB         178 kB
+├ ○ /plantation/products            2.99 kB         186 kB
+├ ƒ /plantation/products/[product]  3.58 kB         158 kB
+├ ○ /plantation/profile             1.65 kB         137 kB
+├ ○ /plantation/view-products       3.83 kB         158 kB
+└ ○ /under-construction                 0 B         124 kB
++ First Load JS shared by all        134 kB
+  ├ chunks/3e0f93b37bf948e9.js      17.2 kB
+  ├ chunks/5f11500e67954124.js      59.2 kB
+  ├ chunks/a75771d769c2c47e.js      24.1 kB
+  ├ chunks/aa3a728ff8158bea.css     10.9 kB
+  └ other shared chunks (total)     22.4 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
