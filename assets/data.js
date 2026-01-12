@@ -49,6 +49,7 @@ export const products = [
       },
     ],
     watching: 150,
+    subImages: ["/images/plants/agarwood/1.jpg", "/images/plants/agarwood/2.png", "/images/plants/agarwood/3.jpg",]
   },
   {
     title: "TJC Mango",
@@ -74,6 +75,7 @@ export const products = [
       },
     ],
     watching: 150,
+    subImages: ["/images/plants/agarwood/1.jpg", "/images/plants/agarwood/2.png", "/images/plants/agarwood/3.jpg",]
   },
   {
     title: "Sandalwood",
@@ -99,6 +101,7 @@ export const products = [
       },
     ],
     watching: 20,
+    subImages: ["/images/plants/agarwood/1.jpg", "/images/plants/agarwood/2.png", "/images/plants/agarwood/3.jpg",]
   },
   {
     title: "Passion Fruit",
@@ -124,6 +127,7 @@ export const products = [
       },
     ],
     watching: 96,
+    subImages: ["/images/plants/agarwood/1.jpg", "/images/plants/agarwood/2.png", "/images/plants/agarwood/3.jpg",]
   },
   {
     title: "Watermelon",
@@ -149,6 +153,7 @@ export const products = [
       },
     ],
     watching: 60,
+    subImages: ["/images/plants/agarwood/1.jpg", "/images/plants/agarwood/2.png", "/images/plants/agarwood/3.jpg",]
   },
   {
     title: "Scotch Bonnet",
@@ -174,6 +179,7 @@ export const products = [
       },
     ],
     watching: 102,
+    subImages: ["/images/plants/agarwood/1.jpg", "/images/plants/agarwood/2.png", "/images/plants/agarwood/3.jpg",]
   },
   {
     title: "Cinnamon Pepper",
@@ -199,6 +205,7 @@ export const products = [
       },
     ],
     watching: 99,
+    subImages: ["/images/plants/agarwood/1.jpg", "/images/plants/agarwood/2.png", "/images/plants/agarwood/3.jpg",]
   },
 ];
 

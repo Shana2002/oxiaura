@@ -6,11 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed": "node prisma/seed.js"
   },
-  "prisma": {
-  "seed": "node prisma/seed.js"
-  },
+
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "framer-motion": "^12.23.22",
@@ -24,11 +23,11 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@prisma/client": "^6.17.1",
+    "@prisma/client": "^6.19.1",
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
-    "prisma": "^6.17.1",
+    "prisma": "^6.19.1",
     "tailwindcss": "^4"
   }
 }

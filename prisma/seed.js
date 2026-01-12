@@ -9,7 +9,11 @@ async function main() {
     // products seeds
     if(products && products.length>0){
         await prisma.products.createMany({
-            data:products,
+            data:products.map(p=>({
+                ...p,
+                paragraphs:JSON.stringify(p.paragraphs),
+                subImages:JSON.stringify(p.subImages)
+            })),
             skipDuplicates: true,
         })
     }
@@ -33,7 +37,12 @@ async function main() {
     // job data seed
     if(jobs && jobs.length>0){
         await prisma.job.createMany({
-            data:jobs,
+            data:jobs.map(j=>({
+                ...j,
+                qualifications:JSON.stringify(j.qualifications),
+                experience:JSON.stringify(j.experience),
+                offers:JSON.stringify(j.offers)
+            })),
             skipDuplicates:true,
         });
     }

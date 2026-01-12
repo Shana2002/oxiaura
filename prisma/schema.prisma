@@ -1,28 +1,22 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
 model Products {
-  id         Int     @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   title      String
   subtitle   String
-  desc       String   @db.Text
+  desc       String
   image      String
   slug       String   @unique
   watching   Int
-  subImages  String[] // Array of sub image URLs
-  paragraphs Json     // Store paragraphs as JSON array
+  subImages  Json     // JSON array of strings
+  paragraphs Json     // JSON array
 
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
@@ -38,8 +32,8 @@ model Testimonial {
   id        Int      @id @default(autoincrement())
   name      String
   position  String
-  comment   String   @db.Text
-  image     String   // URL of the testimonial image
+  comment   String
+  image     String
   status    TestimonialStatus @default(NEW)
 
   createdAt DateTime @default(now())
@@ -47,30 +41,30 @@ model Testimonial {
 }
 
 model Blog {
-  id          Int      @id @default(autoincrement())
-  title       String
-  slug        String   @unique
-  image       String
-  content     Json
+  id        Int      @id @default(autoincrement())
+  title     String
+  slug      String   @unique
+  image     String
+  content   Json
 
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Job {
-  id            Int      @id @default(autoincrement())
-  title         String
-  level         String
-  slug          String   @unique
-  description   String   @db.Text
-  qualifications Json     // Array of qualifications
-  experience    Json     // Array of required experience
-  offers        Json     // Array of offered benefits
-  salary        String
-  imageUrl      String
+  id             Int      @id @default(autoincrement())
+  title          String
+  level          String
+  slug           String   @unique
+  description    String
+  qualifications Json
+  experience     Json
+  offers         Json
+  salary         String
+  imageUrl       String
 
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 enum ShowAtType {
@@ -80,26 +74,25 @@ enum ShowAtType {
 }
 
 model TeamMember {
-  id       Int      @id @default(autoincrement())
-  name     String
-  title    String
-  bio      String   @db.Text
-  imageUrl String
-  showAt    ShowAtType[]
+  id        Int      @id @default(autoincrement())
+  name      String
+  title     String
+  bio       String
+  imageUrl  String
+  showAt    Json     // JSON array of enum values
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
-
 model Company {
-  id      Int     @id @default(autoincrement())
-  name    String
-  logo    String
-  bg      String
-  link    String
-  bgcolor String
-  blank   Boolean @default(false)
+  id        Int      @id @default(autoincrement())
+  name      String
+  logo      String
+  bg        String
+  link      String
+  bgcolor   String
+  blank     Boolean  @default(false)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -108,7 +101,7 @@ model Company {
 model User {
   id        Int      @id @default(autoincrement())
   name      String
-  username  String   @unique       // Ensure emails are unique
+  username  String   @unique
   password  String
 
   createdAt DateTime @default(now())
