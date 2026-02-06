@@ -5,8 +5,8 @@ import { FaWhatsapp } from "react-icons/fa6";
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Oxiaura Plantation",
-  description: "Oxiaura Plantaion",
+  title: "Oxiaura Group",
+  description: "Oxiaura Plantation is a proud member of the Oxiaura Group, delivering high-quality sustainable plantation products and excellence in agriculture in Sri Lanka.",
 };
 
 export default function RootLayout({ children }) {

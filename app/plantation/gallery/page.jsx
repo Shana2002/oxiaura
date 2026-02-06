@@ -4,7 +4,8 @@ import Gallery from "@/components/ui/Gallery";
 
 
 const images = [
-  { src: "/images/aboutus2_bg.png", alt: "Tea garden" },
+  { src: "/images/award2.jpg", alt: "Tea garden" },
+  { src: "/images/award.jpg", alt: "Tea garden" },
   { src: "/images/blog_header.png", alt: "Passion fruit" },
   { src: "/images/plant1.png", alt: "Green plants" },
   { src: "/images/plant2.png", alt: "Watermelon" },
