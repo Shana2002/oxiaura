@@ -471,13 +471,6 @@ export const teamMembers = [
     bio: "Mr. Kosgolla won International Nelson Mandela award in 2019. He obtained his honorary PHD from national American Business University. Presently he perform duties as chairman of Olix Ceylon (Pvt) Ltd. and former chairman oxiflame cosmetics (Pvt) Ltd. He is member of lion club international and former sectary of YMBA Kurunegala.",
     imageUrl: "/images/MD.png",
     target:"all",
-  },
-  {
-    name: "Mr. Ashok Yogaraj",
-    title: "Assistant General Manager",
-    bio: "Mr. K.Y. Ashok has over 18 years of experience in marketing and management of the insurance sector. He obtained an honorary MBA in international business management from the University of the West of Scotland (UWS) and HRM (UK). Limra International (UK).For his performance, he has received both national and international honors.",
-    imageUrl: "/images/agm1.png",
-    target:"plantation",
   }
 ];
 
