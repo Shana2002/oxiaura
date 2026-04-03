@@ -5,7 +5,7 @@ import { Search, User, ChevronDown, Check, X, MessageSquare, ExternalLink } from
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
 import StorySecion from '@/components/ui/StorySecion';
-import {plantationBlogs} from '@/assets/data.js'
+import { plantationBlogs } from '@/assets/data.js'
 import { useParams } from 'next/navigation';
 
 
@@ -17,7 +17,7 @@ const MainArticle = ({ data }) => {
     // Determine the user's color for the metadata based on the image's style
     const metadataColor = 'text-green-700';
     const metadataStyle = 'text-xs text-gray-500 font-medium';
-    
+
     return (
         <section className="px-[5vw] mx-auto py-20">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -47,7 +47,7 @@ const MainArticle = ({ data }) => {
                             <span className="text-xs text-gray-500 font-medium">
                                 Uploaded on: <span className="text-green-700">20/09/2025</span>
                             </span>
-                            <span  className="hidden text-xs text-gray-500 font-medium">
+                            <span className="hidden text-xs text-gray-500 font-medium">
                                 Copied by: <span className="text-green-700"></span>
                             </span>
                         </div>
@@ -60,24 +60,55 @@ const MainArticle = ({ data }) => {
                     <p className="text-lg text-gray-700 leading-relaxed pt-2">
                         {data.summary}
                     </p>
-                    
+
                     {/* Floating Share Icon (Styled like a WhatsApp button) */}
                     <button
                         className="absolute right-0 top-0 lg:right-[-20px] lg:top-[-20px] p-3 rounded-full shadow-lg transition-transform transform hover:scale-105 bg-['rgb(118, 185, 0)']"
                         aria-label="Share via WhatsApp"
                     >
                         {/* Mock WhatsApp/Share Icon */}
-                        <MessageSquare size={24} className="text-white" /> 
+                        <MessageSquare size={24} className="text-white" />
                     </button>
                 </div>
             </div>
 
             {/* Article Body */}
             <div className="mx-auto mt-12 space-y-6 text-lg text-gray-800 leading-relaxed">
-                {data.description}
-                {/* {data.body.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                ))} */}
+                {data.description.map((block, index) => {
+                    switch (block.type) {
+                        case "heading":
+                            return (
+                                <h2 key={index} className="text-2xl font-bold text-gray-900">
+                                    {block.content}
+                                </h2>
+                            );
+
+                        case "paragraph":
+                            return <p key={index}>{block.content}</p>;
+
+                        case "image":
+                            return (
+                                <img
+                                    key={index}
+                                    src={block.src}
+                                    alt={block.alt}
+                                    className="w-full rounded-lg shadow-md"
+                                />
+                            );
+
+                        case "list":
+                            return (
+                                <ul key={index} className="list-disc pl-6 space-y-2">
+                                    {block.items.map((item, i) => (
+                                        <li key={i}>{item}</li>
+                                    ))}
+                                </ul>
+                            );
+
+                        default:
+                            return null;
+                    }
+                })}
             </div>
 
         </section>
@@ -110,78 +141,78 @@ const Feedback = ({ onFeedback }) => (
 
 // --- Main App Component ---
 export default function App() {
-  const [feedback, setFeedback] = useState(null);
-  const {blog_title} = useParams();
-  const blogData = plantationBlogs.find(
-    (item) => item.slug.toLowerCase().replace(/\s+/g, "-") === blog_title.toLowerCase()
-  ) 
+    const [feedback, setFeedback] = useState(null);
+    const { blog_title } = useParams();
+    const blogData = plantationBlogs.find(
+        (item) => item.slug.toLowerCase().replace(/\s+/g, "-") === blog_title.toLowerCase()
+    )
 
-  if(!blogData) return (
-    <h1>Sorry</h1>
-  ) 
-  const otherBlogs = plantationBlogs.filter((item)=>{
-    const itemslug = item.slug.toLowerCase().replace(/\s+/g, "-");
-    return itemslug !== blog_title.toLowerCase();
-  })
+    if (!blogData) return (
+        <h1>Sorry</h1>
+    )
+    const otherBlogs = plantationBlogs.filter((item) => {
+        const itemslug = item.slug.toLowerCase().replace(/\s+/g, "-");
+        return itemslug !== blog_title.toLowerCase();
+    })
 
-  const handleFeedback = (response) => {
-    setFeedback(response);
-    console.log('User feedback:', response);
-  };
-  const stories = [
-    {
-      image: "/images/Chille.png",
-      title: "Red Chilli project",
-      desc: "From farm to flavor—our red chillies...",
-    },
-    {
-      image: "/images/plant3.png",
-      title: "Red Chilli project",
-      desc: "From farm to flavor—our red chillies...",
-    },
-    {
-      image: "/images/plant3.png",
-      title: "Red Chilli project",
-      desc: "From farm to flavor—our red chillies...",
-    },
-  ];
+    const handleFeedback = (response) => {
+        setFeedback(response);
+        console.log('User feedback:', response);
+    };
+    const stories = [
+        {
+            image: "/images/Chille.png",
+            title: "Red Chilli project",
+            desc: "From farm to flavor—our red chillies...",
+        },
+        {
+            image: "/images/plant3.png",
+            title: "Red Chilli project",
+            desc: "From farm to flavor—our red chillies...",
+        },
+        {
+            image: "/images/plant3.png",
+            title: "Red Chilli project",
+            desc: "From farm to flavor—our red chillies...",
+        },
+    ];
 
-  return (
-    <div className="bg-white font-sans">
-      <Navbar />
+    return (
+        <div className="bg-white font-sans">
+            <Navbar />
 
-      <main>
-        {/* Main Article Content */}
-        <MainArticle data={blogData} />
+            <main>
+                {/* Main Article Content */}
+                <MainArticle data={blogData} />
 
-        {/* Feedback Section */}
-        <Feedback onFeedback={handleFeedback} />
+                {/* Feedback Section */}
+                <Feedback onFeedback={handleFeedback} />
 
-        {/* Related Articles Section (Grey Background) */}
-        <StorySecion title="More Related articles" stories={otherBlogs.slice(0,3)} />
-      </main>
+                {/* Related Articles Section (Grey Background) */}
+                <StorySecion title="More Related articles" stories={otherBlogs.slice(0, 3)} />
+            </main>
 
-      {/* Footer */}
-      <Footer />
-      
-      {/* Mock Feedback Message Box */}
-      {feedback && (
-        <div 
-            className="fixed bottom-4 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-2xl z-50 transition-transform duration-300"
-            style={{ transform: feedback ? 'translateY(0)' : 'translateY(100%)' }}
-        >
-          <div className='flex items-center justify-between'>
-            <p className='font-semibold'>{`Thank you for your feedback! You marked the article as '${feedback}'.`}</p>
-            <button 
-                onClick={() => setFeedback(null)} 
-                className='ml-4 p-1 rounded-full hover:bg-gray-700'
-                aria-label='Close feedback message'
-            >
-                <X size={18} />
-            </button>
-          </div>
+            {/* Footer */}
+            <Footer />
+
+            {/* Mock Feedback Message Box */}
+            {feedback && (
+                <div
+                    className="fixed bottom-4 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-2xl z-50 transition-transform duration-300"
+                    style={{ transform: feedback ? 'translateY(0)' : 'translateY(100%)' }}
+                >
+                    <div className='flex items-center justify-between'>
+                        <p className='font-semibold'>{`Thank you for your feedback! You marked the article as '${feedback}'.`}</p>
+                        <button
+                            onClick={() => setFeedback(null)}
+                            className='ml-4 p-1 rounded-full hover:bg-gray-700'
+                            aria-label='Close feedback message'
+                        >
+                            <X size={18} />
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
-      )}
-    </div>
-  );
+    );
 }

@@ -40,7 +40,7 @@ export default function Home() {
               {plantationBlogs[0].title}
             </h1>
             <p className="mt-3 max-w-2xl line-clamp-2">
-              {plantationBlogs[0].description}
+              {plantationBlogs[0].description[0].content}
             </p>
 
             <Link

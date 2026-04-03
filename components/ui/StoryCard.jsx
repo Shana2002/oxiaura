@@ -8,7 +8,7 @@ const StoryCard = ({image,title,description,slug}) => {
         <img src={image} alt={title} className="w-full h-[50vh] object-cover" />
         <div className="absolute inset-0 bg-black/40 text-white p-4 flex flex-col justify-end">
           <h3 className="text-lg font-bold">{title}</h3>
-          <p className="text-sm line-clamp-1">{description}</p>
+          <p className="text-sm line-clamp-1">{description[0].content}</p>
         </div>
       </div>
     </Link>

@@ -4,13 +4,16 @@ import Gallery from "@/components/ui/Gallery";
 
 
 const images = [
-  { src: "/images/award2.jpg", alt: "Tea garden" },
+  { src: "/images/kegalle.jpeg", alt: "Tea garden" },
+  { src: "/images/synergyaward.JPG", alt: "Tea garden" },
   { src: "/images/award.jpg", alt: "Tea garden" },
-  { src: "/images/blog_header.png", alt: "Passion fruit" },
-  { src: "/images/plant1.png", alt: "Green plants" },
-  { src: "/images/plant2.png", alt: "Watermelon" },
-  { src: "/images/sandalwood.jpg", alt: "Seedling" },
+  { src: "/images/award2.jpg", alt: "Tea garden" },
   { src: "/images/plantation_image2.png", alt: "Seedling" },
+  { src: "/images/kegalle.jpeg", alt: "Tea garden" },
+  
+  { src: "/images/blog_header.png", alt: "Passion fruit" },
+  { src: "/images/sandalwood.jpg", alt: "Seedling" },
+  { src: "/images/kegalleteam.jpeg", alt: "Tea garden" },
   { src: "/images/plantation_image3.webp", alt: "Seedling" },
   { src: "/images/scotchbonnet.webp", alt: "Seedling" },
   { src: "/images/vanila_flower.png", alt: "vanila flower" },
