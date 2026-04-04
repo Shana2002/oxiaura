@@ -955,8 +955,8 @@ export const companies = [
     bgcolor: "#fff"
   },
   {
-    name: "Oxiaura Realestate",
-    logo: "/images/logo/realstate.png",
+    name: "Oxiaura Home & Lands",
+    logo: "/images/logo/realstate.jpeg",
     bg: "/images/bg/Realestate back .jpg",
     link: "/under-construction",
     bgcolor: "#fff"
