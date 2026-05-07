@@ -31,10 +31,10 @@ const Footer = ({image,desc}) => {
           </p>
           <div className="mt-4 space-y-2 text-sm">
             <p className="flex items-center gap-2">
-              <FaPhone /> +94 76 455 3564 / +94 38 225 4330
+              <FaPhone /> +94 76 433 6544 / +94 38 225 4330
             </p>
             <p className="flex items-center gap-2">
-              <IoLogoWhatsapp /> +94 76 455 3564
+              <IoLogoWhatsapp /> +94 76 433 6544
             </p>
             <p className="flex items-center gap-2">
               <FaEnvelope /> info@oxiaura.com
