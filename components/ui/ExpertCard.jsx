@@ -27,7 +27,7 @@ const ExpertCard = ({ name, title, bio, imageUrl }) => {
 
       {/* Name and Title */}
       <h3 className="text-xl font-bold text-green-800">{name}</h3>
-      <p className="text-sm font-semibold text-green-600 mb-3">{title}</p>
+      <p className="text-sm font-semibold text-green-600 mb-3">{title[0]}</p>
 
       {/* Bio (Full Text) */}
       <div className="flex-grow">

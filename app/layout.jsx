@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
             <img
               src="/images/blog/award_1.png"
               alt="Award 1"
-              className="w-20 h-44 object-cover hover:scale-105 transition cursor-pointer"
+              className="w-12 h-32 md:w-20 md:h-44 object-cover hover:scale-105 transition cursor-pointer"
             />
           </Link>
 
@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
             <img
               src="/images/blog/synergy_award.png"
               alt="Award 2"
-              className="w-20 h-44 object-cover hover:scale-105 transition cursor-pointer"
+              className="w-12 h-32 md:w-20 md:h-44 object-cover hover:scale-105 transition cursor-pointer"
             />
           </Link>
 

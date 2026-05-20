@@ -890,18 +890,89 @@ export const jobs = [
 export const teamMembers = [
   {
     name: "Mr. Jagath Premal",
-    title: "Director",
+    title: ["Chairman"],
     bio: "Mr. Jagath Premal has over 30 years of experience in Senior management positions in Sri Lanka's plantation and insurance sector and also he working as the Principal officer at Fairwell Insurance Brokers, He has won national and international awards for his performance.",
     imageUrl: "/images/Chairman.png",
-    target:"all"
+    target:["group","plantation"]
   },
   {
     name: "Dr. Susantha Kosgolla",
-    title: "Director",
+    title: ["Managing Director"],
     bio: "Mr. Kosgolla won International Nelson Mandela award in 2019. He obtained his honorary PHD from national American Business University. Presently he perform duties as chairman of Olix Ceylon (Pvt) Ltd. and former chairman oxiflame cosmetics (Pvt) Ltd. He is member of lion club international and former sectary of YMBA Kurunegala.",
     imageUrl: "/images/MD.png",
-    target:"all",
-  }
+    target:["group","plantation"]
+  },
+    {
+    name: "Janath Jayasooriya",
+    title: ["CEO - Oxiaura Global Plus and Oxiaura Cosmetics and Wellness"],
+    bio: "Mr. Janath is a renowned marketing leader, trainer, and motivational speaker with over 15 years of experience in Sri Lanka’s network marketing industry since 2007. Known for his innovative and ethical approach to marketing, he has empowered thousands through leadership training, personal development programs, and motivational sessions conducted across schools, private organizations, and government institutions.A creative personality with a deep passion for the arts, Mr. Janath also produced the stage drama Guththila in 2020 and promoted it nationwide. As a dedicated social contributor and Lions Club member, he has been honored with the prestigious Melvin Jones Fellowship (MJF) Award for his service to society.",
+    imageUrl: "/images/janath.png",
+    target:["group"]
+  },
+  {
+    name: "Dr. Prabath Wijesekara",
+    title: ["Director - Oxiaura Cosmetics and Wellness"],
+    bio: "Dr. M M S Prabhath Wijesekara Deshmanya Waidhyarathna Deshabandu, Deshakeerthi, Former director of the Apexaura Medical Committee, Family Health Coordinator at Wathupitiwila Hospital.",
+    imageUrl: "/images/prabath.png",
+    target:["group"]
+  },
+  // {
+  //   name: "Muditha Bandara",
+  //   title: ["Director - MIK Events and Media Solutions"],
+  //   bio: "Entrepreneur | Research and Development Professional | PR Professional | Social | Digital Content Creator| Social Activist                                                      Muditha is a Research and Development Professional, Digital Content Creator, PR Professional, Career Development Professional and Social Entrepreneur, over the 12+ years of experiences in NGO and Humanitarian Sector, Digital Media, Public Relations , and Migration Services Consulting.",
+  //   imageUrl: "/images/muditha.png",
+  //   target:["group"]
+  // },
+  // {
+  //   name: "Indika Liyandeniya",
+  //   title: ["Director - MIK Events and Media Solutions"],
+  //   bio: "Indika Liyandeniya is a Sri Lankan Businessman, Media Professional and a Project Development & Management Consultant. He was educated at National Academy for Political Education and University of Sri Jayewardenepura. He has served as a Media Monitoring Officer of Prime-Minister's Media Unit (2002-2004), Business Development Manager at Bharathi Aritel Lanka and has held multiple other executive level positions in both private and public sector. He is a current Executive Committee Member of Sri Lanka Press Association and a Consultant to the Sri Lankan branch of Swiss Sustainable Energy Company, World Energy Rangers. Indika is a Consultant at EDISON 8.",
+  //   imageUrl: "/images/indika.png",
+  //   target:["group"]
+  // },
+  {
+    name: "Saman Liyanage",
+    title: ["Project Manager - Oxiaura Group"],
+    bio: "",
+    imageUrl: "/images/shiran.png",
+    target:[""]
+  },
+  {
+    name: "Shiran Mendis",
+    title: ["Administrative Manager - Oxiaura Group"],
+    bio: "",
+    imageUrl: "/images/shiran.png",
+    target:["management"]
+  },
+  {
+    name: "Chaminda Pushpakumara",
+    title: ["Senior Manager - Oxiaura Homes and Lands"],
+    bio: "",
+    imageUrl: "/images/chaminda.png",
+    target:["management"]
+  },
+  {
+    name: "Ranesh Fonseka",
+    title: ["Senior Manager - Oxiaura Green Circle"],
+    bio: "",
+    imageUrl: "/images/ranesh.png",
+    target:["management"]
+  },
+
+  // {
+  //   name: "Indika",
+  //   title: ["Director - MIK"],
+  //   bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  //   imageUrl: "/images/indika.png",
+  //   target:["group"]
+  // },
+  // {
+  //   name: "Muditha",
+  //   title: ["Director - MIK"],
+  //   bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  //   imageUrl: "/images/muditha.png",
+  //   target:["group"]
+  // },
 ];
 
 export const companies = [
@@ -943,8 +1014,8 @@ export const companies = [
   {
     name: "MIK events and Media Solutions",
     logo: "/images/logo/mik.jpg",
-    bg: "/images/bg/Logistics-bg.jpg",
-    link: "/under-construction",
+    bg: "/images/bg/event.jpg",
+    link: "https://www.mikevents.lk/",
     bgcolor: "#ffffff"
   },
   {
@@ -958,6 +1029,13 @@ export const companies = [
     name: "Oxiaura Home & Lands",
     logo: "/images/logo/realstate.jpeg",
     bg: "/images/bg/Realestate back .jpg",
+    link: "/under-construction",
+    bgcolor: "#fff"
+  },
+  {
+    name: "Oxiaura Green Circle",
+    logo: "/images/logo/greencricle.png",
+    bg: "/images/bg/gc.jpg",
     link: "/under-construction",
     bgcolor: "#fff"
   },

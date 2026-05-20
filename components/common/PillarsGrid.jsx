@@ -14,7 +14,7 @@ export default function PillarsGrid() {
       </h2>
 
       {/* Grid */}
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3">
         {companies.map((company, index) => (
           <div
             key={index}

@@ -13,6 +13,7 @@ import { VisionMissionCard } from "@/components/ui/Cards";
 import PillarsGrid from "@/components/common/PillarsGrid";
 import { teamMembers } from "@/assets/data.js";
 import GroupNavbar from "@/components/common/GroupNavbar";
+import ExpertCard from "@/components/ui/ExpertCard";
 
 
 const fadeInUp = {
@@ -139,7 +140,7 @@ const page = () => {
 
         <div className="flex flex-col gap-10 items-center">
           {teamMembers
-            .filter((data) => data.target === 'all') // Filter for items where target is 'all'
+            .filter((data) => data.target.includes("group")) // Filter for items where target is 'all'
             .map((data, i) => (
               <motion.div
                 key={i}
@@ -160,6 +161,35 @@ const page = () => {
               </motion.div>
             ))}
 
+        </div>
+      </section>
+      {/* Senior Management */}
+      <section className="py-20 bg-white min-h-screen">
+        <div className="max-w-[1200px] mx-auto px-4">
+          <motion.h2
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-center text-3xl md:text-4xl font-bold text-green-900 mb-12"
+          >
+            Senior Management Team
+          </motion.h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-stretch">
+            {teamMembers.filter((data) => data.target.includes("management")).map((member, i) => (
+              <motion.div
+                key={i}
+                className="h-full"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <ExpertCard {...member} />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

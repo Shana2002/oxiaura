@@ -242,7 +242,7 @@ across its diverse business sectors."
           </motion.h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-stretch">
-            {teamMembers.map((member, i) => (
+            {teamMembers.filter((data) => data.target.includes("plantation")).map((member, i) => (
               <motion.div
                 key={i}
                 className="h-full"
