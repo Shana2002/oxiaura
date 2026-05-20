@@ -906,7 +906,7 @@ export const teamMembers = [
     name: "Janath Jayasooriya",
     title: ["CEO - Oxiaura Global Plus and Oxiaura Cosmetics and Wellness"],
     bio: "Mr. Janath is a renowned marketing leader, trainer, and motivational speaker with over 15 years of experience in Sri Lanka’s network marketing industry since 2007. Known for his innovative and ethical approach to marketing, he has empowered thousands through leadership training, personal development programs, and motivational sessions conducted across schools, private organizations, and government institutions.A creative personality with a deep passion for the arts, Mr. Janath also produced the stage drama Guththila in 2020 and promoted it nationwide. As a dedicated social contributor and Lions Club member, he has been honored with the prestigious Melvin Jones Fellowship (MJF) Award for his service to society.",
-    imageUrl: "/images/janath.png",
+    imageUrl: "/images/janath1.png",
     target:["group"]
   },
   {

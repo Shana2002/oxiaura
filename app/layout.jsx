@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { FaWhatsapp } from "react-icons/fa6";
 import Link from "next/link";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased text-black overflow-x-hidden`}>
+        <SpeedInsights/>
 
         {/* 🏆 Awards (Horizontal - Left of WhatsApp) */}
         <div className="fixed bottom-6 right-24 flex items-center gap-3 z-[999]">
