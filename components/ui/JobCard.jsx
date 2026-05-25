@@ -20,7 +20,7 @@ const JobCard = ({ title, description, imageUrl,slug }) => {
           <div className="absolute inset-0 bg-gray-900/40" />
     
           {/* External Link Icon (Green Square with Arrow) */}
-          <div
+          {/* <div
             className="absolute top-4 right-4 p-2 bg-green-500 rounded-lg shadow-xl hover:bg-green-400 transition-colors"
             aria-label={`Apply for ${title}`}
           >
@@ -38,7 +38,7 @@ const JobCard = ({ title, description, imageUrl,slug }) => {
                 d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
               />
             </svg>
-          </div>
+          </div> */}
     
           {/* Text Content at the Bottom */}
           <div className="absolute bottom-0 left-0 right-0 p-6 text-white bg-gradient-to-t from-gray-900/80 to-transparent">

@@ -14,6 +14,7 @@ import PillarsGrid from "@/components/common/PillarsGrid";
 import { teamMembers } from "@/assets/data.js";
 import GroupNavbar from "@/components/common/GroupNavbar";
 import ExpertCard from "@/components/ui/ExpertCard";
+import {companies} from '@/assets/data.js'
 
 
 const fadeInUp = {
@@ -51,7 +52,7 @@ const page = () => {
 
         {/* Foreground Content */}
         <motion.div
-          className="relative text-center text-white flex flex-col gap-5 px-4"
+          className="relative text-center text-white flex flex-col items-center gap-5 px-4"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
@@ -59,7 +60,7 @@ const page = () => {
           <Image
             src={GroupLogoWhite}
             alt="oxiaura-group-white"
-            className="mx-auto mb-4 w-1/3 sm:w-1/4 md:w-1/6"
+            className="mx-auto mb-4 w-1/3 sm:w-1/4 md:w-1/12 2xl:w-1/8"
           />
           <h3 className="text-3xl sm:text-5xl lg:text-6xl">Welcome to</h3>
           <h1 className="text-5xl sm:text-7xl lg:text-[15vh] font-bold">
@@ -68,6 +69,32 @@ const page = () => {
           <h2 className="text-2xl sm:text-4xl lg:text-6xl">
             Group
           </h2>
+          <div className="w-1/6 bg-white backdrop-blur-md mt-6 py-4 overflow-hidden rounded-xl border border-white/20 2xl:h-1/4">
+            <motion.div
+              className="flex items-center gap-16 w-max"
+              animate={{
+                x: ["0%", "-50%"],
+              }}
+              transition={{
+                repeat: Infinity,
+                ease: "linear",
+                duration: 30,
+              }}
+            >
+              {[...companies, ...companies].map((company, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center min-w-[120px]"
+                >
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className="h-14 object-contain transition duration-300"
+                  />
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </motion.div>
       </section>
 

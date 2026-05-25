@@ -65,7 +65,7 @@ const Footer = ({image,desc}) => {
                 <Link href={"/plantation/products"}>Products</Link>
               </li>
               <li>
-                <Link href={"/plantation/investment"}>Investment</Link>
+                <Link href={"/plantation/investment"}>Plans</Link>
               </li>
               <li>
                 <Link href={"/plantation/career"}>Career</Link>
@@ -96,27 +96,34 @@ const Footer = ({image,desc}) => {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-2">Partnerships</h3>
+            <h3 className="font-semibold mb-2">Companies</h3>
             <ul className="space-y-1 text-sm">
               <li>
-                <Link href={"/"}>Olix</Link>
+                <Link href={"/plantation"}>Oxiaura Plantation</Link>
               </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">Groups</h3>
-            <ul className="space-y-1 text-sm">
               <li>
                 <Link href={"/"}>Excel Lanka Travels</Link>
               </li>
               <li>
-                <Link href={"www.oxoaura.net/web"}>Oxiaura Cosmetics</Link>
+                <Link href={"www.oxoaura.net/web"}>Oxiaura Cosmetics & Wellness</Link>
               </li>
               <li>
-                <Link href={"/"}>JK Holdings</Link>
+                <Link href={"/"}>Global Plus</Link>
               </li>
               <li>
-                <Link href={"/"}>JK Logistics</Link>
+                <Link href={"/"}>Olix Ceylon</Link>
+              </li>
+              <li>
+                <Link href={"/"}>MIK events and Media Solution</Link>
+              </li>
+              <li>
+                <Link href={"/"}>Oxiaura Health Care</Link>
+              </li>
+              <li>
+                <Link href={"/"}>Oxiaura Homes and Lands</Link>
+              </li>
+              <li>
+                <Link href={"/"}>Oxiaura Green Circle</Link>
               </li>
             </ul>
           </div>

@@ -822,7 +822,7 @@ export const jobs = [
       "Exposure to innovative plantation projects and international collaborations.",
     ],
     salary:
-      "LKR 120,000 – 160,000 per month (based on experience and qualifications).",
+      "Basic + Fuel Allowances + Vehicle Allowances + Achivement Allowances (Based on Experiance and Qualifications)",
     imageUrl: "/images/jobs/zonal.jpg",
   },
   {
@@ -840,7 +840,7 @@ export const jobs = [
 
     ],
     experience: [
-      "Minimum of 5–7 years’ experience in plantation, agricultural, or regional operations management.",
+      "Minimum of 5 years’ experience in plantation, agricultural, or regional operations management.",
       "Proven track record in managing multi-site operations, achieving productivity targets, and leading large teams.",
       "Experience in FMCG, agribusiness, or manufacturing sectors is an added advantage.",
     ],
@@ -852,7 +852,7 @@ export const jobs = [
       "Employee welfare benefits, including healthcare coverage and growth incentives.",
     ],
     salary:
-      "LKR 90,000 - 120,000 per month (based on qualifications and experience).",
+      "Basic + Fuel Allowances + Vehicle Allowances + Achivement Allowances (Based on Experiance and Qualifications)",
     imageUrl: "/images/jobs/regional.jpg",
   },
   {
@@ -869,7 +869,7 @@ export const jobs = [
       "Ability to plan, organize, and oversee multiple ongoing projects effectively.",
     ],
     experience: [
-      "Minimum of 3–5 years’ experience in branch or operations management.",
+      "Minimum of 2 years’ experience in branch or operations management.",
       "Proven track record in managing teams, meeting branch targets, and ensuring operational excellence.",
       "Experience in agriculture, plantation, FMCG, or manufacturing sectors will be a significant advantage.",
     ],
@@ -881,7 +881,7 @@ export const jobs = [
       "Employee welfare benefits, including healthcare coverage and training programs.",
     ],
     salary:
-      "LKR 90,000 - 120,000 per month (based on qualifications and experience).",
+      "Basic + Fuel Allowances + Vehicle Allowances + Achivement Allowances (Based on Experiance and Qualifications)",
     imageUrl: "/images/jobs/branch.jpg",
   }
 ];
