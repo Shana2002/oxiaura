@@ -1000,7 +1000,7 @@ export const companies = [
   {
     name: "Excel Lanka",
     logo: "/images/logo/excellanka.png",
-    bg: "/images/bg/Travel-bg.jpg",
+    bg: "/images/bg/tourbg.jpeg",
     link: "/under-construction",
     bgcolor: "#9E1CA0"
   },
