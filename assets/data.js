@@ -986,14 +986,14 @@ export const companies = [
   {
     name: "Oxiaura Cosmetics and Wellness",
     logo: "/images/logo/cosmetics1.jpg",
-    bg: "/images/bg/Cosmetics-bg.jpg",
+    bg: "/images/bg/cosmetics_bd_cover.png",
     link: "https://oxiaura.net",
     bgcolor: "#fff"
   },
   {
     name: "Olix Nano Tech",
     logo: "/images/logo/olix.png",
-    bg: "/images/bg/Olix-background.jpg",
+    bg: "/images/bg/olixbg.jpeg",
     link: "/under-construction",
     bgcolor: "#914695"
   },
