@@ -69,7 +69,7 @@ const page = () => {
           <h2 className="text-2xl sm:text-4xl lg:text-6xl">
             Group
           </h2>
-          <div className="w-1/6 bg-white backdrop-blur-md mt-6 py-4 overflow-hidden rounded-xl border border-white/20 2xl:h-1/4">
+          {/* <div className="w-1/6 bg-white backdrop-blur-md mt-6 py-4 overflow-hidden rounded-xl border border-white/20 2xl:h-1/4">
             <motion.div
               className="flex items-center gap-16 w-max"
               animate={{
@@ -94,8 +94,8 @@ const page = () => {
                 </div>
               ))}
             </motion.div>
-          </div>
-        </motion.div>
+          </div> */}
+        </motion.div>``
       </section>
 
       {/* About Screen */}
